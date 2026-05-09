@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Circuit";
+  src: url(../resources/BT-Circuit-Medium.woff);
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Circuit";
+  src: url(../resources/BT-Circuit-Medium-Italic-10.woff);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Giusto";
+  src: url(../resources/BT-Giusto-SemiBold.woff);
+}
+
+body {
+  width:100vw;
+  height:100vh;
+  background: #FFF1ED;
+  text-overflow:ellipsis;
+  display:flex;
+  user-select:none;
+}
+
+nav {
+  width:20vw;
+  height:100vh;
+  display:inline-flex;
+  position:fixed;
+}
+
+main {
+  margin-top:12vw;
+  margin-left:20vw;
+  padding-bottom:3vw;
+  width:60vw;
+  height:fit-content;
+  display:inline-flex;
+}
+
+i {
+  font-style:italic;
+}
+
+a {
+  color:inherit;
+}
+
+quote {
+  font-family:Circuit, serif;
+  font-size:max(1.7vmax, 12pt);
+  line-height:max(2vmax, 14pt);
+  color: #285f78;
+}
+
+p {
+  font-family:Giusto, sans-serif;
+  font-size:max(1.5vmax, 10pt);
+  color: #285f78;
+}
+
+container {
+  padding-top:2vw;
+  padding-left:2vw;
+  padding-right:2vw;
+}
+
+.bild{
+  -webkit-user-drag: none;
+  margin-right:1vw;
+  display:flexbox;
+  position:relative;
+  height:min-content;
+  flex-wrap: wrap;
+  float:inline-start;
+  overflow:hidden;
+}
+
+.detail {
+  z-index: 10;
+  position:absolute;
+  visibility:hidden;
+}
+
+.detail:hover {
+  cursor:pointer;
+}
+
+.bildunterschrift{
+  hyphens:auto;
+  display:flex;
+  position:absolute;
+  bottom:0;
+  margin: .7vw;
+  padding-top:100%;
+  font-size:max(0.9vmax, 6pt);
+  color:transparent;
+  pointer-events:pointermove;
+}
+
+.bildunterschrift:hover{
+  cursor:pointer;
+  color:#FFF1ED;
+  text-shadow: 0 0 .3vmax #2f312b;
+}
+
+.drittel{
+  width:17.6vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.fünftel{
+  object-fit: cover;
+  height:14vw;
+  width:10.2vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.zeile {
+  display:block;
+  overflow:auto;
+  margin-top:1vw;
+}
+
+#logo {
+  width:15vw;
+  min-width:115px;
+  position:absolute;
+  -webkit-user-drag: none;
+  z-index:10;
+}
+
+#navlist {
+  line-height:max(2.2vmax, 15pt);
+  position:fixed;
+  bottom:3vw;
+}
+
+/* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
