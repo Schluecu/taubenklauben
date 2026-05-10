@@ -19,96 +19,25 @@
 
     <nav id="left">
         <container>
-            <img id="logo" src="./resources/Logo.svg"></img>
-            <p id="navlist">MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <img id="logo" class="small" src="./resources/Logo.svg" style="margin-left:25vw;margin-top:20vh;width:45vw;height:auto;" onclick="menu()">
+                <menu id="menu" class="menuoff">
+                    <a class="menulink" onclick="menu()" href="./about.html">Über das Projekt</a>
+                    <a class="menulink" onclick="menu()" href="./index.html">Erkundungstour <i>soon to come...</i></a>
+                    <a class="menulink" onclick="menu()" href="./tauben.html">Zu den Tauben</a>
+                    <a class="menulink" onclick="menu()" href="./verzeichnis.html">Verzeichnis</a>
+                </menu></img>
+            <p id="navlist1" class="navlist">MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist2" class="navlist off"><a href="./impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
-    <main>
-        <container>
-            <quote>Hier entsteht ein digitales Erkundungstool zu einer im <i>Beatrice von Wattenwyl-Haus</i> durchgeführten Erkundungstour,
-                sowie eine Sammlung zu einer Gruppe von Taubenanhängern auf Berner Frauenportraits aus dem 17. Jahrhundert.</quote>
-            <p><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a></p>
+    <start id="start" onclick="start()">
+        <img id="uhr" src="./Bilder/Uhren/Uhren.png"></img>
+        <img id="taube" src="./Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img>
+        <img id="eingang" src="./Bilder/Hausunten.png"></img>
+    </start>
 
-
-            <div class="zeile" style="margin-top:3vw;">
-            <!--style="width:19.8vmax"-->
-            <div class="bild drittel">
-            <img class="detail drittel" src="./Bilder/Details/152154_W_r_72 copy.jpg"></img>
-            <img class="drittel" src="./Bilder/Portraits/152154_W_r_72.jpg"></img>
-            <p class="bildunterschrift off" id="werdt" onclick="bildbeschreibung('werdt')">
-            Johannes Dünz<br>(*&#8239;17.01.1645, Brugg,
-            †&#8239;09.10.1736, Bern)<br><br>
-            Bildnis Elisabeth von Werdt-Andreae, 1672, Öl auf textilem Bildträger [Leinen/Hanf]
-            113.5&#8239;×&thinsp;82.5&#8239;cm, Kunstmuseum Bern
-            <br><br>Foto: Kunstmuseum Bern
-            </p></div>
-            <!--style="20.5vmax"-->
-            <div class="bild drittel">
-            <img class="detail drittel" src="./Bilder/Details/Katharina Tscharner.jpg"></img>
-            <img class="drittel" src="./Bilder/Portraits/H_41359-bild01.jpg"></img>
-            <p class="bildunterschrift off" id="tscharner" onclick="bildbeschreibung('tscharner')">
-            Porträt von Katharina Tscharner geb.
-            Lüthardt verh. Berseth (1626-1704), 1675, Öl auf Leinwand, 114.0&#8239;×&thinsp;84.5&#8239;cm, H/41359<br>
-            Porträtdok. 6372<br><br>
-            ©&#8239;Bernisches Historisches Museum Bern, Foto: Christine Moor. Eigentum der Gesellschaft zu Ober-Gerwern
-            </p></div>
-            <!--style="width:12.7vmax"-->
-            <div class="bild drittel">
-            <img class="detail drittel" src="./Bilder/Details/Steiger.jpg"></img>
-            <img class="drittel" src="./Bilder/Portraits/Portrait.jpg"></img>
-            <p class="bildunterschrift off" id="schöni" onclick="bildbeschreibung('schöni')">
-            Porträt von Ursula Esther Schöni (*&#8239;1643), 1693 (1670?), Öl auf Leinwand, 70.5&#8239;×&thinsp;56.5&#8239;cm
-            <br>Porträtdok.&nbsp;4966
-            <br><br>Foto: Luca Blum
-            </p></div></div>
-
-
-            <div class="zeile" style="margin-top:3vw;">
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/44a4a7e8-f0ef-48d4-a4f1-137d5fc8abdf.jpg"></img>
-            <p class="bildunterschrift">
-            Porträt von Barbe de Theisson, 1663, Öl auf Leinwand, 78&#8239;×&thinsp;61&#8239;cm, ausfindig gemacht via Mutual Art</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._5515.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 5515, Foto: Gerhard Howald</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._7867.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 7867, Foto: Gerhard Howald</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/multimedia-25382.jpg"></img>
-            <p class="bildunterschrift">
-            Kunstammlung des Bundes vW134
-            <br>Porträtdok. 2067,
-            <br>Foto: Matthias Bill, Belp, Public Domain</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._3545.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 3545, Foto: Gerhard Howald</p></div></div>
-
-
-
-            <div class="zeile">
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/multimedia-25352.jpg"></img>
-            <p class="bildunterschrift">
-            Kunstsammlung des Bundes vW15
-            <br>Foto: Matthias Bill, Belp, Public Domain</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._1153.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 1153</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._5516.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 5516, Foto: Gerhard Howald</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._9212.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 9212, Foto: Gerhard Howald</p></div>
-            <div class="bild fünftel"><img class="fünftel" src="./Bilder/Portraits/Porträtdok._9683.jpg"></img>
-            <p class="bildunterschrift">
-            Burgerbibliothek Bern, Porträtdok. 9683, Foto: Gerhard Howald</p></div></div>
-        </container>
+    <main id="main">
+        <container></container>
     </main>
-
-    <nav id="right" style="right:0">
-        <container>
-            <img>
-        </container>
-    </nav>
-
 </body>
