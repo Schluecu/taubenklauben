@@ -285,7 +285,6 @@ start {
 #uhr {
   position:fixed;
   width:30vmax;
-  transform:rotate(160deg);
   top:-10vmax;
   left:-7vmax;
   transition:ease-in all .3s;
