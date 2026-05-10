@@ -216,10 +216,10 @@ container {
   position:absolute;
   text-wrap:initial;
   width:50vw;
-  margin-top:4vmax;
+  margin-top:2vmax;
   text-align:center;
   justify-self:center;
-
+  overflow:scroll;
   font-family:Circuit, serif;
   font-size:max(2.5vmax, 18pt);
   line-height:max(3.5vmax, 25pt);
@@ -239,7 +239,8 @@ container {
   height:11.5vmax;
   margin-left:35vw;
   margin-right:35vw;
-  transition:width .2s, margin-left .3s;
+  margin-top:7vh;
+  transition:all .3s, width .2s;
 }
 
 .navlist {
@@ -264,6 +265,16 @@ container {
   cursor:pointer;
 }
 
+#dingle {
+  -webkit-user-drag:none;
+  transform:translate(-50%,-50%);
+  top:3vh;
+  width:13vmax;
+  align-self:center;
+  margin-left:13vmax;
+  margin-top:15vh;
+}
+
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
 
 start {
@@ -271,6 +282,10 @@ start {
   width:100vw;
   height:100vh;
   z-index:10;
+}
+
+start:hover {
+  cursor:pointer;
 }
 
 #eingang {
@@ -282,11 +297,18 @@ start {
   transform-origin:top center;
 }
 
+@keyframes turn {
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+
 #uhr {
   position:fixed;
   width:30vmax;
   top:-10vmax;
   left:-7vmax;
+  animation: turn 500s linear infinite;
   transition:ease-in all .3s;
 }
 
