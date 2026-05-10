@@ -67,5 +67,5 @@ function start() {
 
 function end() {
   document.getElementById("start").style="display:none";
-  open("https://taubenklauben.ch/about","_self");
+  open("./about.html","_self");
 }
