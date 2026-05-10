@@ -103,13 +103,16 @@ container {
 
 .bildunterschrift:hover{
   cursor:pointer;
-  color:#FFF1ED;
-  text-shadow: 0 0 .3vmax #2f312b;
 }
 
-.bildunterschrift:focus{
+.on {
   color:#FFF1ED;
-  text-shadow: 0 0 .3vmax #2f312b;
+  text-shadow:0 0 .3vmax #2f312b;
+}
+
+.off {
+  color:transparent;
+  text-shadow:none;
 }
 
 .drittel{
