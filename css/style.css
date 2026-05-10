@@ -29,6 +29,7 @@ nav {
   height:100vh;
   display:inline-flex;
   position:fixed;
+  z-index:10;
 }
 
 main {
@@ -136,10 +137,10 @@ container {
   min-width:115px;
   position:absolute;
   -webkit-user-drag: none;
-  z-index:10;
 }
 
 #navlist {
+  background:#FFF1ED;
   line-height:max(2.2vmax, 15pt);
   position:fixed;
   bottom:3vw;
@@ -156,4 +157,6 @@ container {
   .bildunterschrift{margin:2vw;}
   .drittel {width:27.5vw;}
   .fünftel {width:16vw;height:22vw;}
+  #logo {padding-right:65vw;background:#FFF1ED}
+  #navlist {padding-right:65vw;background:#FFF1ED}
 }
