@@ -1,8 +1,10 @@
-function openDesc1() {
-  var x = document.getElementById("desc1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+function bildbeschreibung(desc) {
+  var x = document.getElementById(desc);
+  if (x.classList.contains("on")) {
+    x.classList.remove("on");
+    x.classList.add("off");
   } else {
-    x.style.display = "none";
+    x.classList.add("on");
+    x.classList.remove("off");
   }
 }
