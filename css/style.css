@@ -290,12 +290,19 @@ start {
   transition:ease-in all .3s;
 }
 
+@keyframes wobble {
+  0% {top:54.8vh}
+  50% {top:55.2vh}
+  100% {top:54.8vh}
+}
+
 #taube {
   position:fixed;
   transform:translate(-50%,-50%);
   width:19vmax;
   left:20vw;
-  top:55vh;
+  top:54.8vh;
+  animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
   transition:ease-in all .3s;
 }
 
