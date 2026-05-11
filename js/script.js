@@ -55,7 +55,7 @@ function killswitch() {
 }
 
 function start() {
-  document.getElementById("logo").style="";
+  document.getElementById("logo").classList.remove("grösser");
   document.getElementById("eingang").style.transform="scale(2)";
   document.getElementById("uhr").style.top="-20vmax";
   document.getElementById("uhr").style.left="-30vmax";
