@@ -275,6 +275,23 @@ container {
   margin-top:15vh;
 }
 
+#aufführung {
+  position:relative;
+  top:1.5vmax;
+  width:80vw;
+}
+
+#verzeichnis {
+  position:absolute;
+}
+
+.grösser {
+  margin-left:25vw;
+  margin-top:20vh;
+  width:45vw;
+  height:auto;
+}
+
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
 
 start {
@@ -329,16 +346,31 @@ start:hover {
 }
 
 @media only screen and (orientation:portrait) and (hover:none){
-  body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh}
+  body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh;}
   main {margin-top:12vh;margin-left:3vw;width:90vw;}
   nav {display:inline;position:fixed;}
   quote {display:block; width:85vw;}
   container {padding:0}
   .bildunterschrift{margin:2vw;}
-  .drittel {width:27.5vw;}
+  .drittel {width:27.5vw;height:38vw;}
   .fünftel {width:16vw;height:22vw;}
   .big {margin-left:30vw;}
-  .menuon {padding-bottom:0;margin-top:50vh;margin-left:20vw;}
+  #left {position:fixed;width:80vw;}
+  .menuon {font-size:max(2vmax, 15pt);line-height:max(3vmax, 20pt);padding-bottom:0;margin-top:0vh;margin-left:20vw;position:absolute;top:25vh;left:2vw;align-content:center; overflow:hidden;}
   .navlist {padding-right:65vw;}
   #logo {padding-right:65vw;}
+  #dingle {top:0vh;}
+  #aufführung {top:2.5vmax;}
+  #verzeichnis {margin-top:5vmax;position:absolute;width:100vw;overflow:scroll;}
+  #weg {display:none;}
+  #uhr {animation: turn 100s linear infinite;}
+  @keyframes wobble {
+  0% {top:71.6vh}
+  50% {top:71vh}
+  100% {top:71.6vh}}
+  #taube {width:25vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
+  #eingang {width:110vw;bottom:0vh;left:-1vw}
+  .weg {display:none}
+  .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
+  #uhr {width:70vw;top:-16vh;left:-25vw;}
 }
