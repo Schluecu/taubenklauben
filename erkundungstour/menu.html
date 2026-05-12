@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../resources/Taube.svg"rel="icon">
+    <script src="../js/script.js"></script>
+    <title>Erkundungstool</title>
+    <meta name="description" content="Zum Entdecken von Tauben und andere Details im Beatrice von Wattenwyl-Haus. Enstanden im Rahmen des Minor-Projekts FS26 von Luca Blum im MA Art Education an der HKB.">
+    <meta property="og:image" content="../resources/Taube.ico"/>
+
+</head>
+
+<body>
+
+    <nav id="left">
+        <container>
+            <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
+                <menu id="menu" class="menuoff">
+                    <a class="menulink" onclick="menu()" href="../about.html">Über das Projekt</a>
+                    <a class="menulink" onclick="menu()" href="../index.html">Erkundungstour</a>
+                    <a class="menulink" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
+                    <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
+                    <img src="../resources/Taube.ico" id="dingle"></img>
+                </menu></img>
+            <p id="navlist1" class="navlist weg"> MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist2" class="navlist off weg"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
+        </container>
+    </nav>
+
+    <main id="main">
+        <container id="umsetzung">
+            <quote class="button" id="links" onmousedown="backwards()">❮</quote>
+            <quote class="button" id="rechts" onmousedown="forwards()">❯</quote>
+
+            <a href="./tauben.html"><div class="keyimage off" id="tauben" content="Anhänger<br>Wiederholung<br>Forschung">
+                <img class="keyimage" style="height:37vh;top:27vh;left:-5vw;" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img>
+                <img class="keyimage" style="height:60vh;top:25vh;" src="../Bilder/Details/Taube_freigestellt.png"></img>
+                <img class="keyimage" style="height:80vh;top:33vh;left:3vw;" src="../Bilder/Details/IMG_3450.png"></img>
+            </div></a>
+            <a href="./uhren.html"><img src="../Bilder/Uhren/Uhren1.png" class="keyimage off" id="uhren" content="Ticken<br>Wiederholung<br>Erkundungstour"></img></a>
+            <a href="./bäume.html"><div class="keyimage off" id="bäume" content="Bäume<br>Schauen<br>Multisensorisch"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage"></img></div></a>
+            <a href="./schauen.html"><div class="keyimage off" id="schauen" content="Schauen<br>Details<br>Verbindungen"><img src="../Bilder/Skizzen/1.png" class="keyimage" style="height:50vh;" onload="randostart()"></img></div></a>
+            </container>
+    </main>
+</body>
