@@ -62,10 +62,83 @@ function start() {
   document.getElementById("uhr").style.width="20vw";
   document.getElementById("taube").style.left="-30vw";
   document.getElementById("taube").style.width="30vw";
-  setTimeout(end, 500);
+  setTimeout(end, 400);
 }
 
 function end() {
-  document.getElementById("start").style="display:none";
-  open("./about.html","_self");
+  open("./erkundungstour/menu.html","_self");
+}
+
+const clusters = ["tauben", "schauen", "bäume", "uhren"];
+
+function backwards() {
+  x = clusters[3];
+  z = clusters[0];
+
+  document.getElementById(x).classList.remove('rechtsraus');
+  document.getElementById(x).classList.add('linksraus');
+  document.getElementById(x).classList.remove("off");
+  document.getElementById(z).classList.add('rechtsraus');
+  
+  console.log(clusters);
+  clusters.splice(0,0,x);
+  clusters.splice(4,1);
+  console.log(clusters);
+
+  setTimeout(hinein, 20);
+  setTimeout(forw, 1000);
+}
+
+function forwards() {
+  
+  y = clusters[1];
+  z = clusters[0];
+
+  document.getElementById(y).classList.remove('linksraus');
+  document.getElementById(y).classList.add('rechtsraus');
+  document.getElementById(y).classList.remove("off");
+  document.getElementById(z).classList.add('linksraus');
+  
+  console.log(clusters);
+  clusters.push(z);
+  clusters.shift();
+  console.log(clusters);
+  
+  setTimeout(hinein, 20);
+  setTimeout(back, 1000);
+}
+
+function hinein() {
+  y = clusters[0];
+  textändern(y);
+  document.getElementById(y).classList.remove('rechtsraus');
+  document.getElementById(y).classList.remove('linksraus');
+}
+
+function back() {
+  x = clusters[3];
+  document.getElementById(x).classList.add("off");
+}
+
+function forw() {
+  x = clusters[3];
+  document.getElementById(x).classList.add("off");
+}
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+function randostart() {
+  shuffle(clusters);
+  var y = clusters[0];
+  document.getElementById(y).classList.remove("off");
+  textändern(y);
+}
+
+function textändern(y) {
+  var seite = document.getElementById("navlist1");
+  x = document.getElementById(y).getAttribute("content");
+  console.log(x);
+  seite.innerHTML = x;
 }
