@@ -142,3 +142,27 @@ function textändern(y) {
   console.log(x);
   seite.innerHTML = x;
 }
+
+function wiggle() {
+  x = document.getElementById('weiss')
+  y = document.getElementById('schöni')
+  z = document.getElementById('werdt')
+  console.log(x, y, z);
+  x.style="transition:all .15s ;height:37vh;top:27.2vh;left:-5.5vw;";
+  y.style="transition:all .2s ;height:62vh;top:25.5vh;;left:-.2vw;";
+  z.style="transition:all .3s ;height:58vh;top:32.5vh;left:0.6vw;";
+}
+
+function unwiggle() {
+  x = document.getElementById('weiss')
+  y = document.getElementById('schöni')
+  z = document.getElementById('werdt')
+  console.log(x, y, z);
+  x.style="height:37vh;top:27vh;left:-5vw;";
+  y.style="height:62vh;top:25vh;";
+  z.style="height:58vh;top:32vh;left:0.5vw;";
+}
+
+function klasse(klasse) {
+  document.getElementById(klasse).classList.add(klasse);
+}
