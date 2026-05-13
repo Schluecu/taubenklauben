@@ -52,6 +52,7 @@ a {
 
 a:hover {
   cursor:pointer;
+  color:#c73a2d;
 }
 
 quote {
@@ -137,6 +138,7 @@ container {
   font-size:max(0.9vmax, 6pt);
   line-height:max(1vmax, 7pt);
   color: #285f78;
+  user-select: all;
 }
 
 #killswitch{
@@ -261,8 +263,11 @@ container {
   transition:height .3s, margin-left .3s;
 }
 
-#logo:hover {
+#logo:not(.big):hover {
   cursor:pointer;
+  transform-origin:top left;
+  transform:scale(104%);
+  transition:all .2s;
 }
 
 #dingle {
@@ -326,6 +331,7 @@ container {
   left:50%;
   top:50%;
   transition:all .8s;
+  -webkit-user-drag: none;
 }
 
 .keyimage.off {
@@ -339,6 +345,61 @@ container {
 
 .rechtsraus{
   left:100vw;
+}
+
+.keyword:hover {
+  cursor:pointer;
+  color:#c73a2d;
+}
+
+.seitentaube {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:30vh;
+  left:9vw;
+  z-index:10;
+}
+
+.seitentaube:hover {
+  height:30.8vh;
+}
+
+#überbaum {
+  pointer-events: none;
+}
+
+#unterbaum:hover {
+  filter: invert(.3);
+  opacity:.7;
+}
+
+.seitenbaum {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:40vh;
+  left:9vw;
+  z-index:10;
+}
+
+.seitenbaum:hover {
+  height:41vh;
+}
+
+@keyframes roundnround {
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(360deg)}
+}
+
+.uhrtile {width:12vw; transition: all 3s}
+.uhrtile.eins {animation: roundnround 15s infinite linear}
+.uhrtile.zwei {animation: roundnround 8s infinite linear}
+.uhrtile.drei {animation: roundnround 6s infinite linear}
+.uhrtile.vier {animation: roundnround 12s infinite linear}
+.uhrtile.fünf {animation: roundnround 4s infinite linear}
+.uhrtile.sechs {animation: roundnround 10s infinite linear}
+
+.uhrtile:hover {
+  animation: roundnround 2s infinite linear reverse;
 }
 
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
@@ -414,12 +475,18 @@ start:hover {
   #weg {display:none;}
   #uhr {animation: turn 100s linear infinite;}
   @keyframes wobble {
-  0% {top:71.6vh}
-  50% {top:71vh}
-  100% {top:71.6vh}}
+    0% {top:71.6vh}
+    50% {top:71vh}
+    100% {top:71.6vh}
+  }
   #taube {width:25vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
   #eingang {width:180vw;bottom:-5vh;left:-60vw}
   .weg {display:none}
   .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
   #uhr {width:70vw;top:-16vh;left:-25vw;}
+  #umsetzung {width:90vw;}
+  .keyimage {height:50vh;}
+  #rechts {width:5vw;}
+  .linksraus {right:-100vw;}
+  .rechtsraus {left:200vw;}
 }
