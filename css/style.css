@@ -385,21 +385,61 @@ container {
   height:41vh;
 }
 
+.seitenuhr {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:42vh;
+  left:9vw;
+  z-index:10;
+}
+
+.seitenuhr:hover {
+  height:43vh;
+}
+
+.geschaut {
+  position:absolute;
+  object-fit: cover;
+  justify-self:center;
+  -webkit-user-drag: none;
+  transition:all .2s;
+  transform:translate(0% 0%);
+  display:block;
+  transform-origin:center center;
+}
+
 @keyframes roundnround {
   0% {transform:rotate(0deg)}
   100% {transform:rotate(360deg)}
 }
 
-.uhrtile {width:12vw; transition: all 3s}
+.uhrtile {width:12vw; transition: all 3s;z-index: 10}
 .uhrtile.eins {animation: roundnround 15s infinite linear}
-.uhrtile.zwei {animation: roundnround 8s infinite linear}
-.uhrtile.drei {animation: roundnround 6s infinite linear}
+.uhrtile.zwei {animation: roundnround 9s infinite linear}
+.uhrtile.drei {animation: roundnround 7s infinite linear}
 .uhrtile.vier {animation: roundnround 12s infinite linear}
-.uhrtile.fünf {animation: roundnround 4s infinite linear}
+.uhrtile.fünf {animation: roundnround 5s infinite linear}
 .uhrtile.sechs {animation: roundnround 10s infinite linear}
 
 .uhrtile:hover {
-  animation: roundnround 2s infinite linear reverse;
+  animation: roundnround 3s infinite linear reverse;
+  cursor:pointer;
+}
+
+.seitenschauen {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:15vh;
+  left:10vw;
+  z-index:10;
+}
+
+.seitenschauen:hover {
+  height:16vh;
+}
+
+#schauen {
+  height:20vh;
 }
 
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
