@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="uhrenzuteilung('seitenuhr')">
+<body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick()">
 
     <nav id="left">
         <container>
@@ -27,13 +27,38 @@
                     <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
-            <p id="navlist1" class="navlist weg"> MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist1" class="navlist weg"> Ticken<br>Wiederholung<br>Erkundungstour</p>
             <p id="navlist2" class="navlist off weg"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
-    <main id="main">
-        <container><a href="./menu.html"><img class="keyimage" id="seitenuhr" style="align-self:center" src="../Bilder/Uhren/pieces/Uhr2.png"></img></a>
+    <quote class="tik" onclick="tick()" id="tik1"><i style="animation:tiktok backwards infinite;animation-duration:2s;animation-delay:1s;">tick</i><i style="animation:tiktok 2s backwards infinite;">&hairsp;tock</i></quote>
+
+    <main id="main" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
+        <a href="./menu.html"><img class="keyimage" id="seitenuhr" style="align-self:center" src="../Bilder/Uhren/pieces/Uhr2.png"></img></a>
+        <container id="inhaltsgefäss">
+            <div class="spacer" style="height:23vmin;"></div>
+            <quote onclick="tick()" class="inhalt" style="position:relative;">Alles wirkte irgendwie wie eingefroren in der Zeit <i>(ein bisschen wie ein Foto)</i>, ausser die Uhr, die noch lief <i>(mit dem Pendel und einem leichten Geräusch)</i>.<br><br><p>Ethan Pageot</p></quote>
+            <div class="spacer" style="height:15vmin; animation:ersteuhr 8s ease-out;"></div>
+            <div id="ersteuhr" class="inhalt"><img class="inhalt" src="../Bilder/Uhren/HoheUhr.png" style="width:20vw;"></img>
+            <div class="inhalt" style="width:30vw;float:right;"><div class="spacer" style="height:35vmin;"></div><div class="spacer" style="height:15vmin;animation:ersteuhr 8s ease-out;"></div><p>Die Sekunden ticken und die Jahrhunderte werden plötzlich spürbar.</p>
+            <p><br>Wer sich im Raum bewegt, kann sich auf Details achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
+            <p><br>Dieser Kontext verliert sich bei einer digitalen Reproduktion.</p>
+            </div></div>
+            <div class="spacer" style="height:10vmin;"></div>
+            <quote class="inhalt" style="width:35vw;left:10vw;text-align:center;">Ich frage mich, ob man diese Gobelins und Vorhänge auch <a><u>riechen</u></a> kann…<br><br><p>Ralf Junghanns</p></quote>
         </container>
     </main>
+
+    <nav id="right" style="right:0">
+        <container class="navright">
+            <div class="spacer" style="height:20vh;"></div>
+            <div class="mapwrap">
+                <img class="map" src="../resources/og.svg"></img>
+                <img class="map" src="../resources/eg.svg"></img>
+                <p style="top:65.5%;right:67%;" class="dot">⬤</p>
+                <p style="top:55%;right:19%;" class="dot">⬤</p>
+            </div>
+        </container>
+    </nav>
 </body>
