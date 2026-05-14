@@ -195,3 +195,17 @@ function unshift(){
   document.getElementById('geschaut2').style="height:40vh;top:-6vh;left:-18vw;";
   document.getElementById('geschaut3').style="height:40vh;top:-7vh;left:-20vw;";
 }
+
+function inhalt() {
+  document.getElementById('inhaltsgefäss').classList.add('on');
+}
+
+function tick() {
+  var rand1 = Math.random()*75+15;
+  var rand2 = Math.random()*60+20;
+  var rand3 = Math.random()*10+5;
+  const style = "top:"+rand1+"vh; right:"+rand2+"vw; animation:slowintro "+rand3+"s;";
+  document.getElementById('tik1').style="";
+  void document.getElementById('tik1').offsetWidth;
+  document.getElementById('tik1').style=style.toString();
+}
