@@ -42,18 +42,19 @@
                 <img class="keyimage" id="schöni" style="height:62vh;top:25vh;" src="../Bilder/Details/Taube_freigestellt.png"></img>
                 <img class="keyimage" id="werdt" style="height:58vh;top:32vh;left:.5vw;" src="../Bilder/Details/IMG_3450.png"></img>
             </div></a>
-            <a href="./uhren.html">
                 <div class="keyimage off" id="uhren" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
-                    <img class="uhrtile eins" src="../Bilder/Uhren/1uhr.png"></img>
-                    <img class="uhrtile zwei" src="../Bilder/Uhren/2uhr.png"></img>
-                    <img class="uhrtile drei" src="../Bilder/Uhren/3uhr.png"></img>
-                    <img class="uhrtile vier" src="../Bilder/Uhren/4uhr.png"></img>
-                    <img class="uhrtile fünf" src="../Bilder/Uhren/5uhr.png"></img>
-                    <img class="uhrtile sechs" src="../Bilder/Uhren/6uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr2')" class="uhrtile eins" src="../Bilder/Uhren/1uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr5')" class="uhrtile zwei" src="../Bilder/Uhren/2uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr7')" class="uhrtile drei" src="../Bilder/Uhren/3uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr8')" class="uhrtile vier" src="../Bilder/Uhren/4uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr6')" class="uhrtile fünf" src="../Bilder/Uhren/5uhr.png"></img>
+                    <img onclick="uhrenwahl('Uhr9')" class="uhrtile sechs" src="../Bilder/Uhren/6uhr.png"></img>
                 </div>
-            </a>
             <a href="./bäume.html"><div class="keyimage off" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div></a>
-            <a href="./schauen.html"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>"><img src="../Bilder/Skizzen/1.png" class="keyimage" style="height:50vh;" onload="randostart()"></img></div></a>
+            <a href="./schauen.html"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
+                <img src="../Bilder/Skizzen/1.png" class="geschaut" id="geschaut1" style="height:40vh;top:-10vh;left:-22vw;"></img>
+                <img src="../Bilder/Skizzen/2.png" class="geschaut" id="geschaut2" style="height:40vh;top:-6vh;left:-18vw;"></img>
+                <img src="../Bilder/Skizzen/5.png" class="geschaut" id="geschaut3" style="height:40vh;top:-7vh;left:-20vw;" onload="randostart()" onmouseenter="shift()" onmouseleave="unshift()"></img></div></a>
             </container>
     </main>
 </body>
