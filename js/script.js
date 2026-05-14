@@ -209,3 +209,12 @@ function tick() {
   void document.getElementById('tik1').offsetWidth;
   document.getElementById('tik1').style=style.toString();
 }
+
+function notick() {
+  zack = document.getElementById('tik1').classList;
+  if (zack.contains('disappeared')){
+    document.getElementById('tik1').classList.remove('disappeared');
+  } else {
+    document.getElementById('tik1').classList.add('disappeared');
+  }
+}
