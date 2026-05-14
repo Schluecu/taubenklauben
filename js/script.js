@@ -163,6 +163,35 @@ function unwiggle() {
   z.style="height:58vh;top:32vh;left:0.5vw;";
 }
 
-function klasse(klasse) {
+function klassen(klasse) {
   document.getElementById(klasse).classList.add(klasse);
+}
+
+function uhrenwahl(uhr) {
+  öffnen = "./uhren.html#"+uhr;
+  console.log(öffnen);
+  open(öffnen, "_self");
+}
+
+function uhrenzuteilung(klasse) {
+  const text = window.location.toString();
+  let zwischen = text.split("#")[1];
+  let result = zwischen.split(".")[0];
+  console.log(result);
+  const value = "../Bilder/Uhren/pieces/"+result+".png";
+  document.getElementById('seitenuhr').setAttribute("src", value.toString());
+  console.log(document.getElementById('seitenuhr').getAttribute("src"));
+  klassen(klasse);
+}
+
+function shift(){
+  document.getElementById('geschaut1').style="height:40vh;top:-13vh;left:-23vw;transform:rotate(1deg);";
+  document.getElementById('geschaut2').style="height:40vh;top:-4vh;left:-15vw;transform:rotate(-2deg);";
+  document.getElementById('geschaut3').style="height:40vh;top:-7vh;left:-20vw;transform:rotate(-.5deg);";
+}
+
+function unshift(){
+  document.getElementById('geschaut1').style="height:40vh;top:-10vh;left:-22vw;";
+  document.getElementById('geschaut2').style="height:40vh;top:-6vh;left:-18vw;";
+  document.getElementById('geschaut3').style="height:40vh;top:-7vh;left:-20vw;";
 }
