@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="klassen('seitenbaum')">
+<body onload="klassen('seitenbaum'), inhalt(), textändern('main')">
 
     <nav id="left">
         <container>
@@ -27,14 +27,27 @@
                     <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
-            <p id="navlist1" class="navlist weg"> MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist1" class="navlist weg">Bäume<br>Schauen<br>Multisensorisch</p>
             <p id="navlist2" class="navlist off weg"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
-    <main id="main">
-        <container>
-            <a href="./menu.html"><img class="keyimage" id="seitenbaum" style="align-self:center" src="../Bilder/Werke/multimedia-814_baum.png"></img></a>
+    <main id="main" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>">
+        <a href="./menu.html"><img class="keyimage" id="seitenbaum" style="align-self:center" src="../Bilder/Werke/multimedia-814_baum.png"></img></a>
+        <container id="inhaltsgefäss">
+            
         </container>
     </main>
+
+    <nav id="right" style="right:0">
+        <container class="navright">
+            <div class="spacer" style="height:20vh;"></div>
+            <div class="mapwrap">
+                <img class="map" src="../resources/og.svg"></img>
+                <img class="map" src="../resources/eg.svg"></img>
+                <p style="top:65%;right:64%;" class="dot">⬤</p>
+                <p style="top:57%;right:24.5%;" class="dot">⬤</p>
+            </div>
+        </container>
+    </nav>
 </body>
