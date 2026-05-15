@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="klassen('seitentaube')">
+<body onload="klassen('seitentaube'), inhalt(), textändern('main')">
 
     <nav id="left">
         <container>
@@ -27,20 +27,27 @@
                     <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
-            <p id="navlist1" class="navlist">MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist1" class="navlist">Anhänger<br>Wiederholung<br>Forschung</p>
             <p id="navlist2" class="navlist off"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
-    <main id="main">
-        <container>
-            <a href="./menu.html"><img class="keyimage" id="seitentaube" style="align-self:center" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img></a>
+    <main id="main" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
+        <a href="./menu.html"><img class="keyimage" id="seitentaube" style="align-self:center" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img></a>
+        <container id="inhaltsgefäss">
+            
         </container>
     </main>
 
     <nav id="right" style="right:0">
-        <container>
-            <img>
+        <container class="navright">
+            <div class="spacer" style="height:20vh;"></div>
+            <div id="mapwrap">
+                <img class="map" src="../resources/og.svg"></img>
+                <img class="map" src="../resources/eg.svg"></img>
+                <p style="top:65%;right:64%;" class="dot">⬤</p>
+                <p style="top:57%;right:24.5%;" class="dot">⬤</p>
+            </div>
         </container>
     </nav>
 </body>
