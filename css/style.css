@@ -15,6 +15,10 @@
   src: url(../resources/BT-Giusto-SemiBold.woff);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width:100vw;
   height:100vh;
@@ -22,6 +26,7 @@ body {
   text-overflow:ellipsis;
   display:flex;
   user-select:none;
+  transition:opacity 2s;
 }
 
 nav {
@@ -34,12 +39,12 @@ nav {
 
 main {
   display:flex;
+  flex-direction:column;
   margin-top:12vmax;
   margin-left:20vw;
   padding-bottom:3vw;
   width:60vw;
-  height:fit-content;
-  display:inline-flex;
+  min-height:100%;
 }
 
 i {
@@ -51,7 +56,14 @@ a {
 }
 
 a:hover {
-  cursor:pointer;
+  color:#c73a2d;
+}
+
+u:hover {
+  color:#c73a2d;
+}
+
+sup:hover {
   color:#c73a2d;
 }
 
@@ -67,10 +79,11 @@ p {
   font-family:Giusto, sans-serif;
   font-size:max(1.5vmax, 10pt);
   color: #285f78;
+  hyphens:all;
 }
 
 p.inhalt {
-  line-height:max(2vmax, 13pt);
+  line-height:max(1.8vmax, 12pt);
 }
 
 container {
@@ -447,6 +460,27 @@ container {
   height:20vh;
 }
 
+#pieds {
+  transition:.5s ease-out;
+  position:absolute;
+  -webkit-user-drag:none;
+  width:20vw;
+  left:13vw;
+  top:4vh;
+  transform:rotate(2deg);
+}
+
+#pieds:hover {
+  left:16vw;
+  transform:rotate(-3.5deg);
+  cursor:grab;
+}
+
+sup {
+  vertical-align:super;
+  font-size:max(1vmax, 7pt);
+}
+
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
 
 start {
@@ -500,6 +534,10 @@ start:hover {
   transition:ease-in all .3s;
 }
 
+.pointer:hover {
+  cursor:pointer;
+}
+
 #inhaltsgefäss {
   opacity:0;
   transition:all .3s;
@@ -543,6 +581,7 @@ start:hover {
 
 .disappeared {
   display:none;
+  opacity:0;
 }
 
 .navright {
@@ -551,13 +590,12 @@ start:hover {
   justify-items: center;
 }
 
-.mapwrap {
+#mapwrap {
   position:relative;
 }
 
-.mapwrap:hover {
-  transform:scale(1.01);
-  transition:all .2s;
+#mapwrap:hover {
+  cursor:pointer;
 }
 
 .dot {
@@ -576,6 +614,14 @@ start:hover {
 .map {
   width:13vw;
   -webkit-user-drag: none;
+}
+
+.plaintext {
+  text-decoration:none;
+}
+
+.plaintext:hover{
+  color:#285f78;
 }
 
 @keyframes ersteuhr {
