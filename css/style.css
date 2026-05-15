@@ -44,7 +44,6 @@ main {
   margin-left:20vw;
   padding-bottom:3vw;
   width:60vw;
-  min-height:100%;
 }
 
 i {
@@ -259,7 +258,6 @@ container {
 }
 
 .navlist {
-  background:#FFF1ED;
   line-height:max(2.2vmax, 15pt);
   position:fixed;
   bottom:3vw;
@@ -270,7 +268,6 @@ container {
 }
 
 #logo {
-  background:#FFF1ED;
   position:relative;
   -webkit-user-drag: none;
   transition:height .3s, margin-left .3s;
@@ -483,8 +480,24 @@ sup {
 }
 
 #unreflektiert {
-  transition:all 2s;
-  opacity:1;
+  animation: slowintro forwards 1s;
+}
+
+.popup {
+  min-height:fit-content;
+  background:#FFF1ED;
+  padding:1vmax;
+  border-radius: .5vmax;
+  box-shadow: 0 0 1vmax #2f312b;
+  z-index:1;
+}
+
+.grabber:hover {
+  cursor:grab;
+}
+
+.red {
+  color:#c73a2d;
 }
 
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
@@ -498,6 +511,34 @@ start {
 
 start:hover {
   cursor:pointer;
+}
+
+@keyframes karten2turn {
+  from{right:-2vw}
+  to{right:.4vw}
+}
+
+@keyframes karten1turn {
+  from{right:-3vw}
+  to{right:.4vw}
+}
+
+#karte1 {
+  top:-2vh;
+  position:absolute;
+  width:25vw;
+  right:-3vw;
+  transform:rotate(-5deg);
+  transition:all .3s;
+}
+
+#karte2 {
+  top:-.5vh;
+  position:absolute;
+  width:25vw;
+  right:.4vw;
+  transform:rotate(-6deg);
+  transition:all .4s;
 }
 
 #eingang {
