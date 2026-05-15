@@ -15,46 +15,74 @@
 
 </head>
 
-<body>
+<body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick()">
 
     <nav id="left">
         <container>
-            <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
+            <img id="logo" class="small" src="../resources/Logo.svg" onclick="notick(), menu()">
                 <menu id="menu" class="menuoff">
-                    <a class="menulink pointer" onclick="menu()" href="../about.html">Über das Projekt</a>
-                    <a class="menulink pointer" onclick="menu()" href="../index.html">Erkundungstour</a>
-                    <a class="menulink pointer" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
-                    <a class="menulink pointer" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
+                    <a class="menulink" onclick="menu()" href="../about.html">Über das Projekt</a>
+                    <a class="menulink" onclick="menu()" href="../index.html">Erkundungstour</a>
+                    <a class="menulink" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
+                    <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
-            <p id="navlist1" class="navlist weg" onclick="keywords()"> MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
-            <p id="navlist2" class="navlist off weg"><a href="../impressum.html" class="pointer">Impressum</a><br><a href="mailto:info@taubenklauben.ch" class="pointer">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist1" class="navlist weg"> Ticken<br>Wiederholung<br>Erkundungstour</p>
+            <p id="navlist2" class="navlist off weg"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
-    <main id="main">
-        <container id="umsetzung">
-            <quote class="button" id="links" onmousedown="backwards()">❮</quote>
-            <quote class="button" id="rechts" onmousedown="forwards()">❯</quote>
+    <quote class="tik" onclick="tick()" id="tik1"><i style="animation:tiktok backwards infinite;animation-duration:2s;animation-delay:1s;">tick</i><i style="animation:tiktok 2s backwards infinite;">&hairsp;tock</i></quote>
 
-            <a href="./tauben.html" class="pointer"><div class="keyimage off" id="tauben" onmouseover="wiggle()" onmouseleave="unwiggle()" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
-                <img class="keyimage" id="weiss" style="height:37vh;top:27vh;left:-5vw;" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img>
-                <img class="keyimage" id="schöni" style="height:62vh;top:25vh;" src="../Bilder/Details/Taube_freigestellt.png"></img>
-                <img class="keyimage" id="werdt" style="height:58vh;top:32vh;left:.5vw;" src="../Bilder/Details/IMG_3450.png"></img>
-            </div></a>
-                <div class="keyimage off" id="uhren" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
-                    <img onclick="uhrenwahl('Uhr2')" class="uhrtile eins" src="../Bilder/Uhren/1uhr.png"></img>
-                    <img onclick="uhrenwahl('Uhr5')" class="uhrtile zwei" src="../Bilder/Uhren/2uhr.png"></img>
-                    <img onclick="uhrenwahl('Uhr7')" class="uhrtile drei" src="../Bilder/Uhren/3uhr.png"></img>
-                    <img onclick="uhrenwahl('Uhr8')" class="uhrtile vier" src="../Bilder/Uhren/4uhr.png"></img>
-                    <img onclick="uhrenwahl('Uhr6')" class="uhrtile fünf" src="../Bilder/Uhren/5uhr.png"></img>
-                    <img onclick="uhrenwahl('Uhr9')" class="uhrtile sechs" src="../Bilder/Uhren/6uhr.png"></img>
-                </div>
-            <a href="./bäume.html" class="pointer"><div class="keyimage off" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div></a>
-            <a href="./schauen.html" class="pointer"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
-                <img src="../Bilder/Skizzen/1.png" class="geschaut" id="geschaut1" style="height:40vh;top:-10vh;left:-22vw;"></img>
-                <img src="../Bilder/Skizzen/2.png" class="geschaut" id="geschaut2" style="height:40vh;top:-6vh;left:-18vw;"></img>
-                <img src="../Bilder/Skizzen/5.png" class="geschaut" id="geschaut3" style="height:40vh;top:-7vh;left:-20vw;" onload="randostart()" onmouseenter="shift()" onmouseleave="unshift()"></img></div></a>
-            </container>
+    <main id="main" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
+        <a href="./menu.html"><img class="keyimage" id="seitenuhr" style="align-self:center" src="../Bilder/Uhren/pieces/Uhr2.png"></img></a>
+        <container id="inhaltsgefäss">
+            <div class="spacer" style="height:23vmin;"></div>
+            <quote onclick="tick()" class="inhalt" style="position:relative;">Alles wirkte irgendwie wie eingefroren in der Zeit <i>(ein bisschen wie ein Foto)</i>, ausser die Uhr, die noch lief <i>(mit dem Pendel und einem leichten Geräusch)</i>.<br><br><p>Ethan Pageot</p></quote>
+            <div class="spacer" style="height:15vmin; animation:ersteuhr 8s ease-out;"></div>
+            <div id="ersteuhr" class="inhalt"><img class="inhalt" src="../Bilder/Uhren/HoheUhr.png" style="width:20vw;"></img>
+            <div class="inhalt" style="width:30vw;float:right;"><div class="spacer" style="height:35vmin;"></div><div class="spacer" style="height:15vmin;animation:ersteuhr 8s ease-out;"></div><p>Die Sekunden ticken und die Jahrhunderte werden plötzlich spürbar.</p>
+            <p><br>Wer sich im Raum bewegt, kann sich auf <u onclick="appear('stern'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
+            <p><br>Dieser Kontext verliert sich bei einer <u class="pointer" onclick="unclick('digital'), plaintext('digital')" id="digital">digitalen Reproduktion</u>.</p>
+            <div class="spacer" style="height:5vmin;"></div>
+            <img id="stern" onclick="appear('fusssessel'), appear('pieds'), appear('Pieds'), unclick('stern'), setTimeout(unreflektiert, 2000)" class="disappeared pointer" style="position:absolute" src="../Bilder/Uhren/Stern.png"></img>
+            <div class="inhalt" style="position:relative"><img id="fusssessel" class="disappeared" style="-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;" src="../Bilder/Teilnehmende/Pieds.jpg"></img>
+            <img id="pieds" class="disappeared" src="../Bilder/Skizzen/skizzen14.png"></img></div>
+            </div></div>
+            <div class="spacer" style="height:25vmin;width:1vw;"></div>
+
+            <div id="unreflektiert" class="disappeared" style="position:relative;"><img src="../Bilder/Uhren/Uhr1.png" style="width:55vw;"></img>
+            <img id="stern2" class="pointer" srcset="" style="position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 100;" src="../Bilder/Uhren/Stern.png"></img>
+            <p class="inhalt" style="position:absolute;color:#FFF1ED; top:68%; left:53%; width:15vw;">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel reflektiert.</p></div>
+            <div class="spacer" style="height:15vmin;"></div>
+
+            <div style="position:relative"><quote class="inhalt" style="display:inline-block;position:absolute;width:32vw;left:10;text-align:center;">Ich frage mich, ob man diese Gobelins<sup class="pointer">1</sup> und Vorhänge auch <u onclick="unclick('riechen'), plaintext('riechen')" class="pointer" id="riechen">riechen</u> kann…<br><br><p>Ralf Junghanns</p></quote>
+            <p class="inhalt" style="text-align:right;position:absolute;width:23vw;right:3vw;top:0.25vh;"><sup>1</sup>Fachbegriff für «Wand&shy;teppiche», genauer Wirkereien. Im Treppen&shy;aufgang hängen zwei solche Stoffe in enormer Grösse.</p></div>
+            <div class="spacer" style="height:10vmin;"></div>
+        </container>
     </main>
+
+    <nav id="right" style="right:0">
+        <container class="navright">
+            <div class="spacer" style="height:20vh;"></div>
+            <div id="mapwrap">
+                <img class="map" src="../resources/og.svg"></img>
+                <img class="map" src="../resources/eg.svg"></img>
+                <p style="top:55%;right:19%;" title="Standuhr" class="dot">⬤</p>
+                <p id="Uhr9" style="top:3%;right:16%;" title="Uhr mit Säulen" class="dot disappeared">⬤</p>
+                <p id="Uhr5" style="top:55%;right:29%;" title="Wanduhr" class="dot disappeared">⬤</p>
+                <p id="Uhr7" style="top:42%;right:62%;" title="Uhr mit Mann" class="dot disappeared">⬤</p>
+                <p id="Uhr8" style="top:4%;right:80%;" title="Uhr mit Frau" class="dot disappeared">⬤</p>
+                <p id="Uhr6" style="top:65.5%;right:82%;" title="Uhr mit Wagen" class="dot disappeared">⬤</p>
+                <p id="Uhr2" style="top:-1%;right:32%;" title="Uhr mit Cherub" class="dot disappeared">⬤</p>
+                <p id="Stern" style="top:4%;right:23%;" title="Uhr mit POC" class="dot disappeared">⬤</p>
+                <p id="Pieds" style="top:11%;right:40%;" title="Stuhl mit Tatzen" class="dot disappeared">⬤</p>
+            </div>
+        </container>
+    </nav>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {$( "#stern2" ).draggable();} );
+    </script>
 </body>
