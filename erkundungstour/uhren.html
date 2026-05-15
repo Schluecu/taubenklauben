@@ -18,6 +18,7 @@
 <body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick()">
 
     <nav id="left">
+        <div class="blurnav l"></div>
         <container>
             <img id="logo" class="small" src="../resources/Logo.svg" onclick="notick(), menu()">
                 <menu id="menu" class="menuoff">
@@ -48,10 +49,12 @@
             <p><br>Dieser Kontext verliert sich bei einer <u class="pointer" onclick="appear('ralfgobelins1'), unclick('digital'), plaintext('digital')" id="digital">digitalen Reproduktion</u>.</p>
             <div class="spacer" style="height:5vmin;"></div>
 
-            <div class="disappeared popup grabber" srcset="" onmousedown="goblin('ralfgobelins1')" style="position:fixed;top:30vh;left:30vw;" id="ralfgobelins1"><quote class="inhalt" style="display:inline-block;width:32vw;left:10;text-align:center;">
-            Ich frage mich, ob man diese Gobelins<sup id="hoch" class="pointer red" onclick="appear('ralfgobelins2'), unred('hoch')">1</sup> und Vorhänge auch <u onclick="unclick('riechen'), plaintext('riechen')" class="pointer" id="riechen">riechen</u> kann…<br><br><p>Ralf Junghanns</p></quote></div>
-            <div class="disappeared popup grabber" srcset="" onmousedown="goblin('ralfgobelins2')" style="position:fixed;top:40vh;left:55vw;" id="ralfgobelins2">
-            <p class="inhalt" style="text-align:center;width:23vw;"><sup>1</sup>Fachbegriff für «Wand&shy;teppiche», genauer Wirkereien. Im Treppen&shy;aufgang hängen zwei solche Stoffe in enormer Grösse.</p></div>
+            <div class="disappeared popup grabber" srcset style="position:fixed;top:30vh;left:30vw;" id="ralfgobelins1"><quote class="inhalt" style="display:inline-block;width:32vw;left:10;text-align:center;">
+            Ich frage mich, ob man diese Gobelins<sup id="hoch" class="pointer red" onclick="appear('ralfgobelins2'), unred('hoch')">1</sup> und Vorhänge auch <u onclick="unclick('riechen'), plaintext('riechen')" class="pointer" id="riechen">riechen</u> kann…<br><br><p>Ralf Junghanns</p></quote>
+            <p class="cross" onclick="disappear('ralfgobelins1')" style="position:absolute;bottom:6%;right:3%;">×</p></div>
+            <div class="disappeared popup grabber" srcset style="position:fixed;top:40vh;left:55vw;" id="ralfgobelins2">
+            <p class="inhalt" style="text-align:center;width:23vw;"><sup>1</sup>Fachbegriff für «Wand&shy;teppiche», genauer Wirkereien. Im Treppen&shy;aufgang hängen zwei solche Stoffe in enormer Grösse.</p>
+            <p class="cross" onclick="disappear('ralfgobelins2')" style="position:absolute;bottom:6%;right:3%;">×</p></div>
 
 
             <img id="sternzeichnung" class="disappeared" style="position:absolute; width:15vw;left:-2vw;" src="../Bilder/Skizzen/skizzen27.png"></img>
@@ -62,7 +65,7 @@
 
             <div class="spacer" style="height:25vmin;"></div>
             <div id="unreflektiert" class="disappeared" style="position:relative;"><img src="../Bilder/Uhren/Uhr1.png" style="width:55vw;"></img>
-            <img id="stern2" class="grabber" srcset="" style="position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 100;" src="../Bilder/Uhren/Stern.png"></img>
+            <img id="stern2" class="grabber" srcset="" style="position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 1;" src="../Bilder/Uhren/Stern.png"></img>
             <p class="inhalt" style="position:absolute;color:#FFF1ED; top:68%; left:53%; width:15vw;">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel reflektiert.</p></div>
 
             <div class="spacer" style="height:15vmin;"></div>
@@ -70,6 +73,7 @@
     </main>
 
     <nav id="right" style="right:0">
+        <div class="blurnav r"></div>
         <container class="navright">
             <div class="spacer" style="height:20vh;"></div>
             <div id="mapwrap">
