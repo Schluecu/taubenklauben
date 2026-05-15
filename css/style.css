@@ -63,10 +63,6 @@ u:hover {
   color:#c73a2d;
 }
 
-sup:hover {
-  color:#c73a2d;
-}
-
 quote {
   hyphens:auto;
   font-family:Circuit, serif;
@@ -479,6 +475,16 @@ container {
 sup {
   vertical-align:super;
   font-size:max(1vmax, 7pt);
+}
+
+#stern2:hover {
+  transform-origin: 50% 50%;
+  transform:scale(1.03);
+}
+
+#unreflektiert {
+  transition:all 2s;
+  opacity:1;
 }
 
 /* rot: #c73a2d    weiss: #FFF1ED    blau: #285f78    schwarz: #2f312b */
