@@ -229,6 +229,10 @@ function appear(toappear) {
   document.getElementById(toappear).classList.remove('disappeared');
 }
 
+function disappear(toappear) {
+  document.getElementById(toappear).classList.add('disappeared');
+}
+
 function unclick(unclick) {
   document.getElementById(unclick).onclick="";
   document.getElementById(unclick).classList.remove('pointer');
