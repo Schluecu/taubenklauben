@@ -21,14 +21,14 @@
         <container>
             <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
                 <menu id="menu" class="menuoff">
-                    <a class="menulink" onclick="menu()" href="../about.html">Über das Projekt</a>
-                    <a class="menulink" onclick="menu()" href="../index.html">Erkundungstour</a>
-                    <a class="menulink" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
-                    <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
+                    <a class="menulink pointer" onclick="menu()" href="../about.html">Über das Projekt</a>
+                    <a class="menulink pointer" onclick="menu()" href="../index.html">Erkundungstour</a>
+                    <a class="menulink pointer" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
+                    <a class="menulink pointer" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
             <p id="navlist1" class="navlist weg" onclick="keywords()"> MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
-            <p id="navlist2" class="navlist off weg"><a href="../impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist2" class="navlist off weg"><a href="../impressum.html" class="pointer">Impressum</a><br><a href="mailto:info@taubenklauben.ch" class="pointer">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
@@ -37,7 +37,7 @@
             <quote class="button" id="links" onmousedown="backwards()">❮</quote>
             <quote class="button" id="rechts" onmousedown="forwards()">❯</quote>
 
-            <a href="./tauben.html"><div class="keyimage off" id="tauben" onmouseover="wiggle()" onmouseleave="unwiggle()" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
+            <a href="./tauben.html" class="pointer"><div class="keyimage off" id="tauben" onmouseover="wiggle()" onmouseleave="unwiggle()" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
                 <img class="keyimage" id="weiss" style="height:37vh;top:27vh;left:-5vw;" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img>
                 <img class="keyimage" id="schöni" style="height:62vh;top:25vh;" src="../Bilder/Details/Taube_freigestellt.png"></img>
                 <img class="keyimage" id="werdt" style="height:58vh;top:32vh;left:.5vw;" src="../Bilder/Details/IMG_3450.png"></img>
@@ -50,8 +50,8 @@
                     <img onclick="uhrenwahl('Uhr6')" class="uhrtile fünf" src="../Bilder/Uhren/5uhr.png"></img>
                     <img onclick="uhrenwahl('Uhr9')" class="uhrtile sechs" src="../Bilder/Uhren/6uhr.png"></img>
                 </div>
-            <a href="./bäume.html"><div class="keyimage off" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div></a>
-            <a href="./schauen.html"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
+            <a href="./bäume.html" class="pointer"><div class="keyimage off" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div></a>
+            <a href="./schauen.html" class="pointer"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
                 <img src="../Bilder/Skizzen/1.png" class="geschaut" id="geschaut1" style="height:40vh;top:-10vh;left:-22vw;"></img>
                 <img src="../Bilder/Skizzen/2.png" class="geschaut" id="geschaut2" style="height:40vh;top:-6vh;left:-18vw;"></img>
                 <img src="../Bilder/Skizzen/5.png" class="geschaut" id="geschaut3" style="height:40vh;top:-7vh;left:-20vw;" onload="randostart()" onmouseenter="shift()" onmouseleave="unshift()"></img></div></a>
