@@ -42,23 +42,46 @@
             <div class="spacer" style="height:15vmin; animation:ersteuhr 8s ease-out;"></div>
             <div id="ersteuhr" class="inhalt"><img class="inhalt" src="../Bilder/Uhren/HoheUhr.png" style="width:20vw;"></img>
             <div class="inhalt" style="width:30vw;float:right;"><div class="spacer" style="height:35vmin;"></div><div class="spacer" style="height:15vmin;animation:ersteuhr 8s ease-out;"></div><p>Die Sekunden ticken und die Jahrhunderte werden plötzlich spürbar.</p>
-            <p><br>Wer sich im Raum bewegt, kann sich auf Details achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
-            <p><br>Dieser Kontext verliert sich bei einer digitalen Reproduktion.</p>
+            <p><br>Wer sich im Raum bewegt, kann sich auf <u onclick="appear('stern'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
+            <p><br>Dieser Kontext verliert sich bei einer <u class="pointer" onclick="unclick('digital'), plaintext('digital')" id="digital">digitalen Reproduktion</u>.</p>
+            <div class="spacer" style="height:5vmin;"></div>
+            <img id="stern" onclick="appear('Stern'), appear('fusssessel'), appear('pieds'), unclick('stern'), setTimeout(unreflektiert, 2000)" class="disappeared pointer" style="position:absolute" src="../Bilder/Uhren/Stern.png"></img>
+            <div class="inhalt" style="position:relative"><img id="fusssessel" class="disappeared" style="-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;" src="../Bilder/Teilnehmende/pieds.jpg"></img>
+            <img id="pieds" class="disappeared" src="../Bilder/Skizzen/skizzen14.png"></img></div>
             </div></div>
+            <div class="spacer" style="height:25vmin;width:1vw;"></div>
+
+            <div id="unreflektiert" class="disappeared" style="position:relative;"><img src="../Bilder/Uhren/Uhr1.png" style="width:55vw;transition:all 1s;"></img>
+            <img id="stern2" class="pointer" srcset="" style="position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 100;" src="../Bilder/Uhren/Stern.png"></img>
+            <p class="inhalt" style="position:absolute;color:#FFF1ED; top:68%; left:53%; width:15vw;">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel reflektiert.</p></div>
+            <div class="spacer" style="height:15vmin;"></div>
+
+            <div style="position:relative"><quote class="inhalt" style="display:inline-block;position:absolute;width:32vw;left:10;text-align:center;">Ich frage mich, ob man diese Gobelins<sup class="pointer">1</sup> und Vorhänge auch <u onclick="unclick('riechen'), plaintext('riechen')" class="pointer" id="riechen">riechen</u> kann…<br><br><p>Ralf Junghanns</p></quote>
+            <p class="inhalt" style="text-align:right;position:absolute;width:23vw;right:3vw;top:0.25vh;"><sup>1</sup>Fachbegriff für «Wand&shy;teppiche», genauer Wirkereien. Im Treppen&shy;aufgang hängen zwei solche Stoffe in enormer Grösse.</p></div>
             <div class="spacer" style="height:10vmin;"></div>
-            <quote class="inhalt" style="width:35vw;left:10vw;text-align:center;">Ich frage mich, ob man diese Gobelins und Vorhänge auch <a><u>riechen</u></a> kann…<br><br><p>Ralf Junghanns</p></quote>
         </container>
     </main>
 
     <nav id="right" style="right:0">
         <container class="navright">
             <div class="spacer" style="height:20vh;"></div>
-            <div class="mapwrap">
+            <div id="mapwrap">
                 <img class="map" src="../resources/og.svg"></img>
                 <img class="map" src="../resources/eg.svg"></img>
-                <p style="top:65.5%;right:67%;" class="dot">⬤</p>
-                <p style="top:55%;right:19%;" class="dot">⬤</p>
+                <p style="top:55%;right:19%;" title="Standuhr" class="dot">⬤</p>
+                <p id="Uhr9" style="top:3%;right:16%;" title="Uhr mit Säulen" class="dot disappeared">⬤</p>
+                <p id="Uhr5" style="top:55%;right:29%;" title="Wanduhr" class="dot disappeared">⬤</p>
+                <p id="Uhr7" style="top:42%;right:62%;" title="Uhr mit Mann" class="dot disappeared">⬤</p>
+                <p id="Uhr8" style="top:4%;right:80%;" title="Uhr mit Frau" class="dot disappeared">⬤</p>
+                <p id="Uhr6" style="top:65.5%;right:82%;" title="Uhr mit Wagen" class="dot disappeared">⬤</p>
+                <p id="Uhr2" style="top:-1%;right:32%;" title="Uhr mit Cherub" class="dot disappeared">⬤</p>
+                <p id="Stern" style="top:4%;right:23%;" title="Uhr mit POC" class="dot disappeared">⬤</p>
             </div>
         </container>
     </nav>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {$( "#stern2" ).draggable();} );
+    </script>
 </body>
