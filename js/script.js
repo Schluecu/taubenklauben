@@ -171,15 +171,14 @@ function klassen(klasse) {
 }
 
 function uhrenwahl(uhr) {
-  öffnen = "./uhren.html#"+uhr;
+  öffnen = "./uhren.html?"+uhr;
   console.log(öffnen);
   open(öffnen, "_self");
 }
 
 function uhrenzuteilung(klasse) {
   const text = window.location.toString();
-  let zwischen = text.split("#")[1];
-  let result = zwischen.split(".")[0];
+  let result = text.split("?")[1];
   const value = "../Bilder/Uhren/pieces/"+result+".png";
   document.getElementById('seitenuhr').setAttribute("src", value.toString());
   console.log(document.getElementById('seitenuhr').getAttribute("src"));
@@ -243,5 +242,5 @@ function plaintext(goal) {
 
 function unreflektiert() {
   appear('unreflektiert');
-  //scroller('unreflektiert');
+  appear ('Stern');
 }
