@@ -65,6 +65,10 @@ function start() {
   document.getElementById("uhr").style.width="20vw";
   document.getElementById("taube").style.left="-30vw";
   document.getElementById("taube").style.width="30vw";
+  document.getElementById("karte1").style.animation="";
+  document.getElementById("karte1").style.right="-25vw";
+  document.getElementById("karte2").style.animation="";
+  document.getElementById("karte2").style.right="-100vw";
   setTimeout(end, 400);
 }
 
@@ -243,4 +247,8 @@ function plaintext(goal) {
 function unreflektiert() {
   appear('unreflektiert');
   appear ('Stern');
+}
+
+function unred(tounred) {
+  document.getElementById(tounred).classList.remove('red');
 }
