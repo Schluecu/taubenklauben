@@ -26,12 +26,14 @@ function menu() {
   var z = document.getElementById('logo');
   var a = document.getElementById('navlist1');
   var b = document.getElementById('navlist2');
+  var c = document.getElementById('mapwrap');
   if(x.classList.contains("menuon")) {
     x.classList.remove("menuon");
     y.style.display="flex";
     z.classList.remove('big');
     a.classList.remove('off');
     b.classList.add('off');
+    c.classList.remove('disappeared');
     document.getElementById('aufführung').style.visibility="visible";
   } else {
     x.classList.add("menuon");
@@ -39,6 +41,7 @@ function menu() {
     z.classList.add('big');
     a.classList.add('off');
     b.classList.remove('off');
+    c.classList.add('disappeared');
     document.getElementById('aufführung').style.visibility="hidden";
   }
 }
@@ -177,11 +180,11 @@ function uhrenzuteilung(klasse) {
   const text = window.location.toString();
   let zwischen = text.split("#")[1];
   let result = zwischen.split(".")[0];
-  console.log(result);
   const value = "../Bilder/Uhren/pieces/"+result+".png";
   document.getElementById('seitenuhr').setAttribute("src", value.toString());
   console.log(document.getElementById('seitenuhr').getAttribute("src"));
   klassen(klasse);
+  document.getElementById(result).classList.remove('disappeared');
 }
 
 function shift(){
@@ -217,4 +220,28 @@ function notick() {
   } else {
     document.getElementById('tik1').classList.add('disappeared');
   }
+}
+
+function appear(toappear) {
+  document.getElementById(toappear).classList.remove('disappeared');
+}
+
+function unclick(unclick) {
+  document.getElementById(unclick).onclick="";
+  document.getElementById(unclick).classList.remove('pointer');
+}
+
+function scroller(goal) {
+  endgoal = (document.getElementById(goal).getBoundingClientRect().bottom-document.getElementById(goal).getBoundingClientRect().top)/2+document.getElementById(goal).getBoundingClientRect().top;
+  console.log(endgoal);
+  window.scrollTo(0, endgoal);
+}
+
+function plaintext(goal) {
+  document.getElementById(goal).classList.add('plaintext');
+}
+
+function unreflektiert() {
+  appear('unreflektiert');
+  //scroller('unreflektiert');
 }
