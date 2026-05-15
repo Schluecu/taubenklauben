@@ -34,8 +34,20 @@ nav {
   height:100vh;
   display:inline-flex;
   position:fixed;
-  z-index:10;
+  z-index:2;
 }
+
+.blurnav {
+  position:absolute;
+  display:block;
+  width:20vw;
+  height:100%;
+  backdrop-filter: blur(3px);
+  background:#FFF1EDAA;
+}
+
+.blurnav.l{mask: linear-gradient(to left, transparent, black 35%);}
+.blurnav.r{mask: linear-gradient(to right, transparent, black 35%);}
 
 main {
   display:flex;
@@ -113,7 +125,7 @@ container {
 }
 
 .imagelink{
-  z-index:10;
+  z-index:1;
   height:max-content;
 }
 
@@ -310,7 +322,7 @@ container {
 .button {
   position:absolute;
   top:46%;
-  z-index:10;
+  z-index:1;
 }
 
 .button:hover {
@@ -367,7 +379,7 @@ container {
   transition:all .4s ease-out;
   height:30vh;
   left:9vw;
-  z-index:10;
+  z-index:2;
 }
 
 .seitentaube:hover {
@@ -388,7 +400,7 @@ container {
   transition:all .4s ease-out;
   height:40vh;
   left:9vw;
-  z-index:10;
+  z-index:2;
 }
 
 .seitenbaum:hover {
@@ -401,7 +413,7 @@ container {
   width:13vw;
   height:auto;
   left:9vw;
-  z-index:10;
+  z-index:2;
 }
 
 .seitenuhr:hover {
@@ -442,7 +454,7 @@ container {
   transition:all .4s ease-out;
   height:15vh;
   left:10vw;
-  z-index:10;
+  z-index:2;
 }
 
 .seitenschauen:hover {
@@ -494,6 +506,11 @@ sup {
 
 .grabber:hover {
   cursor:grab;
+}
+
+.cross:hover {
+  color:#c73a2d;
+  cursor:pointer;
 }
 
 .red {
@@ -618,7 +635,7 @@ start:hover {
 .tik {
   display:flex;
   position:fixed;
-  z-index:10;
+  z-index:1;
 }
 
 .tik:hover {
