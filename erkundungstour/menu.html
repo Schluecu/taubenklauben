@@ -42,9 +42,10 @@
             <div class="spacer" style="height:15vmin; animation:ersteuhr 8s ease-out;"></div>
             <div id="ersteuhr" class="inhalt"><img class="inhalt" src="../Bilder/Uhren/HoheUhr.png" style="width:20vw;"></img>
             <div class="inhalt" style="width:30vw;float:right;"><div class="spacer" style="height:35vmin;"></div><div class="spacer" style="height:15vmin;animation:ersteuhr 8s ease-out;"></div><p>Die Sekunden ticken und die Jahrhunderte werden plötzlich spürbar.</p>
-            <p><br>Wer sich im Raum bewegt, kann sich auf <u onclick="appear('stern'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
+            <p><br>Wer sich im Raum bewegt, kann sich auf <u onclick="appear('stern'), appear('sternzeichnung'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
             <p><br>Dieser Kontext verliert sich bei einer <u class="pointer" onclick="unclick('digital'), plaintext('digital')" id="digital">digitalen Reproduktion</u>.</p>
             <div class="spacer" style="height:5vmin;"></div>
+            <img id="sternzeichnung" class="disappeared" style="position:absolute; width:15vw;left:-2vw;" src="../Bilder/Skizzen/skizzen27.png"></img>
             <img id="stern" onclick="appear('fusssessel'), appear('pieds'), appear('Pieds'), unclick('stern'), setTimeout(unreflektiert, 2000)" class="disappeared pointer" style="position:absolute" src="../Bilder/Uhren/Stern.png"></img>
             <div class="inhalt" style="position:relative"><img id="fusssessel" class="disappeared" style="-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;" src="../Bilder/Teilnehmende/Pieds.jpg"></img>
             <img id="pieds" class="disappeared" src="../Bilder/Skizzen/skizzen14.png"></img></div>
