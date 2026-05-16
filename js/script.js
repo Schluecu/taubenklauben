@@ -256,3 +256,13 @@ function unreflektiert() {
 function unred(tounred) {
   document.getElementById(tounred).classList.remove('red');
 }
+
+function spacerheight(target, height){
+  document.getElementById(target).style="height:"+height+";";
+}
+
+function aufführung() {
+  if (document.getElementById('aufführung').classList.contains('disappear')) {
+    document.getElementById('aufführung').classList.remove('disappear');
+  } else {document.getElementById('aufführung').classList.add('disappear');}
+}
