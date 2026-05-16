@@ -436,7 +436,7 @@ container {
   100% {transform:rotate(360deg)}
 }
 
-.uhrtile {width:12vw; transition: all 3s;z-index: 10}
+.uhrtile {width:40%; transition: all 3s;z-index: 10}
 .uhrtile.eins {animation: roundnround 15s infinite linear}
 .uhrtile.zwei {animation: roundnround 9s infinite linear}
 .uhrtile.drei {animation: roundnround 7s infinite linear}
@@ -724,7 +724,18 @@ start:hover {
 @media only screen and (orientation:portrait){
   body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh;}
   main {margin-top:12vh;margin-left:3vw;width:90vw;}
-  nav {display:inline;position:fixed;}
+  nav {display:inline;position:fixed;height:10%;width:20%}
+  nav#right {bottom:0;}
+  #mapwrap {top:-500%;width:100%;right:30%}
+  .map{width:100%}
+
+  .keyimage{width:30%;height:20%;object-fit:contain;}
+  .seitenschauen{left:80%}
+
+  #unterbaum{width:220%;height:auto;}
+  #tauben{width:220%;height:auto;}
+
+  .blurnav.l {width:34%;mask: radial-gradient(black,transparent 100%);}
   quote {display:block; width:85vw;}
   container {padding:0}
   .bildunterschrift{margin:2vw;}
@@ -735,7 +746,7 @@ start:hover {
   .menuon {font-size:max(2vmax, 15pt);line-height:max(3vmax, 20pt);padding-bottom:0;margin-top:0vh;
     margin-left:20vw;position:absolute;top:25vh;left:2vw;align-content:center; overflow:hidden;}
   .navlist {padding-right:65vw;}
-  #logo {padding-right:65vw;}
+  #logo {padding-right:0;}
   #dingle {top:0vh;}
   #aufführung {top:2.5vmax;}
   #verzeichnis {margin-top:5vmax;position:absolute;width:100vw;overflow:scroll;}
@@ -752,7 +763,6 @@ start:hover {
   .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
   #uhr {width:70vw;top:-16vh;left:-25vw;}
   #umsetzung {width:90vw;}
-  .keyimage {height:50vh;}
   #rechts {width:5vw;}
   #links {width:5vw;}
   .linksraus {right:-100vw;}
