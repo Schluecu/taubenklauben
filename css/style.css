@@ -54,7 +54,7 @@ main {
   flex-direction:column;
   margin-top:12vmax;
   margin-left:20vw;
-  padding-bottom:3vw;
+  padding-bottom:10vh;
   width:60vw;
 }
 
@@ -508,8 +508,11 @@ sup {
   cursor:grab;
 }
 
-.cross:hover {
+.cross {
   color:#c73a2d;
+}
+
+.cross:hover {
   cursor:pointer;
 }
 
@@ -685,7 +688,32 @@ start:hover {
 }
 
 .plaintext:hover{
-  color:#285f78;
+  color:inherit;
+}
+
+#stern {
+  position:absolute;
+  transform-origin: 48% 55%;
+  animation: roundnround infinite linear 10s;
+}
+
+#stern:hover {
+  animation: roundnround infinite linear 2s;
+}
+
+#turnherr {
+  opacity:0;
+  padding-top:30vh;
+  text-shadow:0 0 .5vmax #285f78;color:#FFF1ED;
+  position:absolute;
+  left:2vw;
+  bottom:4vh;
+  width:22.5vw;
+}
+
+#turnherr:hover {
+  opacity:1;
+  transition:all .3s;
 }
 
 @keyframes ersteuhr {
