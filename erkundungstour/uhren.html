@@ -24,8 +24,7 @@
                 <menu id="menu" class="menuoff">
                     <a class="menulink" onclick="menu()" href="../about.html">Über das Projekt</a>
                     <a class="menulink" onclick="menu()" href="../index.html">Erkundungstour</a>
-                    <a class="menulink" onclick="menu()" href="../tauben.html">Zu den Tauben</a>
-                    <a class="menulink" onclick="menu()" href="../verzeichnis.html">Verzeichnis</a>
+                    <a class="menulink pointer" onclick="menu()" href="../impressum.html">Impressum</a>
                     <img src="../resources/Taube.ico" id="dingle"></img>
                 </menu></img>
             <p id="navlist1" class="navlist weg"> Ticken<br>Wiederholung<br>Erkundungstour</p>
@@ -33,7 +32,7 @@
         </container>
     </nav>
 
-    <quote class="tik" onclick="tick()" id="tik1" srcset=""><i style="animation:tiktok backwards infinite;animation-duration:2s;animation-delay:1s;">tick</i><i style="animation:tiktok 2s backwards infinite;">&hairsp;tock</i></quote>
+    <quote class="tik" onclick="tick()" id="tik1" srcset=""><i style="z-index:3; animation:tiktok backwards infinite;animation-duration:2s;animation-delay:1s;">tick</i><i style="animation:tiktok 2s backwards infinite;">&hairsp;tock</i></quote>
 
     <main id="main" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
         <a href="./menu.html"><img class="keyimage" id="seitenuhr" style="align-self:center" src="../Bilder/Uhren/pieces/Uhr2.png"></img></a>
@@ -78,7 +77,7 @@
             <div class="spacer" id="unrefl" style="height:25vmin;"></div>
             <div id="unreflektiert" class="disappeared" style="position:relative;"><img src="../Bilder/Uhren/Uhr1.png" style="width:55vw;"></img>
             <img id="stern2" class="grabber" srcset="" style="position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 1;" src="../Bilder/Uhren/Stern.png"></img>
-            <p class="inhalt" style="position:absolute;color:#FFF1ED; top:68%; left:53%; width:15vw;">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel <u id="reflektiert" class="pointer" onclick="appear('büste'), appear('Büste'), plaintext('reflektiert'), unclick('reflektiert')">reflektiert</u>.</p>
+            <p class="inhalt" style="position:absolute;color:#FFF1ED; text-shadow:0 0 .5vmax #285f78; top:68%; left:53%; width:15vw;">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel <u id="reflektiert" class="pointer" onclick="appear('büste'), appear('Büste'), plaintext('reflektiert'), unclick('reflektiert')">reflektiert</u>.</p>
             </div>
             <div id="büste" style="position:relative;" class="disappeared">
             <div class="spacer" style="height:5vh;"></div>
