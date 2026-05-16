@@ -154,20 +154,18 @@ function wiggle() {
   x = document.getElementById('weiss')
   y = document.getElementById('schöni')
   z = document.getElementById('werdt')
-  console.log(x, y, z);
-  x.style="transition:all .15s ;height:37vh;top:27.2vh;left:-5.5vw;";
-  y.style="transition:all .2s ;height:62vh;top:25.5vh;;left:-.2vw;";
-  z.style="transition:all .3s ;height:58vh;top:32.5vh;left:0.6vw;";
+  x.style="transition:all .15s ;height:64%;top:49%;left:-5.3vw;";
+  y.style="transition:all .2s ;height:104.5%;top:41.5%;;left:-.1vw;";
+  z.style="transition:all .3s ;height:99%;top:53.5%;left:0.6vw;";
 }
 
 function unwiggle() {
   x = document.getElementById('weiss')
   y = document.getElementById('schöni')
   z = document.getElementById('werdt')
-  console.log(x, y, z);
-  x.style="height:37vh;top:27vh;left:-5vw;";
-  y.style="height:62vh;top:25vh;";
-  z.style="height:58vh;top:32vh;left:0.5vw;";
+  x.style="height:65%;top:48%;left:-5vw;";
+  y.style="height:104%;top:41%;";
+  z.style="height:98%;top:53%;left:.5vw;";
 }
 
 function klassen(klasse) {
