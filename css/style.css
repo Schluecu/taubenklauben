@@ -86,7 +86,6 @@ p {
   font-family:Giusto, sans-serif;
   font-size:max(1.5vmax, 10pt);
   color: #285f78;
-  hyphens:all;
 }
 
 p.inhalt {
@@ -716,6 +715,25 @@ start:hover {
   transition:all .3s;
 }
 
+#hoheuhr{width:20vw;}
+#ersteuhr{width:50vw;}
+#nebenuhr{width:30vw;float:right;}
+#ralfgobelins2{position:fixed;top:40vh;left:55vw;}
+#sternzeichnung{position:absolute; width:15vw;left:-2vw;}
+#spaced{min-height:35vmin;}
+#olfaktorisch{float:right; position:absolute; text-align:center; width:30%; right:28%; top:8vh;}
+#uhrreflekt{width:55vw;}
+#stern2{position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 1;}
+#fahrlässig{position:absolute;color:#FFF1ED; text-shadow:0 0 .5vmax #285f78; top:68%; left:53%; width:15vw;}
+#lowest{height:5vh;}
+#trophäe{position:absolute;left:45%;top:8%;width:26vw;}
+#büstenbild{width:25vw;}
+#fusssessel{-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;}
+#turnherrzitat{position:fixed;top:30vh;left:30vw;}
+#turnherrtext{user-select: text;display:inline-block;width:25vw;text-align:left;}
+
+.tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
+
 @keyframes ersteuhr {
   0% {height:20vmin;}
   100% {height:15vmin;}
@@ -731,6 +749,30 @@ start:hover {
 
   .keyimage{width:30%;height:20%;object-fit:contain;}
   .seitenschauen{left:80%}
+  .seitenuhr{left:85%; width:20%}
+
+  #spaced{min-height:0%;}
+  #hoheuhr{width:40%;}
+  #ersteuhr{width:113%;}
+  #nebenuhr{width:60%;float:right;}
+  #sternzeichnung{position:absolute; width:100%;left:-10%;}
+  #multi{width:170%}
+  #olfaktorisch{position:absolute; text-align:center; width:60%; right:-8%; top:20%;}
+  #uhrreflekt{width:115%;}
+  #stern2{position:absolute;width:15%;right:7.7%;top:44.1%; z-index: 1;}
+  #fahrlässig{position:absolute; top:102%; left:3%; width:115%;color:#285f78;text-shadow:none;}
+  #lowest{height:15vh;}
+  #trophäe{position:absolute;left:3%;top:102%;width:110%;padding-bottom:10vh;}
+  #büstenbild{width:115%;}
+  #fusssessel{-webkit-user-drag:none;width:70%;position:relative;right:60%;top:11vh}
+  #pieds {transition:.5s ease-out;position:absolute;-webkit-user-drag:none;width:130%;left:-41%;top:60%;transform:rotate(2deg);}
+  #pieds:hover {left:-30%;transform:rotate(-3.5deg);cursor:grab;}
+  #turnherrzitat{position:fixed;top:30vh;left:30vw;width:38%}
+  #turnherrtext{user-select: text;display:inline-block;width:100%;left:3%;text-align:left;}
+
+  #ralfgobelins1{width:40%}
+  #ralfgobelins2{width:33%;left:30%}
+  .tooltipinhalt{display:inline-block;width:100%;text-align:center;}
 
   #unterbaum{width:220%;height:auto;}
   #tauben{width:220%;height:auto;}
