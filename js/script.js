@@ -160,9 +160,9 @@ function wiggle() {
 }
 
 function unwiggle() {
-  x = document.getElementById('weiss')
-  y = document.getElementById('schöni')
-  z = document.getElementById('werdt')
+  x = document.getElementById('mweiss')
+  y = document.getElementById('mschöni')
+  z = document.getElementById('mwerdt')
   x.style="height:65%;top:48%;transform:translate(-75%, -50%)";
   y.style="height:104%;top:41%;";
   z.style="height:98%;top:53%;transform:translate(-48%, -50%)";
