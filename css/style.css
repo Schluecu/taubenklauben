@@ -735,9 +735,9 @@ start:hover {
 #geschaut1{top:-10vh;left:-22vw;}
 #geschaut2{top:-6vh;left:-18vw;}
 #geschaut3{top:-7vh;left:-20vw;}
-#weiss{height:65%;top:48%;transform:translate(-75%, -50%)}
-#schöni{height:104%;top:41%;}
-#werdt{height:98%;top:53%;transform:translate(-48%, -50%)}
+#mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
+#mschöni{height:104%;top:41%;}
+#mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
