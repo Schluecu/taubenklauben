@@ -731,6 +731,13 @@ start:hover {
 #fusssessel{-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;}
 #turnherrzitat{position:fixed;top:30vh;left:30vw;}
 #turnherrtext{user-select: text;display:inline-block;width:25vw;text-align:left;}
+.geschaut{height:40vh}
+#geschaut1{top:-10vh;left:-22vw;}
+#geschaut2{top:-6vh;left:-18vw;}
+#geschaut3{top:-7vh;left:-20vw;}
+#weiss{height:65%;top:48%;transform:translate(-75%, -50%)}
+#schöni{height:104%;top:41%;}
+#werdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
@@ -750,6 +757,7 @@ start:hover {
   .keyimage{width:30%;height:20%;object-fit:contain;}
   .seitenschauen{left:80%}
   .seitenuhr{left:85%; width:20%}
+  .seitentaube{left:85%;width:20%}
 
   #spaced{min-height:0%;}
   #hoheuhr{width:40%;}
@@ -769,15 +777,22 @@ start:hover {
   #pieds:hover {left:-30%;transform:rotate(-3.5deg);cursor:grab;}
   #turnherrzitat{position:fixed;top:30vh;left:30vw;width:38%}
   #turnherrtext{user-select: text;display:inline-block;width:100%;left:3%;text-align:left;}
+  .geschaut{height:110%;}
+  #geschaut1{top:10%;left:-70%;}
+  #geschaut2{top:14%;left:-60%;}
+  #geschaut3{top:13%;left:-65%;}
+  #uhren{width:60%;top:30%;transform:translate(-44%, -50%)}
+  #navlist1.menu{left:36%;top:69%;text-align:center;}
+  #navlist2{left:29%;top:69%;text-align:center}
 
   #ralfgobelins1{width:40%}
   #ralfgobelins2{width:33%;left:30%}
   .tooltipinhalt{display:inline-block;width:100%;text-align:center;}
 
   #unterbaum{width:220%;height:auto;}
-  #tauben{width:220%;height:auto;}
+  #tauben{width:220%;height:80%;transform:translate(-48%, -50%)}
 
-  .blurnav.l {width:34%;mask: radial-gradient(black,transparent 100%);}
+  .blurnav.l {width:34%;mask: radial-gradient(black,transparent 90%);}
   quote {display:block; width:85vw;}
   container {padding:0}
   .bildunterschrift{margin:2vw;}
