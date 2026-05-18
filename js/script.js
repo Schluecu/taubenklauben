@@ -151,12 +151,12 @@ function textändern(y) {
 }
 
 function wiggle() {
-  x = document.getElementById('weiss')
-  y = document.getElementById('schöni')
-  z = document.getElementById('werdt')
-  x.style="transition:all .15s ;height:64%;top:48.5%;transform:translate(-78%, -50%)";
-  y.style="transition:all .2s ;height:104.5%;top:41.5%;transform:translate(-50%, -50%)";
-  z.style="transition:all .3s ;height:99%;top:53.5%;transform:translate(-47.5%, -50%)";
+  x = document.getElementById('mweiss')
+  y = document.getElementById('mschöni')
+  z = document.getElementById('mwerdt')
+  x.style="transition:all .15s;height:64%;top:48.5%;transform:translate(-78%, -50%)";
+  y.style="transition:all .2s;height:104.5%;top:41.5%;transform:translate(-50%, -50%)";
+  z.style="transition:all .3s;height:99%;top:53.5%;transform:translate(-47.5%, -50%)";
 }
 
 function unwiggle() {
