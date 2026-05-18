@@ -769,7 +769,7 @@ start:hover {
   #uhrreflekt{width:115%;}
   #stern2{position:absolute;width:15%;right:7.7%;top:44.1%; z-index: 1;}
   #fahrlässig{position:absolute; top:102%; left:3%; width:115%;color:#285f78;text-shadow:none;}
-  #lowest{height:15vh;}
+  #lowest{height:17vh;}
   #trophäe{position:absolute;left:3%;top:102%;width:110%;padding-bottom:10vh;}
   #büstenbild{width:115%;}
   #fusssessel{-webkit-user-drag:none;width:70%;position:relative;right:60%;top:11vh}
