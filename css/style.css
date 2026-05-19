@@ -814,7 +814,7 @@ start:hover {
     50% {top:71vh}
     100% {top:71.6vh}
   }
-  #taube {width:25vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
+  #taube {width:22vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
   #eingang {width:180vw;bottom:-5vh;left:-56vw}
   .weg {display:none}
   .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
