@@ -155,7 +155,7 @@ function wiggle() {
   y = document.getElementById('mschöni')
   z = document.getElementById('mwerdt')
   x.style="transition:all .15s;height:64%;top:48.5%;transform:translate(-78%, -50%);";
-  y.style="transition:all .2s;height:125.5%;top:46.5%;width:25vw;transform:translate(-49%, -50%);@media only screen and (orientation:portrait){width:47%;}";
+  y.style="transition:all .2s;height:125.5%;top:46.5%;width:25vw;transform:translate(-51%, -50%);@media only screen and (orientation:portrait){width:47%;}";
   z.style="transition:all .3s;height:99%;top:53.5%;transform:translate(-47.5%, -50%)";
 }
 
@@ -264,3 +264,5 @@ function aufführung() {
     document.getElementById('aufführung').classList.remove('disappear');
   } else {document.getElementById('aufführung').classList.add('disappear');}
 }
+
+document.addEventListener("scroll", start())
