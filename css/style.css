@@ -736,7 +736,7 @@ start:hover {
 #geschaut2{top:-6vh;left:-18vw;}
 #geschaut3{top:-7vh;left:-20vw;}
 #mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
-#mschöni{height:104%;top:41%;}
+#mschöni{height:125%;top:46%;width:47%}
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
@@ -790,7 +790,7 @@ start:hover {
   .tooltipinhalt{display:inline-block;width:100%;text-align:center;}
 
   #unterbaum{width:220%;height:auto;}
-  #tauben{width:220%;height:80%;transform:translate(-48%, -50%)}
+  #tauben{width:220%;height:80%;transform:translate(-48%, -50%)scale(2.5)}
 
   .blurnav.l {width:34%;mask: radial-gradient(black,transparent 90%);}
   quote {display:block; width:85vw;}
