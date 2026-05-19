@@ -815,7 +815,7 @@ start:hover {
     100% {top:71.6vh}
   }
   #taube {width:22vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
-  #eingang {width:180vw;bottom:-5vh;left:-56vw}
+  #eingang {width:180vw;bottom:-5vh;left:-53vw}
   .weg {display:none}
   .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
   #uhr {width:70vw;top:-16vh;left:-25vw;}
