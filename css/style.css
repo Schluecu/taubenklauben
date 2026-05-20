@@ -482,7 +482,7 @@ container {
 
 sup {
   vertical-align:super;
-  line-heigth:0;
+  line-height:0;
   font-size:max(1vmax, 7pt);
 }
 
