@@ -738,6 +738,7 @@ start:hover {
 #mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
 #mschöni{height:125%;top:46%;width:25vw;object-fit: contain;}
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
+#weiterleitung{z-index:5;position:fixed;left:36.5%; top:40%}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
