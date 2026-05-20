@@ -739,7 +739,7 @@ start:hover {
 #mschöni{height:125%;top:46%;width:25vw;object-fit: contain;}
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 #weiterleitung{z-index:5;position:fixed;left:36.5%; top:40%}
-.frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;}
+.frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
