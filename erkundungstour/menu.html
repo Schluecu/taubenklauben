@@ -36,11 +36,14 @@
             <quote class="button" id="links" onmousedown="backwards()">❮</quote>
             <quote class="button" id="rechts" onmousedown="forwards()">❯</quote>
 
-            <a href="./tauben.html" class="pointer"><div class="keyimage off" id="tauben" onmouseover="wiggle()" onmouseleave="unwiggle()" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
+            <div class="disappeared popup grabber" srcset id="weiterleitung"><p class="inhalt" id="turnherrtext" style="text-align:center;user-select:none;">
+            Coming Soon!<br><br>Diese Unterseite ist noch nicht voll ausgearbeitet. Die <a href="./uhren.html?Uhr8" target="_self"><i>Uhren</i></a> aber schon!</p><p class="cross" onclick="disappear('weiterleitung')" style="position:absolute;bottom:6%;right:3%;">×</p></div> 
+
+            <!--<a href="./tauben.html" class="pointer">--><div onclick="appear('weiterleitung')" class="keyimage off pointer" id="tauben" onmouseover="wiggle()" onmouseleave="unwiggle()" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
                 <img class="keyimage" id="mweiss" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img>
                 <img class="keyimage" id="mschöni" src="../Bilder/Details/Taube_freigestellt.png"></img>
                 <img class="keyimage" id="mwerdt" src="../Bilder/Details/IMG_3450.png"></img>
-            </div></a>
+            </div><!--</a>-->
                 <div class="keyimage off" id="uhren" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
                     <img onclick="uhrenwahl('Uhr2')" class="uhrtile eins" src="../Bilder/Uhren/1uhr.png"></img>
                     <img onclick="uhrenwahl('Uhr5')" class="uhrtile zwei" src="../Bilder/Uhren/2uhr.png"></img>
@@ -49,11 +52,17 @@
                     <img onclick="uhrenwahl('Uhr6')" class="uhrtile fünf" src="../Bilder/Uhren/5uhr.png"></img>
                     <img onclick="uhrenwahl('Uhr9')" class="uhrtile sechs" src="../Bilder/Uhren/6uhr.png"></img>
                 </div>
-            <a href="./bäume.html" class="pointer"><div class="keyimage off" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>"><img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div></a>
-            <a href="./schauen.html" class="pointer"><div class="keyimage off" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
+            <!--<a href="./bäume.html" class="pointer">--><div onclick="appear('weiterleitung')" class="keyimage off pointer" id="bäume" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>">
+                <img src="../Bilder/Werke/multimedia-814.png" class="keyimage" id="unterbaum"></img><img src="../Bilder/Werke/multimedia-814_baum.png" class="keyimage" id="überbaum"></img></div><!--</a>-->
+            <!--<a href="./schauen.html" class="pointer">--><div onclick="appear('weiterleitung')" class="keyimage off pointer" id="schauen" content="<p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Details</p><p class=&quot;keyword&quot;>Verbindungen</p>">
                 <img src="../Bilder/Skizzen/1.png" class="geschaut" id="geschaut1"></img>
                 <img src="../Bilder/Skizzen/2.png" class="geschaut" id="geschaut2"></img>
-                <img src="../Bilder/Skizzen/5.png" class="geschaut" id="geschaut3" onload="randostart()" onmouseenter="shift()" onmouseleave="unshift()"></img></div></a>
+                <img src="../Bilder/Skizzen/5.png" class="geschaut" id="geschaut3" onload="randostart()" onmouseenter="shift()" onmouseleave="unshift()"></img></div><!--</a>-->
             </container>
     </main>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {$( "#weiterleitung" ).draggable();} );
+    </script>
 </body>
