@@ -739,7 +739,7 @@ start:hover {
 #mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
 #mschöni{height:125%;top:46%;width:25vw;object-fit: contain;}
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
-#weiterleitung{z-index:5;position:fixed;left:36.5%; top:40%}
+#weiterleitung{z-index:5;position:fixed;left:38%; top:40%;width:22%}
 .frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3}
 .centerpiece{position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s}
 .schlagwort{top:85%;left:5%;position:absolute;text-shadow:0 0 .8vmax #FFF1ED;transition:all .7s}
