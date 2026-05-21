@@ -481,7 +481,7 @@ container {
 }
 
 sup {
-  vertical-align:super;
+  vertical-align: super;
   line-height:0;
   font-size:max(1vmax, 7pt);
 }
@@ -741,6 +741,9 @@ start:hover {
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 #weiterleitung{z-index:5;position:fixed;left:36.5%; top:40%}
 .frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3}
+.centerpiece{position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s}
+.schlagwort{top:85%;left:5%;position:absolute;text-shadow:0 0 .8vmax #FFF1ED;transition:all .7s}
+.schlagwort:hover{color:#c73a2d;cursor:pointer}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
@@ -780,15 +783,17 @@ start:hover {
   #pieds:hover {left:-30%;transform:rotate(-3.5deg);cursor:grab;}
   #turnherrzitat{position:fixed;top:30vh;left:30vw;width:38%}
   #turnherrtext{user-select: text;display:inline-block;width:100%;left:3%;text-align:left;}
+  #leitungstext{display:inline-block;width:90%;left:3%;text-align:left;}
   .geschaut{height:110%;}
   #geschaut1{top:10%;left:-70%;}
   #geschaut2{top:14%;left:-60%;}
   #geschaut3{top:13%;left:-65%;}
   #uhren{width:60%;top:30%;transform:translate(-44%, -50%)}
-  #navlist1.menu{left:36%;top:75%;text-align:center;}
-  #navlist2{left:29%;top:75%;text-align:center}
+  #navlist1.menu{left:36%;top:80%;text-align:center;}
+  #navlist2{left:29%;top:80%;text-align:center}
   #mschöni{height:125%;top:46%;width:47%;}
   .zeile{width:800%}
+  #weiterleitung{left:20%; top:40%;width:60%}
 
   #ralfgobelins1{width:40%}
   #ralfgobelins2{width:33%;left:30%}
