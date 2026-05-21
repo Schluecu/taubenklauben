@@ -146,7 +146,6 @@ function randostart() {
 function textändern(y) {
   var seite = document.getElementById("navlist1");
   x = document.getElementById(y).getAttribute("content");
-  console.log(x);
   seite.innerHTML = x;
 }
 
@@ -183,7 +182,6 @@ function uhrenzuteilung(klasse) {
   let result = text.split("?")[1];
   const value = "../Bilder/Uhren/pieces/"+result+".png";
   document.getElementById('seitenuhr').setAttribute("src", value.toString());
-  console.log(document.getElementById('seitenuhr').getAttribute("src"));
   klassen(klasse);
   document.getElementById(result).classList.remove('disappeared');
 }
@@ -236,12 +234,6 @@ function unclick(unclick) {
   document.getElementById(unclick).classList.remove('pointer');
 }
 
-function scroller(goal) {
-  endgoal = (document.getElementById(goal).getBoundingClientRect().bottom-document.getElementById(goal).getBoundingClientRect().top)/2+document.getElementById(goal).getBoundingClientRect().top;
-  console.log(endgoal);
-  window.scrollTo(0, endgoal);
-}
-
 function plaintext(goal) {
   document.getElementById(goal).classList.add('plaintext');
 }
@@ -265,4 +257,25 @@ function aufführung() {
   } else {document.getElementById('aufführung').classList.add('disappear');}
 }
 
-document.addEventListener("scroll", start())
+function schlagworte() {
+  const text = window.location.toString();
+  let result = text.split("?")[1];
+  document.getElementById(result).classList.add('centerpiece');
+  document.getElementById(result).classList.add('grabber');
+  document.getElementById(result).classList.remove('schlagwort');
+  document.getElementById(result).style="";
+}
+
+function swv(wort) {
+  document.getElementById(wort).style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;";
+}
+
+function path(el1, el2) {
+  LMNT = document.getElementById(el1);
+  let oneX = LMNT.offsetLeft + LMNT.offsetWidth/2;
+  let oneY = LMNT.offsetTop + LMNT.offsetHeight/2; 
+  LMNT = document.getElementById(el2);
+  let twoX = LMNT.offsetLeft + LMNT.offsetWidth/2;
+  let twoY = LMNT.offsetTop + LMNT.offsetHeight/2;
+  
+}
