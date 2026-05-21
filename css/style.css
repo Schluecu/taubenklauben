@@ -22,7 +22,7 @@ html {
 body {
   width:100vw;
   height:100vh;
-  background: #FDFFF2;
+  background: #F2F1ED;
   text-overflow:ellipsis;
   display:flex;
   user-select:none;
@@ -43,7 +43,7 @@ nav {
   width:20vw;
   height:100%;
   backdrop-filter: blur(3px);
-  background:#FDFFF2AA;
+  background:#F2F1EDAA;
 }
 
 .blurnav.l{mask: linear-gradient(to left, transparent, black 35%);}
@@ -151,7 +151,7 @@ container {
 .bildunterschrift:hover{
   cursor:pointer;
   opacity:100;
-  color:#FDFFF2;
+  color:#F2F1ED;
   text-shadow:0 0 .3vmax #2f312b;
   animation: descfade .1s;
 }
@@ -497,7 +497,7 @@ sup {
 
 .popup {
   min-height:fit-content;
-  background:#FDFFF2;
+  background:#F2F1ED;
   padding:1vmax;
   border-radius: .5vmax;
   box-shadow: 0 0 1vmax #2f312b;
@@ -520,7 +520,7 @@ sup {
   color:#c73a2d;
 }
 
-/* rot: #c73a2d    weiss: #FDFFF2    blau: #285f78    schwarz: #2f312b */
+/* rot: #c73a2d    weiss: #F2F1ED    blau: #285f78    schwarz: #2f312b */
 
 start {
   position:fixed;
@@ -704,7 +704,7 @@ start:hover {
 #turnherr {
   opacity:0;
   padding-top:30vh;
-  text-shadow:0 0 .5vmax #285f78;color:#FDFFF2;
+  text-shadow:0 0 .5vmax #285f78;color:#F2F1ED;
   position:absolute;
   left:2vw;
   bottom:4vh;
@@ -725,7 +725,7 @@ start:hover {
 #olfaktorisch{float:right; position:absolute; text-align:center; width:30%; right:28%; top:8vh;z-index:3}
 #uhrreflekt{width:55vw;}
 #stern2{position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 1;}
-#fahrlässig{position:absolute;color:#FDFFF2; text-shadow:0 0 .5vmax #285f78; top:68%; left:53%; width:15vw;}
+#fahrlässig{position:absolute;color:#F2F1ED; text-shadow:0 0 .5vmax #285f78; top:68%; left:53%; width:15vw;}
 #lowest{height:5vh;}
 #trophäe{position:absolute;left:45%;top:8%;width:26vw;}
 #büstenbild{width:25vw;}
@@ -742,7 +742,7 @@ start:hover {
 #weiterleitung{z-index:5;position:fixed;left:38%; top:40%;width:22%}
 .frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3}
 .centerpiece{position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s}
-.schlagwort{top:85%;left:5%;position:absolute;text-shadow:0 0 .8vmax #FDFFF2;transition:all .7s}
+.schlagwort{top:85%;left:5%;position:absolute;text-shadow:0 0 .8vmax #F2F1ED;transition:all .7s}
 .schlagwort:hover{color:#c73a2d;cursor:pointer}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
