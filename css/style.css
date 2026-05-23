@@ -760,13 +760,13 @@ start:hover {
 .line{stroke:#285f78;stroke-width:.12%;z-index:3;}
 .gross.dot{position:absolute;
   color: #285f78;
-  transform:scale(.6);
+  transform:scale(.4);
   transition:all .4s;}
 .gross.dot:hover{
   color: #c73a2d;
   cursor:pointer;
   transform-origin: 50% 50%;
-  transform:scale(.75);
+  transform:scale(.6);
 }
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
