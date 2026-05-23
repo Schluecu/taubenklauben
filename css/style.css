@@ -679,8 +679,20 @@ start:hover {
 }
 
 .map {
+  position:relative;
   width:13vw;
   -webkit-user-drag: none;
+}
+
+.mapp {
+  position:absolute;
+  width:13vw;
+  -webkit-user-drag: none;
+}
+
+.mapp.navi {
+  transition:all .8s;
+  width:28%;
 }
 
 .plaintext {
@@ -741,9 +753,21 @@ start:hover {
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 #weiterleitung{z-index:5;position:fixed;left:38%; top:40%;width:22%}
 .frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3}
-.centerpiece{position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s}
-.schlagwort{top:85%;left:5%;position:absolute;text-shadow:0 0 .8vmax #F2F1ED;transition:all .7s}
-.schlagwort:hover{color:#c73a2d;cursor:pointer}
+.centerpiece{-webkit-user-drag:none;position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s;z-index:3;text-shadow:0 0 .8vmax #F2F1ED;}
+.schlagwort{-webkit-user-drag: none;top:85%;left:5%;position:absolute;text-shadow:0 0 1vmax #F2F1ED;transition:all .7s}
+.schlagwort:hover{color:#c73a2d;cursor:pointer; animation-play-state: paused;}
+#fullsvg {left:0;top:0;width:100%;height:100%;position:absolute;pointer-events: none;}
+.line{stroke:#285f78;stroke-width:.12%;z-index:3;}
+.gross.dot{position:absolute;
+  color: #285f78;
+  transform:scale(.6);
+  transition:all .4s;}
+.gross.dot:hover{
+  color: #c73a2d;
+  cursor:pointer;
+  transform-origin: 50% 50%;
+  transform:scale(.75);
+}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
