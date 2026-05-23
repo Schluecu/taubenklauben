@@ -102,19 +102,24 @@
         <div class="blurnav r"></div>
         <container class="navright">
             <div class="spacer" style="height:20vh;"></div>
-            <div id="mapwrap">
-                <img class="map" src="../resources/og.svg"></img>
-                <img class="map" src="../resources/eg.svg"></img>
-                <p style="top:55%;right:19%;" title="Standuhr" class="dot">⬤</p>
-                <p id="Uhr9" style="top:3%;right:16%;" title="Uhr mit Säulen" class="dot disappeared">⬤</p>
-                <p id="Uhr5" style="top:55%;right:29%;" title="Wanduhr" class="dot disappeared">⬤</p>
-                <p id="Uhr7" style="top:42%;right:62%;" title="Uhr mit Mann" class="dot disappeared">⬤</p>
-                <p id="Uhr8" style="top:4%;right:80%;" title="Uhr mit Frau" class="dot disappeared">⬤</p>
-                <p id="Uhr6" style="top:65.5%;right:82%;" title="Uhr mit Wagen" class="dot disappeared">⬤</p>
-                <p id="Uhr2" style="top:-1%;right:32%;" title="Uhr mit Cherub" class="dot disappeared">⬤</p>
-                <p id="Stern" style="top:4%;right:23%;" title="Uhr mit POC" class="dot disappeared">⬤</p>
-                <p id="Pieds" style="top:11%;right:40%;" title="Stuhl mit Tatzen" class="dot disappeared">⬤</p>
-                <p id="Büste" style="top:78.5%;right:32%;" title="Trophäenbüste" class="dot disappeared">⬤</p>
+            <div id="mapwrap" onclick="map()">
+                <div style="position:relative">
+                <img class="map" src="../resources/og.svg">
+                    <p id="Uhr9" style="top:3%;right:-3%;" title="Uhr mit Säulen" class="dot disappeared">⬤</p>
+                    <p id="Uhr7" style="top:85%;right:62%;" title="Uhr mit Mann" class="dot disappeared">⬤</p>
+                    <p id="Uhr8" style="top:8%;right:87%;" title="Uhr mit Frau" class="dot disappeared">⬤</p>
+                    <p id="Uhr2" style="top:-1%;right:21%;" title="Uhr mit Cherub" class="dot disappeared">⬤</p>
+                    <p id="Stern" style="top:8%;right:7%;" title="Uhr mit POC" class="dot disappeared">⬤</p>
+                    <p id="Pieds" style="top:22%;right:32%;" title="Stuhl mit Tatzen" class="dot disappeared">⬤</p>
+                </img></div>
+
+                <div style="position:relative">
+                <img class="map" src="../resources/eg.svg">
+                    <p style="top:10%;right:0%;" title="Standuhr" class="dot">⬤</p>
+                    <p id="Uhr5" style="top:10%;right:12%;" title="Wanduhr" class="dot disappeared">⬤</p>
+                    <p id="Uhr6" style="top:31%;right:82%;" title="Uhr mit Wagen" class="dot disappeared">⬤</p>
+                    <p id="Büste" style="top:57%;right:17%;" title="Trophäenbüste" class="dot disappeared">⬤</p>
+                </img></div>
             </div>
         </container>
     </nav>
