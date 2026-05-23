@@ -261,21 +261,106 @@ function schlagworte() {
   const text = window.location.toString();
   let result = text.split("?")[1];
   document.getElementById(result).classList.add('centerpiece');
-  document.getElementById(result).classList.add('grabber');
   document.getElementById(result).classList.remove('schlagwort');
   document.getElementById(result).style="";
+  setTimeout(cent, 400)
+}
+
+function cent() {
+  document.getElementsByClassName('centerpiece')[0].style.transition="none";
 }
 
 function swv(wort) {
   document.getElementById(wort).style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;";
+  setTimeout(swvc, 500);
+}
+
+function swvc() {
+  schlagworte = document.getElementsByClassName('schlagwort');
+  for (let i = 0; i < schlagworte.length; i++) {
+    schlagworte[i].style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;transition:left 30s linear, top 30s linear;";
+  swvct();
+  }
+}
+
+function swvct() {
+  setInterval(swvc, 30000);
+}
+
+function pathex() {
+  path('wiederholung','ticken');
+  path('erkundungstour','ticken');
+  path('baeume','gschauen');
+  path('multisensorisch','baeume');
+  path('details','gschauen');
+  path('details','verbindungen');
+  path('wiederholung','anhaenger');
+  path('anhaenger','forschung');
+  path('erkundungstour','verbindungen');
 }
 
 function path(el1, el2) {
-  LMNT = document.getElementById(el1);
-  let oneX = LMNT.offsetLeft + LMNT.offsetWidth/2;
-  let oneY = LMNT.offsetTop + LMNT.offsetHeight/2; 
-  LMNT = document.getElementById(el2);
-  let twoX = LMNT.offsetLeft + LMNT.offsetWidth/2;
-  let twoY = LMNT.offsetTop + LMNT.offsetHeight/2;
-  
+  var b1 = document.getElementById(el1).getBoundingClientRect();
+  var b2 = document.getElementById(el2).getBoundingClientRect();
+
+  var b1l = b1.left + b1.width/2;
+  var b1t = b1.top + b1.height/2;
+  var b2l = b2.left + b2.width/2;
+  var b2t = b2.top + b2.height/2;
+
+  var newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  newLine.setAttribute('id', 'line1');
+
+  newLine.setAttribute('x1', b1l);
+  newLine.setAttribute('y1', b1t);
+  newLine.setAttribute('x2', b2l);
+  newLine.setAttribute('y2', b2t);
+
+  idname = el1.toString() +"&" + el2.toString();
+  newLine.setAttribute('id', idname);
+  newLine.setAttribute('class', 'line');
+  document.getElementById('fullsvg').append(newLine);
+}
+
+function updateline() {
+  line = document.getElementsByClassName('line');
+  for (let i=0;i<line.length; i++) {
+    lin = line[i];
+
+    el1 = lin.getAttribute('id').split('&')[0];
+    el2 = lin.getAttribute('id').split('&')[1];
+
+    var b1 = document.getElementById(el1).getBoundingClientRect();
+    var b2 = document.getElementById(el2).getBoundingClientRect();
+
+    var b1l = b1.left + b1.width/2;
+    var b1t = b1.top + b1.height/2;
+    var b2l = b2.left + b2.width/2;
+    var b2t = b2.top + b2.height/2;
+    
+
+    lin.setAttribute('x1', b1l);
+    lin.setAttribute('y1', b1t);
+    lin.setAttribute('x2', b2l);
+    lin.setAttribute('y2', b2t);
+  }
+  updateupdate();
+}
+
+function updateupdate() {
+  setTimeout(updateline, 16);
+}
+
+function map(punkt) {
+  open("./grundriss.html?"+punkt, "_self");
+}
+
+function mapp() {
+  map1 = document.getElementsByClassName('mapp')[0];
+  map2 = document.getElementsByClassName('mapp')[1];
+  console.log(map1);
+  map1.classList.add('navi');
+  map2.classList.add('navi');
+  map1.style="right:20%;top:22%";
+  map2.style="right:50%;top:22%";
 }
