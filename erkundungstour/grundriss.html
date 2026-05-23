@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../resources/Taube.svg"rel="icon">
+    <script src="../js/script.js"></script>
+    <title>Erkundungstool</title>
+    <meta name="description" content="Zum Entdecken von Tauben und andere Details im Beatrice von Wattenwyl-Haus. Enstanden im Rahmen des Minor-Projekts FS26 von Luca Blum im MA Art Education an der HKB.">
+    <meta property="og:image" content="../resources/Taube.ico"/>
+
+</head>
+
+<body onload="mapp()">
+    <nav id="left">
+        <container>
+            <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
+                <menu id="menu" class="menuoff">
+                    <a class="menulink pointer" onclick="menu()" href="../about.html">Über das Projekt</a>
+                    <a class="menulink pointer" onclick="menu()" href="../index.html">Erkundungstour</a>
+                    <a class="menulink pointer" onclick="menu()" href="../impressum.html">Impressum</a>
+                    <img src="../resources/Taube.ico" id="dingle"></img>
+                </menu></img>
+            <p id="navlist1" class="navlist off menu"></p>
+            <p id="navlist2" class="navlist menu"></p>
+        </container>
+    </nav>
+
+    <main id="main">
+        <div class="spacer" style="height:10vh;"></div>
+        <div>
+            <div class="mapp" style="width:fit-content; position:relative; right:-80%; top:0%; width:15%;">
+                <img id="eg" src="../resources/og.svg" style="position:relative; margin-right:3%">
+                    <p id="Uhr9" style="top:8%;right:3%;" title="Uhr mit Säulen" class="dot gross disappeareded">⬤</p>
+                    <p id="Uhr7" style="top:87%;right:67%;" title="Uhr mit Mann" class="dot gross disappeareded">⬤</p>
+                    <p id="Uhr8" style="top:10%;right:91%;" title="Uhr mit Frau" class="dot gross disappeareded">⬤</p>
+                    <p id="Uhr2" style="top:1%;right:27%;" title="Uhr mit Cherub" class="dot gross disappeareded">⬤</p>
+                    <p id="Stern" style="top:10%;right:13.5%;" title="Uhr mit POC" class="dot gross disappeareded">⬤</p>
+                    <p id="Pieds" style="top:23.5%;right:38.5%;" title="Stuhl mit Tatzen" class="dot gross disappeareded">⬤</p>
+                </img></div>
+
+                <div class="mapp" style="width:fit-content; position:relative; right:-50%; top:60%; width:15%;">
+                <img id="og" src="../resources/eg.svg" style="position:relative;; margin-right:3%">
+                    <p style="top:12%;right:7.2%;" title="Standuhr" class="dot gross">⬤</p>
+                    <p id="Uhr5" style="top:12%;right:20%;" title="Wanduhr" class="dot gross disappeareded">⬤</p>
+                    <p id="Uhr6" style="top:33%;right:86%;" title="Uhr mit Wagen" class="dot gross disappeareded">⬤</p>
+                    <p id="Büste" style="top:59%;right:23%;" title="Trophäenbüste" class="dot gross disappeareded">⬤</p>
+                </img></div>
+        </div>
+    </main>
+</body>
