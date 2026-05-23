@@ -15,7 +15,9 @@
 
 </head>
 
-<body onload="swv('anhänger'), swv('wiederholung'), swv('forschung'), swv('ticken'), swv('erkundungstour'), swv('bäume'), swv('gschauen'), swv('multisensorisch'), swv('details'), swv('verbindungen'), schlagworte()">
+<body onload="swv('anhaenger'), swv('wiederholung'), swv('forschung'), swv('ticken'), swv('erkundungstour'), swv('baeume'),
+            swv('gschauen'), swv('multisensorisch'), swv('details'), swv('verbindungen'), schlagworte(), setTimeout(pathex, 500), setTimeout(updateupdate, 700)">
+            <svg id="fullsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
     <nav id="left">
         <container>
             <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
@@ -31,27 +33,27 @@
     </nav>
 
     <main id="main">
-        <p class="schlagwort" id="anhänger">Anhänger</p>
-        <p class="schlagwort" id="wiederholung">Wiederholung</p>
-        <p class="schlagwort" id="forschung">Forschung</p>
-        <p class="schlagwort" id="ticken">Ticken</p>
-        <p class="schlagwort" id="erkundungstour">Erkundungstour</p>
-        <p class="schlagwort" id="bäume">Bäume</p>
-        <p class="schlagwort" id="gschauen">Schauen</p>
-        <p class="schlagwort" id="multisensorisch">Multisensorisch</p>
-        <p class="schlagwort" id="details">Details</p>
-        <p class="schlagwort" id="verbindungen">Verbindungen</p>
-    </main>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="anhaenger">Anhänger</p></a>
+        <a href="./uhren.html?Uhr6" target="_self"><p class="schlagwort" id="wiederholung">Wiederholung</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="forschung">Forschung</p></a>
+        <a href="./uhren.html?Uhr8" target="_self"><p class="schlagwort" id="ticken">Ticken</p></a>
+        <a href="./uhren.html?Uhr9" target="_self"><p class="schlagwort" id="erkundungstour">Erkundungstour</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="baeume">Bäume</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="gschauen">Schauen</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="multisensorisch">Multisensorisch</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="details">Details</p></a>
+        <a href="./menu.html" target="_self"><p class="schlagwort" id="verbindungen">Verbindungen</p></a>
+</main>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-    $( function() {$( "#anhänger" ).draggable();} );
+    $( function() {$( "#anhaenger" ).draggable();} );
     $( function() {$( "#wiederholung" ).draggable();} );
     $( function() {$( "#forschung" ).draggable();} );
     $( function() {$( "#ticken" ).draggable();} );
     $( function() {$( "#erkundungstour" ).draggable();} );
-    $( function() {$( "#bäume" ).draggable();} );
+    $( function() {$( "#baeume" ).draggable();} );
     $( function() {$( "#gschauen" ).draggable();} );
     $( function() {$( "#multisensorisch" ).draggable();} );
     $( function() {$( "#details" ).draggable();} );
