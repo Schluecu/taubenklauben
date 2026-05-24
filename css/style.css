@@ -48,6 +48,7 @@ nav {
 
 .blurnav.l{mask: linear-gradient(to left, transparent, black 35%);}
 .blurnav.r{mask: linear-gradient(to right, transparent, black 35%);}
+.blurnav.b{width:90%;height:20%;bottom:7%;left:5%;mask: linear-gradient(to bottom, transparent, black 90%);pointer-events: none;}
 
 main {
   display:flex;
@@ -504,6 +505,25 @@ sup {
   z-index:1;
 }
 
+.popdown {
+  min-height:fit-content;
+  background:#F2F1ED;
+  padding:1vmax;
+  border-radius: .5vmax;
+  box-shadow: 0 0 1vmax #2f312b;
+  z-index:2;
+  position:absolute;
+  display:none;
+  top:0;
+  right:0;
+}
+
+.popdown.klein {
+  font-size:max(1vmax, 8pt);
+}
+
+.dot:hover + .popdown {cursor:pointer;display:block}
+
 .grabber:hover {
   cursor:grab;
 }
@@ -768,6 +788,8 @@ start:hover {
   transform-origin: 50% 50%;
   transform:scale(.6);
 }
+#matterport{line-height:max(2.2vmax, 15pt); height:100%; width:100%;margin-top:5%;overflow:scroll;hyphens:auto;}
+#matterportbox{position:fixed;left:20%;top:79%;width:11%;height:10%;z-index:3;}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
 
