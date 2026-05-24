@@ -368,6 +368,11 @@ function mapp() {
   map2.style="right:50%;top:22%";
 }
 
+function rotpunkt() {
+  let punkt = window.location.toString().split("?")[1];
+  document.getElementById(punkt).classList.add('red');
+}
+
 function karteweiter(link, i, j, k, l , m, n, o, p, q, r) {
   if(r!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o+'/'+p+'/'+q+'/'+r, target="_self");}else{
     if(q!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o+'/'+p+'/'+q, target="_self");}else{
