@@ -15,7 +15,7 @@
 
 </head>
 
-<body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick()">
+<body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick(), weiterkarte()">
 
     <nav id="left">
         <div class="blurnav l"></div>
@@ -77,9 +77,9 @@
             <div class="spacer" id="unrefl" style="height:25vmin;"></div>
             <div id="unreflektiert" class="disappeared" style="position:relative;"><img id="uhrreflekt" src="../Bilder/Uhren/Uhr1.png"></img>
             <img id="stern2" class="grabber" srcset src="../Bilder/Uhren/Stern.png"></img>
-            <p class="inhalt" id="fahrlässig">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel <u id="reflektiert" class="pointer" onclick="appear('büste'), appear('Büste'), plaintext('reflektiert'), unclick('reflektiert')">reflektiert</u>.</p>
+            <p class="inhalt" id="fahrlässig">Hier die Uhr, von der ich mir nicht sicher bin, ob ich sie ab&shy;bilden soll. Gleich&shy;zeitig fände ich es fahrlässig, es nicht zu tun. Deshalb wird die Figur hier&thinsp;–&thinsp;wie leider auch vor Ort&thinsp;–&thinsp;nur im Spiegel <u id="reflektiert" class="pointer" onclick="appear('bueste'), appear('Bueste'), plaintext('reflektiert'), unclick('reflektiert')">reflektiert</u>.</p>
             </div>
-            <div id="büste" style="position:relative;" class="disappeared">
+            <div id="bueste" style="position:relative;" class="disappeared">
             <div class="spacer" id="lowest"></div>
             <img id="büstenbild" src="../Bilder/Menschenaffenbüste.png"></img>
             <p id="turnherr" class>Turnherr, Walter.
@@ -105,20 +105,30 @@
             <div id="mapwrap" onclick="map()">
                 <div style="position:relative">
                 <img class="map" src="../resources/og.svg">
-                    <p id="Uhr9" style="top:3%;right:-3%;" title="Uhr mit Säulen" class="dot disappeared">⬤</p>
-                    <p id="Uhr7" style="top:85%;right:62%;" title="Uhr mit Mann" class="dot disappeared">⬤</p>
-                    <p id="Uhr8" style="top:8%;right:87%;" title="Uhr mit Frau" class="dot disappeared">⬤</p>
-                    <p id="Uhr2" style="top:-1%;right:21%;" title="Uhr mit Cherub" class="dot disappeared">⬤</p>
-                    <p id="Stern" style="top:8%;right:7%;" title="Uhr mit POC" class="dot disappeared">⬤</p>
-                    <p id="Pieds" style="top:22%;right:32%;" title="Stuhl mit Tatzen" class="dot disappeared">⬤</p>
+                    <p id="Uhr9" style="top:3%;right:-3%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:10%;right:-10%;">Uhr mit Säulen</p>
+                    <p id="Uhr7" style="top:85%;right:62%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:92%;right:35%;">Uhr mit Mann</p>
+                    <p id="Uhr8" style="top:8%;right:87%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:15%;right:40%;">Uhr mit Frau</p>
+                    <p id="Uhr2" style="top:-1%;right:21%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:6%;right:14%;">Uhr mit Cherub</p>
+                    <p id="Stern" style="top:8%;right:7%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:14%;right:0%;">Uhr mit POC</p>
+                    <p id="Pieds" style="top:22%;right:32%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:29%;right:25%;">Stuhl mit Tatzen</p>
                 </img></div>
 
                 <div style="position:relative">
                 <img class="map" src="../resources/eg.svg">
-                    <p style="top:10%;right:0%;" title="Standuhr" class="dot">⬤</p>
-                    <p id="Uhr5" style="top:10%;right:12%;" title="Wanduhr" class="dot disappeared">⬤</p>
-                    <p id="Uhr6" style="top:31%;right:82%;" title="Uhr mit Wagen" class="dot disappeared">⬤</p>
-                    <p id="Büste" style="top:57%;right:17%;" title="Trophäenbüste" class="dot disappeared">⬤</p>
+                    <p style="top:10%;right:0%;" class="dot">⬤</p>
+                        <p class="popdown klein" style="top:17%;right:-7%;">Standuhr</p>
+                    <p id="Uhr5" style="top:10%;right:12%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:17%;right:-5%;">Wanduhr</p>
+                    <p id="Uhr6" style="top:31%;right:82%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:38%;right:30%;">Uhr mit Wagen</p>
+                    <p id="Bueste" style="top:57%;right:17%;" class="dot disappeared">⬤</p>
+                        <p class="popdown klein" style="top:64%;right:10%;">Trophäenbüste</p>
                 </img></div>
             </div>
         </container>
