@@ -56,7 +56,7 @@
             </div>
             <div class="spacer" id="shrinker" style="height:15vmin;animation:ersteuhr 8s ease-out;">
             </div><p>Die Sekunden ticken und die Jahrhunderte werden plötzlich spürbar.</p>
-            <p><br>Wer sich im Raum bewegt, kann sich auf <u onclick="appear('stern'), appear('sternzeichnung'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
+            <p><br>Wer sich im Raum bewegt, kann auf <u onclick="appear('stern'), appear('sternzeichnung'), unclick('details'), plaintext('details')" id="details" class="pointer">Details</u> achten. Nicht nur sichtbare, auch das Ticken einer Uhr fällt plötzlich auf.</p>
             <p><br>Dieser Kontext verliert sich bei einer <u class="pointer" onclick="appear('ralfgobelins1'), unclick('digital'), plaintext('digital')" id="digital">digitalen Reproduktion</u>.</p>
             <div class="spacer" style="height:5vmin;"></div>
 
@@ -102,32 +102,32 @@
         <div class="blurnav r"></div>
         <container class="navright">
             <div class="spacer" style="height:20vh;"></div>
-            <div id="mapwrap" onclick="map()">
+            <div id="mapwrap">
                 <div style="position:relative">
                 <img class="map" src="../resources/og.svg">
-                    <p id="Uhr9" style="top:3%;right:-3%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr9')" id="Uhr9" style="top:3%;right:-3%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:10%;right:-10%;">Uhr mit Säulen</p>
-                    <p id="Uhr7" style="top:85%;right:62%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr7')" id="Uhr7" style="top:85%;right:62%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:92%;right:35%;">Uhr mit Mann</p>
-                    <p id="Uhr8" style="top:8%;right:87%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr8')" id="Uhr8" style="top:8%;right:87%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:15%;right:40%;">Uhr mit Frau</p>
-                    <p id="Uhr2" style="top:-1%;right:21%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr2')" id="Uhr2" style="top:-1%;right:21%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:6%;right:14%;">Uhr mit Cherub</p>
-                    <p id="Stern" style="top:8%;right:7%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Stern')" id="Stern" style="top:8%;right:7%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:14%;right:0%;">Uhr mit POC</p>
-                    <p id="Pieds" style="top:22%;right:32%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Pieds')" id="Pieds" style="top:22%;right:32%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:29%;right:25%;">Stuhl mit Tatzen</p>
                 </img></div>
 
                 <div style="position:relative">
                 <img class="map" src="../resources/eg.svg">
-                    <p style="top:10%;right:0%;" class="dot">⬤</p>
+                    <p onclick="map('Standuhr')" id="Standuhr" style="top:10%;right:0%;" class="dot">⬤</p>
                         <p class="popdown klein" style="top:17%;right:-7%;">Standuhr</p>
-                    <p id="Uhr5" style="top:10%;right:12%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr5')" id="Uhr5" style="top:10%;right:12%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:17%;right:-5%;">Wanduhr</p>
-                    <p id="Uhr6" style="top:31%;right:82%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Uhr6')" id="Uhr6" style="top:31%;right:82%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:38%;right:30%;">Uhr mit Wagen</p>
-                    <p id="Bueste" style="top:57%;right:17%;" class="dot disappeared">⬤</p>
+                    <p onclick="map('Bueste')" id="Bueste" style="top:57%;right:17%;" class="dot disappeared">⬤</p>
                         <p class="popdown klein" style="top:64%;right:10%;">Trophäenbüste</p>
                 </img></div>
             </div>
