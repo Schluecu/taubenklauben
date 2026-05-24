@@ -178,8 +178,11 @@ function uhrenwahl(uhr) {
 }
 
 function uhrenzuteilung(klasse) {
-  const text = window.location.toString();
-  let result = text.split("?")[1];
+  const text = window.location.toString()+"/";
+  let split = text.split("?")[1];
+  let result = "Uhr2"
+  try{result = split.split("/")[0];}catch{}
+  console.log(result);
   const value = "../Bilder/Uhren/pieces/"+result+".png";
   document.getElementById('seitenuhr').setAttribute("src", value.toString());
   klassen(klasse);
@@ -363,4 +366,56 @@ function mapp() {
   map2.classList.add('navi');
   map1.style="right:20%;top:22%";
   map2.style="right:50%;top:22%";
+}
+
+function karteweiter(link, i, j, k, l , m, n, o, p, q, r) {
+  if(r!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o+'/'+p+'/'+q+'/'+r, target="_self");}else{
+    if(q!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o+'/'+p+'/'+q, target="_self");}else{
+      if(p!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o+'/'+p, target="_self");}else{
+        if(o!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n+'/'+o, target="_self");}else{
+          if(n!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m+'/'+n, target="_self");}else{
+            if(m!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l+'/'+m, target="_self");}else{
+              if(l!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k+'/'+l, target="_self");}else{
+                if(k!=undefined){open('./'+link+'/'+i+'/'+j+'/'+k, target="_self");}{
+                  if(j!=undefined){open('./'+link+'/'+i+'/'+j, target="_self");}else{
+                    if(i!=undefined){open('./'+link+'/'+i, target="_self");}else{
+                      open('./'+link+'.html?Uhr6', target="_self");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function weiterkarte() {
+  //try{
+    let link = window.location.toString().split("?")[1];
+    let i = link.split("/")[1];
+    let j = link.split("/")[2];
+    let k = link.split("/")[3];
+    let l = link.split("/")[4];
+    let m = link.split("/")[5];
+    let n = link.split("/")[6];
+    let o = link.split("/")[7];
+    let p = link.split("/")[8];
+    let q = link.split("/")[9];
+    let r = link.split("/")[10];
+    if(i!=undefined){document.getElementById(i).classList.remove('disappeared');};
+    if(j!=undefined){document.getElementById(j).classList.remove('disappeared');};
+    if(k!=undefined){document.getElementById(k).classList.remove('disappeared');};
+    if(l!=undefined){document.getElementById(l).classList.remove('disappeared');};
+    if(m!=undefined){document.getElementById(m).classList.remove('disappeared');};
+    if(n!=undefined){document.getElementById(n).classList.remove('disappeared');};
+    if(o!=undefined){document.getElementById(o).classList.remove('disappeared');};
+    if(p!=undefined){document.getElementById(p).classList.remove('disappeared');};
+    if(q!=undefined){document.getElementById(q).classList.remove('disappeared');};
+    if(r!=undefined){document.getElementById(r).classList.remove('disappeared');};
+    console.log(document.getElementById(i));
+    document.getElementById(i).scrollIntoView({behaviour:"smooth"});
+  //} catch {return}
 }
