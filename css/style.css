@@ -327,6 +327,7 @@ container {
 
 .button:hover {
   cursor:pointer;
+  color:#c73a2d;
 }
 
 #links {
@@ -455,6 +456,12 @@ container {
   height:15vh;
   left:10vw;
   z-index:2;
+  position:absolute;
+  object-fit: cover;
+  left:50%;
+  top:57%;
+  transition:all .8s;
+  -webkit-user-drag: none;
 }
 
 .seitenschauen:hover {
@@ -679,26 +686,33 @@ start:hover {
 
 #mapwrap {
   position:relative;
+  z-index:2;
 }
 
 .dot {
   position:absolute;
-  color: #c73a2d;
+  color: #285f78;
   transform:scale(.2);
   transition:all .4s;
   z-index: 2;
 }
 
 .dot:hover {
-  cursor:pointer;
   transform-origin: 50% 50%;
   transform:scale(.5);
+  cursor:pointer;
 }
 
 .map {
   position:relative;
   width:13vw;
   -webkit-user-drag: none;
+}
+
+.mapper:hover > .dot{
+  color:#c73a2d;
+  transform-origin: 50% 50%;
+  transform:scale(.35);
 }
 
 .mapp {
@@ -787,8 +801,14 @@ start:hover {
   transform:scale(.6);
 }
 .gross.dot.red{color:#c73a2d}
+.anjasketch{width:20%;display:flex;}
+.anjasketch:hover{width:40%}
+#oben{transform:rotate(90deg);top:10%;left:50%;z-index: 3;}
+#unten{transform:rotate(90deg);top:90%;left:50%;z-index:3;}
+#navnav{z-index:2;transition:.3s;}
+#navnav:hover{transform:scale(1.1)}
 
-#matterport{line-height:max(1.5vmax, 15pt); font-size: max(1vmax, 7pt); height:100%; width:80%;margin-top:5%;margin-left:2%;overflow:scroll;hyphens:auto;}
+#matterport{line-height:max(1.5vmax, 15pt); font-size: max(1vmax, 7pt); height:100%; width:85%;margin-top:5%;margin-left:2%;overflow:scroll;hyphens:auto;}
 #matterportbox{position:fixed;left:20%;top:79%;width:10%;height:10%;z-index:3;}
 
 .tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
@@ -807,7 +827,7 @@ start:hover {
   .map{width:100%}
 
   .keyimage{width:30%;height:20%;object-fit:contain;}
-  .seitenschauen{left:80%}
+  .seitenschauen{left:80%;width:30%;height:20%;object-fit:contain;}
   .seitenuhr{left:85%; width:20%}
   .seitentaube{left:85%;width:20%}
 
