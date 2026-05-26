@@ -254,10 +254,10 @@ function spacerheight(target, height){
   document.getElementById(target).style="height:"+height+";";
 }
 
-function aufführung() {
-  if (document.getElementById('aufführung').classList.contains('disappear')) {
-    document.getElementById('aufführung').classList.remove('disappear');
-  } else {document.getElementById('aufführung').classList.add('disappear');}
+function aufführung(ide) {
+  if (document.getElementById(ide).classList.contains('disappeared')) {
+    document.getElementById(ide).classList.remove('disappeared');
+  } else {document.getElementById(ide).classList.add('disappeared');}
 }
 
 function schlagworte() {
@@ -281,13 +281,13 @@ function swv(wort) {
 function swvc() {
   schlagworte = document.getElementsByClassName('schlagwort');
   for (let i = 0; i < schlagworte.length; i++) {
-    schlagworte[i].style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;transition:left 30s linear, top 30s linear;";
+    schlagworte[i].style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;transition:left 50s linear, top 50s linear;";
   swvct();
   }
 }
 
 function swvct() {
-  setInterval(swvc, 30000);
+  setInterval(swvc, 50000);
 }
 
 function pathex() {
@@ -359,8 +359,8 @@ function map(punkt) {
 }
 
 function mapp() {
-  map1 = document.getElementsByClassName('mapp')[0];
-  map2 = document.getElementsByClassName('mapp')[1];
+  let map1 = document.getElementsByClassName('mapp')[0];
+  let map2 = document.getElementsByClassName('mapp')[1];
   console.log(map1);
   map1.classList.add('navi');
   map2.classList.add('navi');
@@ -423,4 +423,17 @@ function weiterkarte() {
     console.log(document.getElementById(i));
     document.getElementById(i).scrollIntoView({behaviour:"smooth"});
   //} catch {return}
+}
+
+const skizzen = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+var i = 1;
+
+function rauf() {
+  document.getElementById('seitenschauen').setAttribute('src', '../Bilder/Skizzen/'+skizzen[i]+'.png');
+  if(i==1){i=11;}else{i--;}
+}
+
+function runter() {
+  document.getElementById('seitenschauen').setAttribute('src', '../Bilder/Skizzen/'+skizzen[i]+'.png');
+  if(i==11){i=0;}else{i++;}
 }
