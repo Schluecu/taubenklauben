@@ -860,6 +860,8 @@ start:hover {
   #mschöni{height:125%;top:46%;width:47%;}
   .zeile{width:800%}
   #weiterleitung{left:20%; top:40%;width:60%}
+  #matterportbox{position:fixed;left:50%;top:79%;width:25%;height:10%;z-index:3;}
+  .blurnav.b{width:90%;height:20%;bottom:4%;left:5%;mask: linear-gradient(to bottom, transparent, black 90%);pointer-events: none;}
 
   #ralfgobelins1{width:40%}
   #ralfgobelins2{width:33%;left:30%}
