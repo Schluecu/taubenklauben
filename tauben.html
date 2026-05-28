@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body id="body" onload="quotes()">
 
     <nav id="left">
         <container>
@@ -26,19 +26,20 @@
                     <a class="menulink pointer" onclick="menu()" href="./about.html">Über das Projekt</a>
                     <a class="menulink pointer" onclick="menu()" href="./index.html">Erkundungstour</a>
                     <a class="menulink pointer" onclick="menu()" href="./tauben.html">Zu den Tauben</a>
-                    <a class="menulink pointer" onclick="menu()" href="../impressum.html">Impressum</a>
+                    <a class="menulink pointer" onclick="menu()" href="./impressum.html">Impressum</a>
                     <img src="./resources/Taube.ico" id="dingle"></img>
                 </menu></img>
             <div class="blurnav b taub" style="position:fixed;width:50%;left:-2%;bottom:0%;"></div>
             <div class="blurnav b taub" style="position:fixed;width:50%;left:-2%;bottom:0%;"></div>
             <div class="blurnav b taub" style="position:fixed;width:50%;left:-2%;bottom:0%;"></div>
-            <p id="navlist1" class="navlist"><a href="./verzeichnis.html" target="_self" class="pointer"><i>...zum Bildverzeichnis</i></a><br><br>MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
+            <p id="navlist1" class="navlist"><a href="./verzeichnis.html" target="_self" class="pointer">...zum Bildverzeichnis</a><br><br>MA Art Education<br>Minor Projekt FS26<br>©&thinsp;2026, Luca Blum</p>
             <p id="navlist2" class="navlist off"><a href="./impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
         </container>
     </nav>
 
     <main id="main">
-        <container style="display:flex;flex-direction:row;">
+        <container style="display:flex;flex-direction:column;">
+        <div style="display:flex;flex-direction:row;">
             <div style="width:45%; margin-right:2%;display:flex;flex-direction: column;">
                 <div style="display:flex;flex-direction:row;">
                 <img src="./Bilder/Portraits/multimedia-25382.jpg" class="forschungsbild" style="width:49%;margin-right:2%;pointer-events: none;"></img>
@@ -49,63 +50,56 @@
                 <div style="display:flex;flex-direction:row;">
                 <img src="./Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png" class="forschungsbild" style="width:49%;margin-right:2%;pointer-events: none;"></img>
                 <img src="./Bilder/Details/Portrait1 Large.png" class="forschungsbild" style="width:49%;pointer-events: none;"></img></div>
-                <div style="display:flex;flex-direction:row;margin-top:2%">
-                    <img src="./Bilder/Portraits/44a4a7e8-f0ef-48d4-a4f1-137d5fc8abdf.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Portrait.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/152154_W_r_72.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/H_41359-bild01.jpg" class="forschungsbild" style="width:23.5%"></img>
+                <div style="display:flex;flex-direction:row;margin-top:2%;">
+                    <img src="./Bilder/Portraits/44a4a7e8-f0ef-48d4-a4f1-137d5fc8abdf.jpg" id="barbe" onmouseenter="bildnachweis('barbe')" onmouseleave="bildnachweis('barbe')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Portrait.jpg" id="ursula" onmouseenter="bildnachweis('ursula')" onmouseleave="bildnachweis('ursula')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/152154_W_r_72.jpg" id="elisabeth" onmouseenter="bildnachweis('elisabeth')" onmouseleave="bildnachweis('elisabeth')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/H_41359-bild01.jpg" id="katharina" onmouseenter="bildnachweis('katharina')" onmouseleave="bildnachweis('katharina')" class="forschungsbild" style="width:23.5%"></img>
                 </div>
                 <div style="display:flex;flex-direction:row;margin-top:2%">
-                    <img src="./Bilder/Portraits/Porträtdok._7867.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Porträtdok._1153.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Porträtdok._5515.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Porträtdok._5516.jpg" class="forschungsbild" style="width:23.5%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._7867.jpg" id="annamaria" onmouseenter="bildnachweis('annamaria')" onmouseleave="bildnachweis('annamaria')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._1153.jpg" id="engel" onmouseenter="bildnachweis('engel')" onmouseleave="bildnachweis('engel')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._5515.jpg" id="johanna1" onmouseenter="bildnachweis('johanna1')" onmouseleave="bildnachweis('johanna1')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._5516.jpg" id="johanna2" onmouseenter="bildnachweis('johanna2')" onmouseleave="bildnachweis('johanna2')" class="forschungsbild" style="width:23.5%"></img>
                 </div>
                 <div style="display:flex;flex-direction:row;margin-top:2%">
                     
-                    <img src="./Bilder/Portraits/Porträtdok._9212.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Porträtdok._3545.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Portraits/Porträtdok._9683.jpg" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._9212.jpg" id="unbekannt1" onmouseenter="bildnachweis('unbekannt1')" onmouseleave="bildnachweis('unbekannt1')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._3545.jpg" id="maria" onmouseenter="bildnachweis('maria')" onmouseleave="bildnachweis('maria')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Portraits/Porträtdok._9683.jpg" id="unbekannt2" onmouseenter="bildnachweis('unbekannt2')" onmouseleave="bildnachweis('unbekannt2')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
                     <p class="bildunten" style="display:flex;width:23.5%">...und mehr bisher nicht gefundene Exemplare.</p>
                 </div>
 
                 <div style="display:flex;flex-direction:row;margin-top:12%">
-                    <img src="./Bilder/Details/Steiger.jpg" class="forschungsbild" style="width:32%;margin-right:2%"></img>
-                    <img src="./Bilder/Details/Katharina Tscharner.jpg" class="forschungsbild" style="width:32%;margin-right:2%"></img>
-                    <img src="./Bilder/Details/152154_W_r_72 copy.jpg" class="forschungsbild" style="width:32%"></img>
+                    <img src="./Bilder/Details/Steiger.jpg" id="ursuladetail" onmouseenter="bildnachweis('ursuladetail')" onmouseleave="bildnachweis('ursuladetail')" class="forschungsbild" style="width:32%;margin-right:2%"></img>
+                    <img src="./Bilder/Details/Katharina Tscharner.jpg" id="katharinadetail" onmouseenter="bildnachweis('katharinadetail')" onmouseleave="bildnachweis('katharinadetail')" class="forschungsbild" style="width:32%;margin-right:2%"></img>
+                    <img src="./Bilder/Details/152154_W_r_72 copy.jpg" id="elisabethdetail" onmouseenter="bildnachweis('elisabethdetail')" onmouseleave="bildnachweis('elisabethdetail')" class="forschungsbild" style="width:32%"></img>
                 </div>
 
                 <div style="display:flex;flex-direction:row;margin-top:25%">
-                    <img src="./Bilder/Orden/multimedia-25368-detail.png" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Orden/multimedia-25369-detail.png" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Orden/multimedia-25371-detail.png" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
-                    <img src="./Bilder/Orden/multimedia-26200-detail.png" class="forschungsbild" style="width:23.5%"></img>
+                    <img src="./Bilder/Orden/multimedia-25368-detail.png" id="golden1" onmouseenter="bildnachweis('golden1')" onmouseleave="bildnachweis('golden1')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Orden/multimedia-25369-detail.png" id="golden2" onmouseenter="bildnachweis('golden2')" onmouseleave="bildnachweis('golden2')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Orden/multimedia-25371-detail.png" id="golden3" onmouseenter="bildnachweis('golden3')" onmouseleave="bildnachweis('golden3')" class="forschungsbild" style="width:23.5%;margin-right:2%"></img>
+                    <img src="./Bilder/Orden/multimedia-26200-detail.png" id="golden4" onmouseenter="bildnachweis('golden4')" onmouseleave="bildnachweis('golden4')" class="forschungsbild" style="width:23.5%"></img>
                 </div>
-                <div style="display:flex;flex-direction:row">
-                <p class="bildunten" style="hyphens:auto;width:25%;margin-left:1%;margin-right:2%;">Kunstammlung des Bundes vW74, Foto: Matthias Bill, Belp, Public Domain</p>
-                <p class="bildunten" style="hyphens:auto;width:25%;margin-right:2%;">Kunstammlung des Bundes vW85, Foto: Matthias Bill, Belp, Public Domain</p>
-                <p class="bildunten" style="hyphens:auto;width:25%;margin-right:2%;">Kunstammlung des Bundes vW87, Foto: Matthias Bill, Belp, Public Domain</p>
-                <p class="bildunten" style="hyphens:auto;width:25%;">Kunstammlung des Bundes vW123, Foto: Matthias Bill, Belp, Public Domain</p></div>
                  <div style="display:flex;flex-direction:row;margin-top:2%">
-                    <img src="./Bilder/Orden/multimedia-25113-detail.png" class="forschungsbild" style="width:49%;margin-right:2%;pointer-events:none;"></img>
-                    <img src="./Bilder/Orden/multimedia-25363-detail.png" class="forschungsbild" style="width:49%;pointer-events:none;"></img>
+                    <img src="./Bilder/Orden/multimedia-25113-detail.png" id="golden5" onmouseenter="bildnachweis('golden5')" onmouseleave="bildnachweis('golden5')" class="forschungsbild nohover" style="width:49%;margin-right:2%;"></img>
+                    <img src="./Bilder/Orden/multimedia-25363-detail.png" id="annunziat" onmouseenter="bildnachweis('annunziat')" onmouseleave="bildnachweis('annunziat')" class="forschungsbild nohover" style="width:49%;"></img>
                 </div>
-                <div style="display:flex;flex-direction:row">
-                <p class="bildunten" style="hyphens:auto;width:49%;margin-right:2%;">Kunstammlung des Bundes vW171, Foto: Matthias Bill, Belp, Public Domain</p>
-                <p class="bildunten" style="hyphens:auto;width:49%;">Kunstammlung des Bundes vW32, Foto: Matthias Bill, Belp, Public Domain</p></div>
                 
-                <img src="./Bilder/Orden/IMG_3712.png" class="forschungsbild" style="pointer-events:none;"></img>
+                <img src="./Bilder/Orden/IMG_3712.png" class="forschungsbild nohover" style="margin-top:90%;"></img>
                 
                 <img src="./Bilder/Orden/schmuckfliese.png" class="forschungsbild" style="width:50%;margin-left:40%;object-fit:contain;margin-top:342%"></img>
                 <p class="bildunten" style="hyphens:auto;width:50%;margin-left:40%;">©&thinsp;Hugenottenmuseum Berlin & Lorenz Kienzle&thinsp;/&thinsp;Ronka Oberhammer, CC BY-NC-SA</p>
 
             </div>
-            <p style="top:0;display:flex;width:50%;hyphens:auto;margin-bottom:10%">Zwei Gemälde im Grossen Salon des Beatrice von Wattenwyl-Haus. Zwei Damen der Berner Oberschicht um 1680, portraitiert mit Brämikappe, entsprechend der damals geltenden
-                Kleidermandate.<br><br>Ihre Kleidung zeigt, dass die Mode sich trotzdem entwickelte, aber ein Accessoire ist auf beiden Bildern zu finden. Der Anhänger an einer floralen
+            <div style="top:0;display:flex;width:50%;hyphens:auto;margin-bottom:10%">
+            <p>Zwei Gemälde im Grossen Salon des Beatrice von Wattenwyl-Haus. Zwei Damen der Berner Oberschicht um 1680, portraitiert mit Brämikappe, entsprechend der damals geltenden
+                Kleidermandate.<sup id="kleidermandate">1</sup><br><br>Ihre Kleidung zeigt, dass die Mode sich trotzdem entwickelte, aber ein Accessoire ist auf beiden Bildern zu finden. Der Anhänger an einer floralen
                 schleifenförmigen Brosche, eine fallende Taube mit Perle am Schnabel, besetzt mit fünf roten Steinen.<br><br>Ist es zweimal dasselbe Objekt, vielleicht vererbt?
                 Die zwei Frauen sind familiär nur unwesentlich verbandelt, die Vollendung der beiden Portraits liegen nur ein Jahr auseinander.<br><br>Trauen wir uns doch aber aus
                 dem Haus und durchsuchen im Archiv der Burgerbibliothek die Porträtdok.&thinsp;–&thinsp;eine Zusammenstellung von Portraits aus Bern, die seit den 1960ern unterhalten und gegebenenfalls
-                erweitert wird. Und tatsächlich, da sind weitere solcher Taubenanhänger auf Portraits zu finden!<br><br>Knapp ein Dutzend Frauenportraits von 1670 bis 1693
+                erweitert wird.<sup id="portraetdok">2</sup> Und tatsächlich, da sind weitere solcher Taubenanhänger auf Portraits zu finden!<br><br>Knapp ein Dutzend Frauenportraits von 1670 bis 1693
                 finden sich in der Datenbank. Wenn man nun weiter bei den Berner Kulturinstitutionen rumstochert, stösst man im Bernischen Historischen Museum und im Kunstmuseum
                 auch auf je ein solches Portait, das im BHM ist auch in der Porträtdok. erfasst.<br><br>Online liess sich bisher nur ein weiteres Gemälde mit solch einer Taube
                 finden, das Portrait von Barbe de Theisson von 1663, via die Kunsthandel-Plattform MutualArt. Alles in allem sind wir also mit einem Korpus von 13 Bildern
@@ -114,18 +108,18 @@
                 –&thinsp; der Kopf bleibt unbesetzt. Beim Portrait von Elisabeth von Werdt-Andreae im Kunstmuseum sind es sogar nur zwei rote Steine auf den Flügeln, dafür ein grüner
                 auf dem Rumpf.<br><br>Die Tauben muten wie ein Ordenszeichen an, davon gibt es auf Portraits nicht zu knapp. Hier sind aber die Männer stark im Vorteil.
                 Alleine im Von Wattenwyl-Haus finden wir mindestens drei verschiedene Ordenstypen mit Tieren: Der berühmteste ist der Orden des Goldenen Vlieses mit dem
-                Schaf an einer Kette aus Feuerstahl, gestiftet 1430 vom Burgunderherzog Philipp der Gute.<br><br>Der zweite ist der Annunziaten-Orden, Hausorden der Savoyer. Und
+                Schaf an einer Kette aus Feuerstahl, gestiftet 1430 vom Burgunderherzog Philipp der Gute.<sup id="vlies">3</sup><br><br>Der zweite ist der Annunziaten-Orden, Hausorden der Savoyer.<sup id="annunziaten">4</sup> Und
                 oha! Hier finden wir eine fallende Taube über dem Erzengel Gabriel und Maria, der typischen Szene der Verkündigung. Der portraitierte Nicolas de Watteville (1544–1610)
                 hängt im Grossen Salon unseren zwei Damen mit Taube gegenüber.<br><br> Doch beim dritten wird unsere Taube sogar Hauptakteurin, es handelt sich nämlich
                 um den Orden vom Heiligen Geist. Fall gelöst. Oder?<br><br> Wenn wir nach dem Orden des Heiligen Geistes in Bern Ausschau halten, finden
-                wir gleich zwei verschiedene Verbindungen. Einerseits war der Mönchsorden der Hospitaliter vom Heiligen Geist fast seit der Stadtgründung für Teile des Spitalwesens
-                in Bern verantwortlich. Diese Pflicht ging mit der Reformation und der Aufhebung des Ordens auf die Burger über, die Patrizier-Oberschicht. Namentlich erinnert
+                wir gleich zwei verschiedene Verbindungen. Einerseits war der Mönchsorden der Hospitaliter vom Heiligen Geist seit dem 14. Jahrhundert für Teile des Spitalwesens
+                in Bern verantwortlich.<sup id="hospitaliter">4</sup> Diese Pflicht ging mit der Reformation und der Aufhebung des Ordens auf die Burger über, die Patrizier-Oberschicht. Namentlich erinnert
                 an diese Verbindung entfernt noch heute die Heiliggeist-Kirche.<br><br>Der andere Orden ist ein Ritterorden, den Heinrich III. 1578 gründete, um den Heiligen Geist
-                für die Krönungen zum König von Polen (Pfingstmontag 1573) und Frankreich (Pfingstsonntag 1574) zu ehren. Von diesem Orden kommt übrigens das Blaue Band,
+                für die Krönungen zum König von Polen (Pfingstmontag 1573) und Frankreich (Pfingstsonntag 1574) zu ehren.<sup id="heinrich">5</sup> Von diesem Orden kommt übrigens das Blaue Band,
                 das Cordon Bleu!<br><br>Ein Portrait eines Trägers dieses Ordens finden wir ebenfalls im Von Wattenwyl-Haus. Wie, wenn überhaupt, hängen unsere Tauben auf den Frauenportraits
                 nun mit diesen verschiedenen Ordenstauben zusammen? Das ist die grosse Frage.<br><br>Eine These führt in Richtung Militärdienst, als Proxy-Orden für die Frauen der in Frankreich
-                dienenden Schweizer Offiziere. 1662 wurde der erste Frauenorden durch die römisch-deutschen Kaiserin Eleonora Magdalena Gonzaga von Mantua-Nevers gegründet.
-                Wagten die Berner Damen eine Imitationstat?<br><br>Die andere These wurzelt im Spitalwesen. Die seltsam eingegrenzte Zeitspanne, während der die Tauben auf Portraits auftauchen
+                dienenden Schweizer Offiziere. 1662 wurde der erste Frauenorden durch die römisch-deutschen Kaiserin Eleonora Magdalena Gonzaga von Mantua-Nevers gegründet.<sup id="frauenorden">6</sup> Wagten
+                die Berner Damen eine Imitationstat?<br><br>Die andere These wurzelt im Spitalwesen. Die seltsam eingegrenzte Zeitspanne, während der die Tauben auf Portraits auftauchen
                 (Stand jetzt die 30 Jahre zwischen 1663 und 1693), findet nämlich eine ziemlich passende Korrelation in der Flüchtlingsbewegung des Zweiten Refuge.<br><br>
                 Es geht um die Hugenotten, die protestantische Glaubensminderheit in Frankreich, nach der Reformation verfolgt vom französischen Königshaus. Viele fanden
                 ihren Weg in die benachbarte Schweiz. Bern war die eidgenössische Stadt mit dem höchsten Kontingent an aufgenommenen Flüchtlingen.<br><br>Die zweite grosse
@@ -142,12 +136,51 @@
                 jener Zeit man sich gräbt, desto komplexer wird das Gefüge aus politischen, religiösen und gesellschaftlichen Spannungen. Kleidermandate, Hugenotten, Täufer,
                 Pietisten, soziale, religiöse Reform- und Bewahrungswünsche, die auch symbolisch auf Portraits ausgetragen wurden.
             </p>
+            </div>
+            
+        </div>
+        <div style="display:flex;flex-direction:row">
+        <div style="display:flex;width:25%"></div>
+        <quote id="bibliografie" style="display:flex;width:75%;hyphens:auto;align-self:right;flex-direction:column">
+            <quote class="quelle">Prinz zur Lippe, August Ernst. <i>Orden und Auszeichnungen in Geschichte und Gegenwart</i>. Keysersche Verlagsbuchhandlung, Heidelberg&thinsp;/&thinsp;München, 1958.</quote><br>
         </container>
+        </div>
+        <div style="display:flex;position:absolute;width:20%;right:2%;">
+            <p class="fussnote" id="kleidermandate-note"><a href="https://hls-dhs-dss.ch/articles/016302/2008-10-16/#HMittelalterbis1800" target="blank">vgl. Katharina Simon-Muscheid, «Kleidung&thinsp;–&thinsp;Kleidung für jeden Stand», in <i>Historisches Lexikon der Schweiz (HLS)</i>, Version von 1998, aktualisiert 2008.</a></p>
+            <p class="fussnote" id="portraetdok-note"><a href="https://www.burgerbib.ch/aktuelles/news/detail/einzigartige-sammlung-berner-portraets-online" target="blank">Porträtdok.</a></p>
+            <p class="fussnote" id="vlies-note">August Ernst Prinz zur Lippe, <i>Orden und Auszeichnungen in Geschichte und Gegenwart</i>, Keysersche Verlagsbuchhandlung, Heidelberg&thinsp;/&thinsp;München, 1958, 137.</p>
+            <p class="fussnote" id="hospitaliter-note"><a href="https://hls-dhs-dss.ch/articles/048711/2010-05-20/" target="blank">Elsanne Gilomen-Schenkel, «Hospitaliter vom Heiligen Geist», in <i>Historisches Lexikon der Schweiz (HLS)</i>, Version von 2005, aktualisiert 2010.</a></p>
+            <p class="fussnote" id="annunziaten-note">Prinz zur Lippe, <i>Orden und Auszeichnungen</i>, 35.</p>
+            <p class="fussnote" id="heinrich-note"><a href="https://www.samlhoc.fr/phaleristique/ordres-religieux-hospitaliers/ordre_saint_esprit/" target="blank">Société des amis du musée de la Légion d'Honneur et des ordres de chevalerie, «Ordre du Saint-Esprit», abgerufen am 27.05.2026.</a></p>
+            <p class="fussnote" id="barbe-note" style="display:none;">Porträt von Barbe de Theisson, 1663, Öl auf Leinwand, 78&#8239;×&thinsp;61&#8239;cm, ausfindig gemacht via Mutual Art.</p>
+            <p class="fussnote" id="ursula-note" style="display:none;">Porträt von Ursula Esther Schöni (*&#8239;1643), 1670, Öl auf Leinwand, 70.5&#8239;×&thinsp;56.5&#8239;cm, Porträtdok.&nbsp;4966, Foto: Luca Blum</p>
+            <p class="fussnote" id="elisabeth-note" style="display:none;">Johannes Dünz (*&#8239;17.01.1645, Brugg,
+                †&#8239;09.10.1736, Bern), Bildnis Elisabeth von Werdt-Andreae, 1672, Öl auf textilem Bildträger [Leinen/Hanf]
+                113.5&#8239;×&thinsp;82.5&#8239;cm, Kunstmuseum Bern G 13.022, Foto: Kunstmuseum Bern</p>
+            <p class="fussnote" id="katharina-note" style="display:none;">Porträt von Katharina Tscharner geb.
+                    Lüthardt verh. Berseth (1626-1704), 1675, Öl auf Leinwand, 114.0&#8239;×&thinsp;84.5&#8239;cm, H/41359<br>
+                    Porträtdok. 6372, ©&#8239;Bernisches Historisches Museum Bern, Foto: Christine Moor. Eigentum der Gesellschaft zu Ober-Gerwern</p>
+            <p class="fussnote" id="annamaria-note" style="display:none;">Porträt von Anna Maria Wyttenbach, 1682, Öl auf Leinwand, 83&#8239;×&thinsp;66.5&#8239;cm, Burgerbibliothek Bern, Porträtdok. 7867, Foto: Gerhard Howald</p>
+            <p class="fussnote" id="engel-note" style="display:none;">Porträt von Anna Maria Engel, 1686, Öl auf Leinwand, 96&#8239;×&thinsp;75&#8239;cm, Burgerbibliothek Bern, Porträtdok. 1153</p>
+            <p class="fussnote" id="johanna1-note" style="display:none;">Porträt von Johanna Katharina Steiger (geb. von Muralt) (1665–1727), 1689, Öl auf Karton, 35&#8239;×&thinsp;23.5&#8239;cm, Burgerbibliothek Bern, Porträtdok. 5515, Foto: Gerhard Howald</p>
+            <p class="fussnote" id="johanna2-note" style="display:none;">Porträt von Johanna Katharina Steiger (geb. von Muralt) (1665–1727), ca.&thinsp;1689, Öl auf Holz, 30.5&#8239;×&thinsp;22.5&#8239;cm, Burgerbibliothek Bern, Porträtdok. 5516, Foto: Gerhard Howald</p>
+            <p class="fussnote" id="unbekannt1-note" style="display:none;">Porträt von Unbekannt, 1689, Öl auf Leinwand, 86&#8239;×&thinsp;66&#8239;cm, zuletzt nachgewiesen im Kunsthandel, Burgerbibliothek Bern, Porträtdok. 9212, Foto: Gerhard Howald</p>
+            <p class="fussnote" id="maria-note" style="display:none;">Porträt von Maria Lerber (geb. Marquis), 1693, Guache auf Papier, 13.5&#8239;×&thinsp;10.5&#8239;cm, Burgerbibliothek Bern, Porträtdok. 3545, Foto: Gerhard Howald</p>
+            <p class="fussnote" id="unbekannt2-note" style="display:none;"> Porträt von Unbekannt, 17.&hairsp;Jh. Öl auf Leinwand, 35&#8239;×&thinsp;23&#8239;cm, zuletzt nachgewiesen im Kunsthandel, Burgerbibliothek Bern, Porträtdok. 9683, Foto: Gerhard Howald</p>
+            
+            <p class="fussnote" id="ursuladetail-note" style="display:none;">Porträt von Ursula Esther Schöni (*&#8239;1643), 1670, Öl auf Leinwand, 70.5&#8239;×&thinsp;56.5&#8239;cm, Porträtdok.&nbsp;4966, Detail.</p>
+            <p class="fussnote" id="katharinadetail-note" style="display:none;">Porträt von Katharina Tscharner geb.
+                    Lüthardt verh. Berseth (1626-1704), 1675, Öl auf Leinwand, 114.0&#8239;×&thinsp;84.5&#8239;cm, H/41359
+                    Porträtdok. 6372, Detail, ©&#8239;Bernisches Historisches Museum Bern, Eigentum der Gesellschaft zu Ober-Gerwern</p>
+            <p class="fussnote" id="elisabethdetail-note" style="display:none;">Johannes Dünz (*&#8239;17.01.1645, Brugg,
+                †&#8239;09.10.1736, Bern), Bildnis Elisabeth von Werdt-Andreae, 1672, Öl auf textilem Bildträger [Leinen/Hanf]
+                113.5&#8239;×&thinsp;82.5&#8239;cm, Detail, Kunstmuseum Bern G 13.022.</p>
+            <p class="fussnote" id="golden1-note" style="display:none;">Kunstammlung des Bundes vW74, Foto: Matthias Bill, Belp, Public Domain</p>
+            <p class="fussnote" id="golden2-note" style="display:none;">Kunstammlung des Bundes vW85, Foto: Matthias Bill, Belp, Public Domain</p>
+            <p class="fussnote" id="golden3-note" style="display:none;">Kunstammlung des Bundes vW87, Foto: Matthias Bill, Belp, Public Domain</p>
+            <p class="fussnote" id="golden4-note" style="display:none;">Kunstammlung des Bundes vW123, Foto: Matthias Bill, Belp, Public Domain</p>
+            <p class="fussnote" id="golden5-note" style="display:none;">Kunstammlung des Bundes vW171, Foto: Matthias Bill, Belp, Public Domain</p>
+            <p class="fussnote" id="annunziat-note" style="display:none;">Kunstammlung des Bundes vW32, Foto: Matthias Bill, Belp, Public Domain</p>
+        </div>
     </main>
-
-    <nav id="right" style="right:0">
-        <container>
-            <img>
-        </container>
-    </nav>
 </body>
