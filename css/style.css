@@ -813,10 +813,10 @@ start:hover {
 #unten{transform:rotate(90deg);top:90%;left:50%;z-index:3;}
 #navnav{z-index:2;transition:.3s;}
 #navnav:hover{transform:scale(1.1)}
-.forschungsbild{width:100%;display:flex;-webkit-user-drag: none;transition:all .2s;}
-.forschungsbild:hover{transform:scale(2.5);cursor:zoom-in;}
+.forschungsbild{width:100%;display:flex;-webkit-user-drag: none;transition:all .2s;object-fit: cover;}
+.forschungsbild:hover{transform:scale(2);cursor:zoom-in;}
 .taub{display:none;}
-.quelle{font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);hyphens:none;position:relative}
+.quelle{font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);hyphens:none;position:relative;user-select: text;}
 .fussnote{font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);hyphens:none;position:absolute;}
 .bildtextbild{display:none;position:absolute;margin-top:7.5%;margin-left:-3.5%;font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);color: #285f78;user-select: all;width:100%}
 .seitenbild:hover{ .bildtextbild{display:block}}
