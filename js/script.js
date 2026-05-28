@@ -437,3 +437,22 @@ function runter() {
   document.getElementById('seitenschauen').setAttribute('src', '../Bilder/Skizzen/'+skizzen[i]+'.png');
   if(i==11){i=0;}else{i++;}
 }
+
+function quotes() {
+  const id = [];
+  let quellen = document.getElementsByClassName('fussnote');
+  for (var i=0; i<quellen.length; i++) {
+    id[i] = quellen[i].id.split('-')[0];
+    try {
+    height = document.getElementById(id[i]).getBoundingClientRect().top-document.getElementById('main').getBoundingClientRect().y-20;
+    quellen[i].style.transform = 'translate(0, '+height.toString()+'px)';
+    } catch {console.log(quellen[i].id+' geht nicht');}
+  }
+}
+
+function bildnachweis(beschreibung) {
+  beschreibung = beschreibung+'-note';
+  if (document.getElementById(beschreibung).style.display == "block") {
+    document.getElementById(beschreibung).style.display = "none";
+  } else {document.getElementById(beschreibung).style.display = "block";}
+}
