@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./resources/Taube.svg"rel="icon">
+    <script src="./js/script.js"></script>
+    <title>Erkundungstool</title>
+    <meta name="description" content="Zum Entdecken von Tauben und andere Details im Beatrice von Wattenwyl-Haus. Enstanden im Rahmen des Minor-Projekts FS26 von Luca Blum im MA Art Education an der HKB.">
+    <meta property="og:image" content="./resources/Taube.ico"/>
+
+</head>
+
+<body id="body" onload="uhrenzuteilung('seitenuhr'), inhalt(), textändern('main'), tick()">
+
+    <nav id="left">
+        <container>
+            <img id="logo" class="small" src="./resources/Logo.svg" onclick="menu()">
+                <menu id="menu" class="menuoff">
+                    <a class="menulink" onclick="menu()" href="./about.html">Über das Projekt</a>
+                    <a class="menulink" onclick="menu()" href="./index.html">Erkundungstour</a>
+                    <a class="menulink" onclick="menu()" href="./tauben.html">Zu den Tauben</a>
+                    <a class="menulink" onclick="menu()" href="./verzeichnis.html">Verzeichnis</a>
+                    <img src="./resources/Taube.ico" id="dingle"></img>
+                </menu></img>
+            <p id="navlist1" class="navlist weg"> Ticken<br>Wiederholung<br>Erkundungstour</p>
+            <p id="navlist2" class="navlist off weg"><a href="./impressum.html">Impressum</a><br><a href="mailto:info@taubenklauben.ch">info@taubenklauben.ch</a><br>©&thinsp;2026, Luca Blum</p>
+        </container>
+    </nav>
+    
+    <main id="main" content="<p class=&quot;keyword&quot;>Ticken</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Erkundungstour</p>">
+        <container id="inhaltsgefäss">
+        </container>
+    </main>
+
+    <nav id="right" style="right:0">
+        <container class="navright">
+            <div class="spacer" style="height:25vh;"></div>
+            <div class="mapwrap">
+                <img class="map" src="./resources/og.svg"></img>
+                <img class="map" src="./resources/eg.svg"></img>
+                <p style="top:0;right:0;" class="dot">⬤</p>
+            </div>
+        </container>
+    </nav>
+</body>

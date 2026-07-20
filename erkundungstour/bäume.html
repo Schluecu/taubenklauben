@@ -15,9 +15,10 @@
 
 </head>
 
-<body onload="klassen('seitenbaum'), inhalt(), textändern('main')">
+<body onload="klassen('seitenbaum'), inhalt(), textändern('main'), weiterkarte()">
 
     <nav id="left">
+        <div class="blurnav l"></div>
         <container>
             <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
                 <menu id="menu" class="menuoff">
@@ -32,22 +33,68 @@
         </container>
     </nav>
 
-    <main id="main" content="<p class=&quot;keyword&quot;>Bäume</p><p class=&quot;keyword&quot;>Schauen</p><p class=&quot;keyword&quot;>Multisensorisch</p>">
+    <main id="main" content="<p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?baeume&quot;>Bäume</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?gschauen&quot;>Schauen</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?multisensorisch&quot;>Multisensorisch</a></p>">
         <a href="./menu.html"><img class="keyimage" id="seitenbaum" style="align-self:center" src="../Bilder/Werke/multimedia-814_baum.png"></img></a>
         <container id="inhaltsgefäss">
+            <div id="baumdraussen" style="position:relative;width:95%;">
+                <img src="../Bilder/Baumdraussen.png" onmouseenter="appear('besserus')" id="unterbaum" class="nodrag" style="width:100%;transition:all .5s;"></img>
+                <img src="../Bilder/Baumdraussen_frei.png" id="überbaum" class="nodrag" style="width:100%;position:absolute;top:0;left:0"></img>
+                <svg id="glasssquare" onclick="appear('glass')" class="pointer" style="position:absolute;top:65%;left:5%;width:9%;height:5vw;" xmlns="http://www.w3.org/2000/svg"><rect id="glassrect" width="100%" height="100%" style="stroke-width:.5vmax;stroke:#c73a2d"></rect></svg>
+            </div>
+            <quote class="inhalt disappeared pointer" id="besserus" onclick="appear('baumbaum'), unclick('besserus')" style="position:relative;text-align: center;width:100%"><br>«Üse gsed chli besser us.»<br>«Ui ja, de heds halt au chli schwirig hie.»</quote>
+            <div class="disappeared popup grabber" onmouseenter="appear('glasstext')" srcset style="position:fixed;top:40%;left:32%;width:18%;height:32%;transition:transform .3s;background-image: url(../Bilder/glass.jpeg);background-size:cover" id="glass">
+            <p class="cross" onclick="disappear('glass')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p></div>
+
+            <div class="disappeared popup grabber" srcset id="glasstext" style="position:fixed;top:40%;right:27%;width:18%;min-height:32%">
+                <p>Vom Treppenaufgang ins Obergeschoss blickt man direkt auf den Innenhof.<br><br>Die Glasscheibe dafür wurde an die Steinsäulen perfekt angepasst.<br><br>
+                Architektonische Eingriffe ins Gebäude sind mög&shy;lich&thinsp;–&thinsp;wenn es denn den gewählten Prioritäten entspricht.</p>
+                <p class="cross" onclick="disappear('glasstext')" style="position:absolute;bottom:4%;right:3%;">×</p></div>
+            </div>
+            <p class="disappeared" id="baumbaum" style="width:60%;margin-left:20%;hyphens:auto">
+                <img src="../Bilder/Skizzen/6.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Dieser Austausch wurde an der Erkundungstour im Beatrice von Wattenwyl-Haus aufgeschnappt. Der Baum im Innenhof scheint es
+                tatsächlich <u id="nichtleicht" class="pointer" onclick="appear('baumbaum2'), unclick('nichtleicht'), plaintext('nichtleicht')">nicht leicht</u> zu haben.
+                <p id="baumbaum2" style="width:60%;margin-left:5%;hyphens:auto" class="disappeared"><img src="../Bilder/Skizzen/7.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Es gibt aber auch noch andere Bäume in und um den Repräsentationsbau. Wer in Bern auch nur wenig Zeit verbracht hat,
+                ist solchen Bäumen wohl <u id="begegnet" class="pointer" onclick="appear('spannbaum'), appear('baumkrone'), unclick('begegnet'), plaintext('begegnet')">sogar schon begegnet</u>.</p>
+                <div id="spannbaum" style="width:60%;margin-left:30%;hyphens:auto" class="disappeared"><p style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;">
+                    <img src="../Bilder/spannbaum.png" class="nodrag" id="unterspann" style="width:100%;transition:all .3s;"></img>
+                    <img src="../Bilder/spannbaum_frei.png" class="nodrag" id="überspann" style="position:absolute;width:100%;top:0;left:0"></img></p>
+                    <p>Denn im Garten des Von Wattenwyl-Hauses stehen Bäume. Ihre Kronen werden in einem <u id="poetisch" class="pointer" onclick="appear('plaeaefe'), unclick('poetisch'), plaintext('poetisch')">poetischen Akt</u> mit Spanngurten und Kabeln in Form gehalten.
+                        <p id="plaeaefe" class="disappeared"><br>Betrachtet man die Bäume von der <u id="plaefe" class="pointer" onclick="appear('pläfebox'), unclick('plaefe'), plaintext('plaefe')">Pläfe</u>, bemerkt man dieses aufwändige Herrichten nicht. Der stabile und klar definierte Schein bleibt.</p>
+                    </p>
+                <div class="disappeared popup grabber" srcset id="pläfebox" style="position:fixed;bottom:20%;left:27%;width:25%;height:25%;background-image: url(../Bilder/austausch.png);background-size:cover">
+                    <p class="cross" onclick="disappear('pläfebox')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p>
+                </div>
+                </div>
+                <img id="anderbaum" src="../Bilder/Skizzen/5.png" class="nodrag disappeared" style="position:relative;width:105%;left:-2.5%;align-self:center;margin-top:2vh;margin-bottom:2vh;"></img>
+            </p>
             
         </container>
     </main>
 
     <nav id="right" style="right:0">
+        <div class="blurnav r"></div>
         <container class="navright">
             <div class="spacer" style="height:20vh;"></div>
             <div id="mapwrap">
+                <div class="mapper" style="position:relative">
                 <img class="map" src="../resources/og.svg"></img>
+                <p onclick="map('Baumkrone')" id="baumkrone" style="top:-6%;right:17%;" class="dot disappeared">⬤</p>
+                    <p class="popdown klein" style="top:0%;right:0%;">Baumkrone</p>
+                <p onclick="map('Innenhof')" id="innenhof" style="top:45%;right:63%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:53%;right:20%;">Baum im Innenhof</p></div>
+                
+                <div class="mapper" style="position:relative">
                 <img class="map" src="../resources/eg.svg"></img>
-                <p style="top:65%;right:64%;" class="dot">⬤</p>
-                <p style="top:57%;right:24.5%;" class="dot">⬤</p>
-            </div>
+                <p onclick="map('Gobelin')" id="gobelin" style="top:38%;right:22%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:45%;right:-3%;">Gobelin mit<br>Apfelschimmel</p>
+            </div></div>
         </container>
     </nav>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {$( "#glass" ).draggable();} );
+    $( function() {$( "#glasstext" ).draggable();} );
+    $( function() {$( "#pläfebox" ).draggable();} );
+    </script>
 </body>

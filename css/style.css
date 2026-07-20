@@ -75,6 +75,8 @@ u:hover {
   color:#c73a2d;
 }
 
+#wowo:hover{color:white}
+
 quote {
   hyphens:auto;
   font-family:Circuit, serif;
@@ -378,20 +380,29 @@ container {
 .seitentaube {
   position:fixed;
   transition:all .4s ease-out;
-  height:30vh;
+  height:20%;
   left:9vw;
   z-index:2;
 }
 
 .seitentaube:hover {
-  height:30.8vh;
+  height:22%;
 }
 
 #überbaum {
   pointer-events: none;
 }
 
+#überspann {
+  pointer-events: none;
+}
+
 #unterbaum:hover {
+  filter: invert(.3);
+  opacity:.7;
+}
+
+#unterspann:hover {
   filter: invert(.3);
   opacity:.7;
 }
@@ -547,10 +558,6 @@ s{
 
 .cross:hover {
   cursor:pointer;
-}
-
-.red {
-  color:#c73a2d;
 }
 
 /* rot: #c73a2d    weiss: #F2F1ED    blau: #285f78    schwarz: #2f312b */
@@ -709,6 +716,11 @@ start:hover {
   cursor:pointer;
 }
 
+.bern:hover{
+  transform-origin: 50% 50%;
+  transform:scale(.45);
+}
+
 .map {
   position:relative;
   width:13vw;
@@ -786,7 +798,7 @@ start:hover {
 #geschaut2{top:-6vh;left:-18vw;}
 #geschaut3{top:-7vh;left:-20vw;}
 #mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
-#mschöni{height:125%;top:46%;width:25vw;object-fit: contain;}
+#mschöni{height:80%;top:55%;transform:translate(-75%, -50%);}
 #mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
 #weiterleitung{z-index:5;position:fixed;left:38%; top:40%;width:22%}
 @keyframes wabern {0%{text-shadow:0 0 .5vmax #285f78}100%{text-shadow:0 0 .8vmax #285f78}}
@@ -831,6 +843,41 @@ start:hover {
   0% {height:20vmin;}
   100% {height:15vmin;}
 }
+
+@keyframes fadeout {100%{opacity:0}}
+#raum{position:relative;animation:fadeout 20s forwards}
+.insetshadow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 .7vmax .7vmax #F2F1ED;
+  width:90%;
+}
+.insetshadow{display:inline-flex;width:90%;}
+.portraitrechts{position:absolute;right:12.2%;top:4.5%;width:13%;}
+.portraitlinks{position:absolute;left:31.3%;bottom:6.5%;width:3.3%;}
+.rechtsactivated{transition:all 1s;transform-origin:top right; transform: scale(1.85);box-shadow: inset 0 0 1vmax 1vmax #F2F1ED;animation:none}
+.linksactivated{transition:all 1.3s;transform-origin: bottom center;transform: scale(6.85);box-shadow: inset 0 0 1vmax 1vmax #F2F1ED;animation:none}
+.nodrag{-webkit-user-drag: none;}
+.detailtaube{width:15%;position:absolute;transition:all .5s}
+.bern{font-size:max(3vmax, 20pt);transform: scale(.3);}
+.bern.schlagwort{position:relative;}
+.bern.schlagwort:hover{transform:scale(.3);}
+.dotmother{position:absolute}
+.dotdaughter{position:relative;width:fit-content}
+#punkte:hover{color:#c73a2d}
+.schiebdetail{height:100%;position:relative;}
+
+.grschauen{width:70%;position:absolute;top:10vh;left:10%;transition:all .3s}
+.grschauen:hover{transform-origin:center,center;transform: scale(1.01);}
+#schauenbox:hover{cursor:pointer}
+
+#besserus:hover {color:#c73a2d;}
+#glassrect {transition:fill .5s;fill:rgba(0,0,0,0);}
+#glassrect:hover {fill:#f2f1ed88}
+
+.red {color:#c73a2d;}
+.white {color:#F2F1ED}
 
 @media only screen and (orientation:portrait){
   body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh;}

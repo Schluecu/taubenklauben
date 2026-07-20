@@ -15,9 +15,10 @@
 
 </head>
 
-<body onload="klassen('seitentaube'), inhalt(), textändern('main')">
+<body onload="klassen('seitentaube'), inhalt(), textändern('main'), bildvergrössern()">
 
-    <nav id="left">
+    <nav id="left" style="z-index:4">
+        <div class="blurnav l"></div>
         <container>
             <img id="logo" class="small" src="../resources/Logo.svg" onclick="menu()">
                 <menu id="menu" class="menuoff">
@@ -32,22 +33,179 @@
         </container>
     </nav>
 
-    <main id="main" content="<p class=&quot;keyword&quot;>Anhänger</p><p class=&quot;keyword&quot;>Wiederholung</p><p class=&quot;keyword&quot;>Forschung</p>">
-        <a href="./menu.html"><img class="keyimage" id="seitentaube" style="align-self:center" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png"></img></a>
-        <container id="inhaltsgefäss">
+    <main id="main" content="<p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?anhaenger&quot;>Anhänger</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?wiederholung&quot;>Wiederholung</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?forschung&quot;>Forschung</a></p>">
+        <a href="./menu.html"><img class="keyimage" id="seitentaube" style="align-self:center;z-index:5" src="../resources/Taube.ico"></img></a>
+        <container id="inhaltsgefäss" style="display:inline-block;position:relative;padding-bottom:0">
+            <div class="inhalt" style="position:absolute;width:100%">
+                <div class="insetshadow" style="border-radius:1vmax;"><img class="inhalt bild nodrag" style="margin-right:0;border-radius:1vmax;" id="raum" src="../Bilder/Raum.png"></img></div>
+                <img src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png" class="disappeared detailtaube nodrag" id="detailweiss" style="left:6%;top:27%"></img>
+                <img class="pointer bild portraitrechts nodrag" id="rechtsactivated" onmouseenter="klassen('rechtsactivated')" src="../Bilder/Portraits/multimedia-25352.jpg"></img>
+                <p id="taubeweiss" style="top:35%;left:29.5%;pointer-events:none;" class="dot bern white disappeared">⬤</p>
+                <img src="../Bilder/Details/Portrait1 Large.png" class="disappeared detailtaube nodrag" id="detaildiesbach" style="left:47%;top:27%"></img>
+                <img class="pointer bild portraitlinks nodrag" id="linksactivated" onmouseenter="klassen('linksactivated')" src="../Bilder/Portraits/multimedia-25382.jpg"></img>
+                <p id="taubediesbach" style="top:41.5%;right:25.3%;pointer-events:none" class="dot bern white disappeared">⬤</p>
+            </div>
+            <div class="spacer" style="height:42vmin;"></div>
+            <div class="inhalt" id="multisensory" style="align-self:center;width:87%;margin-left:5%;">
+                <p id="multi" >Die Wand wird zuerst wohl als bespielte Fläche wahrge&shy;nommen. Doch je länger man davor steht, desto eher lösen sich einzelne Elemente
+                    davon ab.<br><br>Vielleicht sind das die zwei Damenportaits, die sich oben gerade loslösen.<br><br> Und vielleicht fokussiert sich die Wahrnehmung
+                    nicht auf den ganzen Rahmen, sondern auf zwei <u class="pointer" onclick="appear('detailweiss'), appear('detaildiesbach'), appear('karte'), taubenerschein(), klassen('rechtsactivated'), klassen('linksactivated'), unclick('stellen'), plaintext('stellen')" id="stellen">spezifische Details</u>.
+                </p>
+            </div>
+            <div class="spacer" style="height:6vmin;"></div>
+            <div id="karte" class="disappeared">
+                <p id="wo" srcset style="position:relative;width:100%;text-align:center;z-index:5;mix-blend-mode:multiply;"><a id="wowo" class="grabber frage" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')">Wo gibt es den Taubenanhänger noch?</a></p>
+                <p id="institutionen" class="disappeared" style="position:relative;width:100%;text-align:center;"><br>Einige Gemälde gehören Institutionen.</p>
+
+                <div class="spacer" style="height:6vmin;"></div>
+                <div style="position:relative">
+                <img src="../Bilder/bern.svg" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')" class="nodrag" id="bern" style="position:relative;left:5%;width:80%;"></img>
+                <p id="weiss" style="top:15.2%;left:19%;" class="dot bern red" onclick="appear('kunstmuseum')">⬤</p>
+                    <p class="popdown klein" style="top:23%;right:68%;">Kunstmuseum Bern</p>
+                <p id="weiss" style="top:55%;right:43%;" class="dot bern red" onclick="appear('bvwhaus')">⬤</p>
+                    <p class="popdown klein" style="top:62.5%;right:23%;">Beatrice von Wattenwyl-Haus</p>
+                <p id="weiss" style="bottom:-1.5%;left:43%;" class="dot bern red" onclick="appear('bhm')">⬤</p>
+                    <p class="popdown klein" style="top:94%;right:23%;">Bernisches Historisches Museum</p>
+            </div>
+
+            <div class="disappeared popup grabber" srcset id="kunstmuseum" style="position:absolute;width:40%;top:53%;right:20%;z-index:2"><p class="inhalt">
+            Hier befindet sich ein <u class="pointer" onmouseenter="appear('werdtandreae')" onmouseleave="disappear('werdtandreae')">Portrait der Elisabeth von Werdt-Andreae</u>, gemalt von Johannes Dünz um 1672, gezeigt in der Ausstellung «Das volle Leben.
+            Alte Meister von Duccio bis Liotard», bis Ende September 2026.</p>
+            <p class="cross" onclick="disappear('kunstmuseum')" style="position:absolute;bottom:6%;right:3%;">×</p></div>
+            <img src="../Bilder/Portraits/152154_W_r_72.jpg" class="nodrag disappeared" id="werdtandreae" style="box-shadow: 0 0 1vmax #2f312b;position:absolute;top:69%;right:20%;width:30%;z-index:3;border-radius: .5vmax;"></img>
+
+            <div class="disappeared popup grabber" srcset id="bvwhaus" style="position:absolute;width:40%;top:69%;left:6%;z-index:2"><p class="inhalt">
+            Die oben gezeigten Portraits hängen im Grossen Salon dieses Gebäudes. Das Haus und die Ausstattung gehört seit Anfang des 20.&nbsp;Jahrhunderts dem Bund
+            und wird vom Bundesrat zu Repräsen&shy;tations&shy;zwecken genutzt.</p>
+            <p class="cross" onclick="disappear('bvwhaus')" style="position:absolute;bottom:6%;right:3%;">×</p></div>
+
+            <div class="disappeared popup grabber" srcset id="bhm" style="position:absolute;width:40%;top:85%;left:0%;z-index:2"><p class="inhalt">
+            Das Bernische Historische Museum bewahrt im Depot ein <u class="pointer" onmouseenter="appear('tscharner')" onmouseleave="disappear('tscharner')">Gemälde</u> auf, das der Gesellschaft zu Ober-Ger&shy;wern gehört. Diese entstand aus der Zunft der Lederhändler.</p>
+            <p class="cross" onclick="disappear('bhm')" style="position:absolute;bottom:6%;right:3%;">×</p></div>
+            <img src="../Bilder/Portraits/H_41359-bild01.jpg" class="nodrag disappeared" id="tscharner" style="box-shadow: 0 0 1vmax #2f312b;position:absolute;top:69%;right:20%;width:30%;z-index:3;border-radius: .5vmax;"></img>
             
+            <div class="spacer" style="height:5vmin;"></div>
+            <p id="punkte" class="pointer disappeared" style="text-align:center" onclick="appear('recherche'), appear('rechercher'), disappear('punkte')">…</p>
+        </div>
         </container>
+        <container class="disappeared" id="recherche" style="display:inline-block;position:relative;padding-top:0">
+            <div class="disappeared" id="rechercher">
+            <p style="position:relative;width:100%;text-align:center;">Andere Exemplare sind <u class="pointer" onclick="appear('recherching'), unclick('einfach'), plaintext('einfach')" id="einfach">nicht so einfach</u> zu finden.</p>
+        </div>
+            <div class="inhalt" style="position:relative;display:flexbox;align-self:center;width:87%;margin-left:5%;margin-top:4%;height:20vh;">
+                <img src="../Bilder/Portraits/44a4a7e8-f0ef-48d4-a4f1-137d5fc8abdf.jpg" id="barbebild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Portrait.jpg" id="schoenibild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._7867.jpg" id="wyttenbachbild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._1153.jpg" id="engelbild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._5515.jpg" id="steiger1bild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._5516.jpg" id="steiger2bild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._9212.jpg" id="unbekanntbild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._3545.jpg" id="lerberbild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+                <img src="../Bilder/Portraits/Porträtdok._9683.jpg" id="kunsthandelbild" class="disappeared"
+                style="display:flex;position:absolute;height:120%;transform-origin:center;justify-self:center;border-radius:1vmax;"></img>
+
+                <div id="barbe" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('barbebild')" onmouseleave="disappear('barbebild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Barbe de Theisson (1663),<br>im Kunsthandel nachgewiesen</p></div></div>
+                <div id="schoeni" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('schoenibild')" onmouseleave="disappear('schoenibild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Ursula Esther<br>Schöni (1670), in Privatbesitz</p></div></div>
+                <div id="wyttenbach" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('wyttenbachbild')" onmouseleave="disappear('wyttenbachbild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Anna Maria Wyttenbach<br>(1682), Ort unbekannt</p></div></div>
+                <div id="engel" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('engelbild')" onmouseleave="disappear('engelbild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Anna Maria Engel<br>(1686), Ort unbekannt</p></div></div>
+                <div id="steiger1" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('steiger1bild')" onmouseleave="disappear('steiger1bild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Johanna Katharina Steiger<br>(1689), Ort unbekannt</p></div></div>
+                <div id="steiger2" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('steiger2bild')" onmouseleave="disappear('steiger2bild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Johanna Katharina Steiger<br>(ca.&thinsp;1689), Ort unbekannt</p></div></div>
+                <div id="unbekannt" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('unbekanntbild')" onmouseleave="disappear('unbekanntbild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Unbekannt (1689),<br>im Kunsthandel nachgewiesen</p></div></div>
+                <div id="lerber" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('lerberbild')" onmouseleave="disappear('lerberbild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Maria Lerber<br>(1693), Ort unbekannt</p></div></div>
+                <div id="kunsthandel" class="dotmother">
+                    <div class="dotdaughter">
+                    <p class="dot bern red schlagwort" onmouseenter="appear('kunsthandelbild')" onmouseleave="disappear('kunsthandelbild')">⬤</p>
+                    <p class="popdown klein" style="top:80%;width:max-content;left:40%">Portrait von Unbekannt (17.&thinsp;Jh.),<br>im Kunsthandel nachgewiesen</p></div></div>
+            </div>
+        </container>
+        <div class="disappeared" id="recherching">
+            <div class="spacer" style="height:8vmin;"></div>
+            <p style="align-self:center;width:70%;margin-left:7%;padding-left:8%;text-align:center;">Die laufende kunsthistorische Erschliessung der Tauben findet sich auf
+                <u class="pointer" onclick="unclick('seite'), plaintext('seite')" id="seite"><a href="../tauben.html" target="_self">dieser Seite</a></u>.
+            Dabei ist von Interesse, wie die gesellschaftlichen Kontexte jener Zeit mit diesem <u id="symbol" onclick="appear('schiebedetails'), appear('detailschiebung'), unclick('symbol'), plaintext('symbol')">inszenierten Symbol</u> zusammenhängen.</p>
+        </div>
+        
+        <div id="schiebedetails" class="disappeared" style="display:flex;height:25vh;margin-left:-10%;justify-content:center;">
+            <div class="spacer" style="height:5vmin;"></div>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png" class="schiebdetail pointer" id="detaileins" srcset style="left:6%;top:27%"></img>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Taube_freigestellt.png" class="schiebdetail pointer" id="detailzwei" srcset style="left:6%;top:27%"></img>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Portrait1 Large.png" class="schiebdetail pointer" id="detaildrei" srcset style="left:6%;top:27%"></img>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/IMG_3450.png" class="schiebdetail pointer" id="detailvier" srcset style="left:6%;top:27%"></img>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Katharina Tscharner.png" class="schiebdetail pointer" id="detailfünf" srcset style="left:6%;top:27%"></img>
+            <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/barbe.png" class="schiebdetail pointer" id="detailsechs" srcset style="left:6%;top:27%"></img>
+        </div>
+
+        <div id="detailschiebung" class="disappeared">
+            <div class="spacer" style="height:10vmin;"></div>
+            <p id="gleich" style="width:60%;margin-left:20%;text-align:center;">Warum sehen die Anhänger <u onclick="appear('anders'), disappear('gleich')">alle gleich</u> aus?</p>
+            <p id="anders" class="disappeared" style="width:60%;margin-left:20%;text-align:center;">Warum sehen die Anhänger <u onclick="appear('unterschiede'), unclick('ander'), plaintext('ander')" id="ander">alle anders</u> aus?<br><br></p>
+            <p id="unterschiede" class="disappeared" style="width:60%;margin-left:20%;text-align:center;">Die Ähnlichkeit zu Beginn zerfällt schnell in eine <u onclick="appear('vielzahl'), unclick('vielz'), plaintext('vielz')" id="vielz">Vielzahl von Unterschieden</u>.<br><br></p>
+            <p id="vielzahl" class="disappeared" style="width:60%;margin-left:20%;text-align:center;">Edelsteinbesatz, Brosche (oder auch keine Brosche), Perlenform... Je genauer man schaut, desto einzigartiger sind die Tauben.
+            </p>
+        </div>
+        <div class="spacer" style="height:5vmin;"></div>
     </main>
 
     <nav id="right" style="right:0">
-        <container class="navright">
+        <div class="blurnav r" style="z-index:4"></div>
+        <container class="navright" style="z-index:5">
             <div class="spacer" style="height:20vh;"></div>
             <div id="mapwrap">
+                <div class="mapper">
                 <img class="map" src="../resources/og.svg"></img>
+                <p onclick="map('weiss')" id="weiss" style="top:2.2%;right:57%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:7%;right:0%;">Portrait Magdalena Weiss</p>
+                <p onclick="map('diesbach')" id="diesbach" style="top:6%;right:57%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:10%;right:0%;">Portrait Maria Magdalena <br>von Diesbach</p>
+                </div>
                 <img class="map" src="../resources/eg.svg"></img>
-                <p style="top:65%;right:64%;" class="dot">⬤</p>
-                <p style="top:57%;right:24.5%;" class="dot">⬤</p>
             </div>
         </container>
     </nav>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {$( "#kunstmuseum" ).draggable();} );
+    $( function() {$( "#bvwhaus" ).draggable();} );
+    $( function() {$( "#bhm" ).draggable();} );
+    $( function() {$( "#detaileins" ).draggable();} );
+    $( function() {$( "#detailzwei" ).draggable();} );
+    $( function() {$( "#detaildrei" ).draggable();} );
+    $( function() {$( "#detailvier" ).draggable();} );
+    $( function() {$( "#detailfünf" ).draggable();} );
+    $( function() {$( "#detailsechs" ).draggable();} );
+    $( function() {$( "#wo" ).draggable();} );
+    </script>
 </body>

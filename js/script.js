@@ -154,7 +154,7 @@ function wiggle() {
   y = document.getElementById('mschöni')
   z = document.getElementById('mwerdt')
   x.style="transition:all .15s;height:64%;top:48.5%;transform:translate(-78%, -50%);";
-  y.style="transition:all .2s;height:125.5%;top:45.5%;width:25vw;transform:translate(-51%, -50%);@media only screen and (orientation:portrait){width:47%;}";
+  y.style="transition:all .2s;height:80%;top:55%;transform:translate(-76%, -50%);@media only screen and (orientation:portrait){width:47%;}";
   z.style="transition:all .3s;height:99%;top:53.5%;transform:translate(-47.5%, -50%)";
 }
 
@@ -163,7 +163,7 @@ function unwiggle() {
   y = document.getElementById('mschöni')
   z = document.getElementById('mwerdt')
   x.style="height:65%;top:48%;transform:translate(-75%, -50%)";
-  y.style="height:125%;top:45%;width:25vw;@media only screen and (orientation:portrait){width:47%;}";
+  y.style="height:80%;top:55%;transform:translate(-75%, -50%);@media only screen and (orientation:portrait){width:47%;}";
   z.style="height:98%;top:53%;transform:translate(-48%, -50%)";
 }
 
@@ -175,6 +175,35 @@ function uhrenwahl(uhr) {
   öffnen = "./uhren.html?"+uhr;
   console.log(öffnen);
   open(öffnen, "_self");
+}
+
+function taubenerschein() {
+  detailpunkte();
+  setTimeout(taubenerscheinen, 1500);
+}
+
+function detailpunkte() {
+  swvdot('barbe'); swvdot('schoeni'); swvdot('wyttenbach'); swvdot('engel'); swvdot('steiger1'); swvdot('steiger2'); swvdot('unbekannt'); swvdot('lerber'); swvdot('kunsthandel');
+}
+
+function taubenerscheinen() {
+  appear('taubeweiss'); appear('taubediesbach');
+}
+
+function bildvergrössern() {
+  setTimeout(vergrössern, 7000);
+}
+
+function vergrössern() {
+  klassen('rechtsactivated');
+  klassen('linksactivated');
+  setTimeout(appeardetails, 1000);
+  taubenerschein();
+}
+
+function appeardetails() {
+  appear('detaildiesbach');
+  appear('detailweiss');
 }
 
 function uhrenzuteilung(klasse) {
@@ -282,12 +311,25 @@ function swvc() {
   schlagworte = document.getElementsByClassName('schlagwort');
   for (let i = 0; i < schlagworte.length; i++) {
     schlagworte[i].style="top:"+(Math.random()*60+20)+"%;left:"+(Math.random()*60+18)+"%;transition:left 50s linear, top 50s linear;";
-  swvct();
   }
+  setInterval(swvc, 50000);
 }
 
-function swvct() {
-  setInterval(swvc, 50000);
+function swvdot(wort) {
+  document.getElementById(wort).style="top:"+(Math.random()*100)+"%;left:"+(Math.random()*80+5)+"%;";
+  setInterval(swvcdot, 1);
+}
+
+function swvcdot() {
+  schlagworte = document.getElementsByClassName('dotmother');
+  for (let i = 0; i < schlagworte.length; i++) {
+    schlagworte[i].style="top:"+(Math.random()*100)+"%;left:"+(Math.random()*80+5)+"%;transition:left 40s linear, top 40s linear;";
+  }
+  swvctdot();
+}
+
+function swvctdot() {
+  setInterval(swvcdot, 40000);
 }
 
 function pathex() {
@@ -423,6 +465,33 @@ function weiterkarte() {
     console.log(document.getElementById(i));
     document.getElementById(i).scrollIntoView({behaviour:"smooth"});
   //} catch {return}
+}
+
+var schau = 1;
+var zind = 0;
+let schauenen = ('schauen'+schau).toString();
+function schauen() {
+  document.getElementById(schauenen).style.pointerEvents="none";
+  document.getElementById(schauenen).style.top="0vh";
+  setTimeout(schauenzwei,300);
+}
+
+function schauenzwei() {
+  zind--;
+  document.getElementById(schauenen).style.zIndex=zind;
+  setTimeout(schauenzweihalb,100)
+}
+
+function schauenzweihalb() {
+  document.getElementById(schauenen).style.top="10vh";
+  setTimeout(schauendrei, 300)
+}
+
+function schauendrei() {
+  if (schau==12){schau=1}else{schau++;}
+  schauenen = ('schauen'+schau).toString();
+  document.getElementById(schauenen).style.zIndex="3";
+  document.getElementById(schauenen).style.pointerEvents="all";
 }
 
 const skizzen = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
