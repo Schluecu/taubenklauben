@@ -245,8 +245,8 @@ container {
   text-wrap:initial;
   width:50vw;
   margin-top:2vmax;
+  margin-left:100%;
   text-align:center;
-  justify-self:center;
   overflow:scroll;
   font-family:Circuit, serif;
   font-size:max(2.5vmax, 18pt);
@@ -475,7 +475,7 @@ container {
   -webkit-user-drag: none;
 }
 
-[id^="textschauen"]{width:67%;hyphens:auto;transition:all .2s}
+[id^="textschauen"]{width:67%;hyphens:auto;transition:all .2s;bottom:-55vh;margin-left:17%;z-index:2;pointer-events:none;position:relative}
 
 .seitenschauen:hover {
   height:16vh;
