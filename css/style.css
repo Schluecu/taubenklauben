@@ -475,6 +475,8 @@ container {
   -webkit-user-drag: none;
 }
 
+[id^="textschauen"]{width:67%;hyphens:auto;transition:all .2s}
+
 .seitenschauen:hover {
   height:16vh;
 }
@@ -872,9 +874,12 @@ start:hover {
 .grschauen:hover{transform-origin:center,center;transform: scale(1.01);}
 #schauenbox:hover{cursor:pointer}
 
+@keyframes zitat {0%{top:15vh}100%{top:0}}
+#besserus{animation:zitat 7s ease-out}
 #besserus:hover {color:#c73a2d;}
 #glassrect {transition:fill .5s;fill:rgba(0,0,0,0);}
 #glassrect:hover {fill:#f2f1ed88}
+
 
 .red {color:#c73a2d;}
 .white {color:#F2F1ED}
