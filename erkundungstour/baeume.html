@@ -51,8 +51,12 @@
                 <p class="cross" onclick="disappear('glasstext')" style="position:absolute;bottom:4%;right:3%;">×</p></div>
             </div>
             <p class="disappeared" id="baumbaum" style="width:60%;margin-left:20%;hyphens:auto">
-                <img src="../Bilder/Skizzen/6.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Dieser Austausch wurde an der Erkundungstour im Beatrice von Wattenwyl-Haus <a href="./schauen.html" target="_self"><u>aufgeschnappt</u></a>. Der Baum im Innenhof scheint es
+                <img src="../Bilder/Skizzen/6.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Dieser Austausch wurde an der Erkundungstour im Beatrice von Wattenwyl-Haus <u id="aufgeschnappt" class="pointer" onclick="appear('anjabox'), unclick('aufgeschnappt'), plaintext('aufgeschnappt')">aufgeschnappt</u>. Der Baum im Innenhof scheint es
                 tatsächlich <u id="nichtleicht" class="pointer" onclick="appear('baumbaum2'), unclick('nichtleicht'), plaintext('nichtleicht')">nicht leicht</u> zu haben.
+                <div class="disappeared popup grabber" srcset id="anjabox" style="position:fixed;bottom:20%;left:27%;width:20%;height:25%;"><p>Wie es sich anfühlt, sich im Haus zu bewegen,
+                ist digital schwer vermittelbar.<br><br>Eine Möglichkeit, ein Gefühl dafür zu bekommen:<br><br>Anja Roosens hat ihr Erlebnis an der Erkundungstour im April 2026 mit
+                einer Reihe von <a href="./schauen.html" target="_self"><u>Skizzen</u></a> festgehalten.</p>
+                <p class="cross" onclick="disappear('anjabox')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p></div>
                 <p id="baumbaum2" style="width:60%;margin-left:5%;hyphens:auto" class="disappeared"><img src="../Bilder/Skizzen/7.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Es gibt aber auch noch andere Bäume in und um den Repräsentationsbau. Wer in Bern auch nur wenig Zeit verbracht hat,
                 ist solchen Bäumen wohl <u id="begegnet" class="pointer" onclick="appear('spannbaum'), appear('baumkrone'), unclick('begegnet'), plaintext('begegnet')">sogar schon begegnet</u>.</p>
                 <div id="spannbaum" style="width:60%;margin-left:30%;hyphens:auto" class="disappeared"><p style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;">
@@ -96,5 +100,6 @@
     $( function() {$( "#glass" ).draggable();} );
     $( function() {$( "#glasstext" ).draggable();} );
     $( function() {$( "#pläfebox" ).draggable();} );
+    $( function() {$( "#anjabox" ).draggable();} );
     </script>
 </body>
