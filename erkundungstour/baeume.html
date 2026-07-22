@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
+    <style>@media only screen and (orientation:portrait){#inhaltsgefäss{width:70vw}}</style>
     <link href="../resources/Taube.svg"rel="icon">
     <script src="../js/script.js"></script>
     <title>Erkundungstool</title>
@@ -42,10 +43,10 @@
                 <svg id="glasssquare" onclick="appear('glass')" class="pointer" style="position:absolute;top:65%;left:5%;width:9%;height:5vw;" xmlns="http://www.w3.org/2000/svg"><rect id="glassrect" width="100%" height="100%" style="stroke-width:.5vmax;stroke:#c73a2d"></rect></svg>
             </div>
             <quote class="inhalt pointer" id="besserus" onclick="appear('baumbaum'), unclick('besserus')" style="position:relative;text-align: center;width:100%"><br>«Üse gsed chli besser us.»<br>«Ui ja, de heds halt au chli schwirig hie.»</quote>
-            <div class="disappeared popup grabber" onmouseenter="appear('glasstext')" srcset style="position:fixed;top:40%;left:32%;width:18%;height:32%;transition:transform .3s;background-image: url(../Bilder/glass.jpg);background-size:cover" id="glass">
+            <div class="disappeared popup grabber" onmouseenter="appear('glasstext')" srcset id="glass">
             <p class="cross" onclick="disappear('glass')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p></div>
 
-            <div class="disappeared popup grabber" srcset id="glasstext" style="position:fixed;top:40%;right:27%;width:18%;min-height:32%">
+            <div class="disappeared popup grabber" srcset id="glasstext">
                 <p>Vom Treppenaufgang ins Obergeschoss blickt man direkt auf den Innenhof.<br><br>Die Glasscheibe dafür wurde an die Steinsäulen perfekt angepasst.<br><br>
                 Architektonische Eingriffe ins Gebäude sind mög&shy;lich&thinsp;–&thinsp;wenn es denn den gewählten Prioritäten entspricht.</p>
                 <p class="cross" onclick="disappear('glasstext')" style="position:absolute;bottom:4%;right:3%;">×</p></div>
@@ -53,7 +54,7 @@
             <p class="disappeared" id="baumbaum" style="width:60%;margin-left:20%;hyphens:auto">
                 <img src="../Bilder/Skizzen/6.png" class="nodrag" style="position:relative;width:110%;left:-5%;align-self:center;margin-top:7vh;margin-bottom:2vh;"></img>Dieser Austausch wurde an der Erkundungstour im Beatrice von Wattenwyl-Haus <u id="aufgeschnappt" class="pointer" onclick="appear('anjabox'), unclick('aufgeschnappt'), plaintext('aufgeschnappt')">aufgeschnappt</u>. Der Baum im Innenhof scheint es
                 tatsächlich <u id="nichtleicht" class="pointer" onclick="appear('baumbaum2'), unclick('nichtleicht'), plaintext('nichtleicht')">nicht leicht</u> zu haben.
-                <div class="disappeared popup grabber" srcset id="anjabox" style="position:fixed;bottom:20%;left:27%;width:20%;height:25%;"><p>Wie es sich anfühlt, sich im Haus zu bewegen,
+                <div class="disappeared popup grabber" srcset id="anjabox"><p>Wie es sich anfühlt, sich im Haus zu bewegen,
                 ist digital schwer vermittelbar.<br><br>Eine Möglichkeit, ein Gefühl dafür zu bekommen:<br><br>Anja Roosens hat ihr Erlebnis an der Erkundungstour im April 2026 mit
                 einer Reihe von <a href="./schauen.html" target="_self"><u>Skizzen</u></a> festgehalten.</p>
                 <p class="cross" onclick="disappear('anjabox')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p></div>
@@ -65,7 +66,7 @@
                     <p>Denn im Garten des Von Wattenwyl-Hauses stehen Bäume. Ihre Kronen werden in einem <u id="poetisch" class="pointer" onclick="appear('plaeaefe'), unclick('poetisch'), plaintext('poetisch')">poetischen Akt</u> mit Spanngurten und Kabeln in Form gehalten.
                         <p id="plaeaefe" class="disappeared"><br>Betrachtet man die Bäume von der <u id="plaefe" class="pointer" onclick="appear('pläfebox'), unclick('plaefe'), plaintext('plaefe')">Pläfe</u>, bemerkt man dieses aufwändige Herrichten nicht. Der stabile und klar definierte Schein bleibt.</p>
                     </p>
-                <div class="disappeared popup grabber" srcset id="pläfebox" style="position:fixed;bottom:20%;left:27%;width:25%;height:25%;background-image: url(../Bilder/austausch.png);background-size:cover">
+                <div class="disappeared popup grabber" srcset id="pläfebox">
                     <p class="cross" onclick="disappear('pläfebox')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p>
                 </div>
                 </div>

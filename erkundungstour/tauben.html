@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
+    <style>@media only screen and (orientation:portrait){#inhaltsgefäss{width:50vw}#recherche{width:65vw}#recherching{width:80vw}#schiebedetails{width:80vw}}</style>
     <link href="../resources/Taube.svg"rel="icon">
     <script src="../js/script.js"></script>
     <title>Nach Tauben Klauben</title>
@@ -36,7 +37,7 @@
     <main id="main" content="<p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?anhaenger&quot;>Anhänger</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?wiederholung&quot;>Wiederholung</a></p><p class=&quot;keyword&quot;><a href=&quot;./schlagwort.html?forschung&quot;>Forschung</a></p>">
         <a href="./menu.html"><img class="keyimage" id="seitentaube" style="align-self:center;z-index:5" src="../resources/Taube.ico"></img></a>
         <container id="inhaltsgefäss" style="display:inline-block;position:relative;padding-bottom:0">
-            <div class="inhalt" style="position:absolute;width:100%">
+            <div class="inhalt" id="wandbild">
                 <div class="insetshadow" style="border-radius:1vmax;"><img class="inhalt bild nodrag" style="margin-right:0;border-radius:1vmax;" id="raum" src="../Bilder/Raum.png"></img></div>
                 <img src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png" class="disappeared detailtaube nodrag" id="detailweiss" style="left:6%;top:27%"></img>
                 <img class="pointer bild portraitrechts nodrag" id="rechtsactivated" onmouseenter="klassen('rechtsactivated')" src="../Bilder/Portraits/multimedia-25352.jpg"></img>
@@ -46,7 +47,7 @@
                 <p id="taubediesbach" style="top:41.5%;right:25.3%;pointer-events:none" class="dot bern white disappeared">⬤</p>
             </div>
             <div class="spacer" style="height:42vmin;"></div>
-            <div class="inhalt" id="multisensory" style="align-self:center;width:87%;margin-left:5%;">
+            <div class="inhalt" id="multisensory">
                 <p id="multi" >Die Wand wird zuerst wohl als bespielte Fläche wahrge&shy;nommen. Doch je länger man davor steht, desto eher lösen sich einzelne Elemente
                     davon ab.<br><br>Vielleicht sind das die zwei Damenportaits, die sich oben gerade loslösen.<br><br> Und vielleicht fokussiert sich die Wahrnehmung
                     nicht auf den ganzen Rahmen, sondern auf zwei <u class="pointer" onclick="appear('detailweiss'), appear('detaildiesbach'), appear('karte'), taubenerschein(), klassen('rechtsactivated'), klassen('linksactivated'), unclick('stellen'), plaintext('stellen')" id="stellen">spezifische Details</u>.
@@ -54,12 +55,12 @@
             </div>
             <div class="spacer" style="height:6vmin;"></div>
             <div id="karte" class="disappeared">
-                <p id="wo" srcset style="position:relative;width:100%;text-align:center;z-index:5;mix-blend-mode:multiply;"><a id="wowo" class="grabber frage" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')">Wo gibt es den Taubenanhänger noch?</a></p>
-                <p id="institutionen" class="disappeared" style="position:relative;width:100%;text-align:center;"><br>Einige Gemälde gehören Institutionen.</p>
+                <p id="wo" srcset><a id="wowo" class="grabber frage" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')">Wo gibt es den Taubenanhänger noch?</a></p>
+                <p id="institutionen" class="disappeared"><br>Einige Gemälde gehören Institutionen.</p>
 
                 <div class="spacer" style="height:6vmin;"></div>
-                <div style="position:relative">
-                <img src="../Bilder/bern.svg" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')" class="nodrag" id="bern" style="position:relative;left:5%;width:80%;"></img>
+                <div style="position:relative" id="aussenbern">
+                <img src="../Bilder/bern.svg" onmouseenter="appear('institutionen'), appear('recherche'), appear('rechercher')" class="nodrag" id="bern"></img>
                 <p id="weiss" style="top:15.2%;left:19%;" class="dot bern red" onclick="appear('kunstmuseum')">⬤</p>
                     <p class="popdown klein" style="top:23%;right:68%;">Kunstmuseum Bern</p>
                 <p id="weiss" style="top:55%;right:43%;" class="dot bern red" onclick="appear('bvwhaus')">⬤</p>
@@ -155,9 +156,10 @@
             <p style="align-self:center;width:70%;margin-left:7%;padding-left:8%;text-align:center;">Die laufende kunsthistorische Erschliessung der Tauben findet sich auf
                 <u class="pointer" onclick="unclick('seite'), plaintext('seite')" id="seite"><a href="../tauben.html" target="_self">dieser Seite&thinsp;↗</a></u>.
             Dabei ist von Interesse, wie die gesellschaftlichen Kontexte jener Zeit mit diesem <u id="symbol" onclick="appear('schiebedetails'), appear('detailschiebung'), unclick('symbol'), plaintext('symbol')">inszenierten Symbol</u> zusammenhängen.</p>
+            <div class="spacer bottom"></div>
         </div>
         
-        <div id="schiebedetails" class="disappeared" style="display:flex;height:25vh;margin-left:-10%;justify-content:center;">
+        <div id="schiebedetails" class="disappeared">
             <div class="spacer" style="height:5vmin;"></div>
             <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Magdalena_Weiss_von_Mollens_Detail.png" class="schiebdetail pointer" id="detaileins" srcset style="left:6%;top:27%"></img>
             <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Taube_freigestellt.png" class="schiebdetail pointer" id="detailzwei" srcset style="left:6%;top:27%"></img>
@@ -165,6 +167,7 @@
             <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/IMG_3450.png" class="schiebdetail pointer" id="detailvier" srcset style="left:6%;top:27%"></img>
             <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/Katharina Tscharner.png" class="schiebdetail pointer" id="detailfünf" srcset style="left:6%;top:27%"></img>
             <img onmousedown="appear('detailschiebung')" src="../Bilder/Details/barbe.png" class="schiebdetail pointer" id="detailsechs" srcset style="left:6%;top:27%"></img>
+            <div class="spacer bottom"></div>
         </div>
 
         <div id="detailschiebung" class="disappeared">
@@ -174,8 +177,8 @@
             <p id="unterschiede" class="disappeared" style="width:60%;margin-left:20%;text-align:center;">Die Ähnlichkeit zu Beginn zerfällt schnell in eine <u onclick="appear('vielzahl'), unclick('vielz'), plaintext('vielz')" id="vielz">Vielzahl von Unterschieden</u>.<br><br></p>
             <p id="vielzahl" class="disappeared" style="width:60%;margin-left:20%;text-align:center;">Edelsteinbesatz, Brosche (oder auch keine Brosche), Perlenform... Je genauer man schaut, desto einzigartiger sind die Tauben.
             </p>
+            <div class="spacer bottom"></div>
         </div>
-        <div class="spacer" style="height:5vmin;"></div>
     </main>
 
     <nav id="right" style="right:0">
