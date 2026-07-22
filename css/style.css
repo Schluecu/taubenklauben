@@ -475,7 +475,7 @@ container {
   -webkit-user-drag: none;
 }
 
-[id^="textschauen"]{width:67%;hyphens:auto;transition:all .2s;bottom:-55vh;margin-left:17%;z-index:2;pointer-events:none;position:relative}
+[id^="textschauen"]{width:67%;hyphens:auto;transition:all .3s ease-in;bottom:-55vh;margin-left:17%;z-index:2;pointer-events:none;position:relative}
 
 .seitenschauen:hover {
   height:16vh;
@@ -880,6 +880,18 @@ start:hover {
 #glassrect {transition:fill .5s;fill:rgba(0,0,0,0);}
 #glassrect:hover {fill:#f2f1ed88}
 
+#multisensory{width:78%;align-self:center;width:87%;margin-left:5%;}
+#wandbild{position:absolute;width:100%}
+#bern{position:relative;left:5%;width:80%;}
+#wo{position:relative;width:100%;text-align:center;z-index:5;mix-blend-mode:multiply;}
+#schiebedetails{display:flex;height:25vh;margin-left:-10%;justify-content:center;}
+#institutionen{position:relative;width:100%;text-align:center;}
+#bottom{height:5vmin;}
+#glass{position:fixed;top:40%;left:32%;width:18%;height:32%;transition:transform .3s;background-image: url(../Bilder/glass.jpg);background-size:cover}
+#glasstext{position:fixed;top:40%;right:27%;width:18%;min-height:32%}
+#anjabox{position:fixed;bottom:20%;left:27%;width:20%;height:25%;}
+#pläfebox{position:fixed;bottom:20%;left:27%;width:25%;height:25%;background-image: url(../Bilder/austausch.png);background-size:cover}
+
 
 .red {color:#c73a2d;}
 .white {color:#F2F1ED}
@@ -888,15 +900,21 @@ start:hover {
   body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh;}
   main {margin-top:12vh;margin-left:3vw;width:90vw;}
   nav {display:inline;position:fixed;height:10%;width:20%}
-  nav#right {bottom:0;}
+  nav#right {bottom:10%;}
   #mapwrap {top:-500%;width:100%;right:30%}
   .map{width:100%}
 
-  .keyimage{width:30%;height:20%;object-fit:contain;}
-  .seitenschauen{left:80%;width:30%;height:20%;object-fit:contain;}
+  .keyimage{width:30%;height:20%;top:38%;object-fit:contain;}
+  .keyimage#überbaum{width:200%;position:absolute;object-fit:cover;height:43vh;transform:translate(-50%, -50%);left:50%;top:40%;transition:all .8s;-webkit-user-drag: none;}
+  .seitenschauen{left:570%;width:150%;height:120%}
   .seitenuhr{left:85%; width:20%}
   .seitentaube{left:85%;width:20%}
+  .seitenbaum{left:80%;width:27%}
 
+  #glass{width:40%;height:25%;left:10%;top:32%}
+  #glasstext{width:40%;min-height:20%;top:60%}
+  #anjabox{width:45%;left:10%;height:10%}
+  #pläfebox{width:50%;left:10%;height:18%}
   #spaced{min-height:0%;}
   #hoheuhr{width:40%;}
   #ersteuhr{width:113%;}
@@ -923,7 +941,9 @@ start:hover {
   #uhren{width:60%;top:30%;transform:translate(-44%, -50%)}
   #navlist1.menu{left:36%;top:80%;text-align:center;}
   #navlist2{left:29%;top:80%;text-align:center}
-  #mschöni{height:125%;top:46%;width:47%;}
+  #mschöni{height:42%;top:53%;width:30%;}
+  #multisensory{width:78%}
+  #wandbild{width:160%;}
   .zeile{width:800%}
   #weiterleitung{left:20%; top:40%;width:60%}
   #matterportbox{position:fixed;left:50%;top:79%;width:25%;height:10%;z-index:3;}
@@ -938,6 +958,7 @@ start:hover {
   #tauben{width:80%;height:80%;transform:translate(-48%, -50%)scale(2)}
 
   .blurnav.l {width:34%;mask: radial-gradient(black,transparent 90%);}
+  .blurnav.r {display:none;}
   quote {display:block; width:85vw;}
   container {padding:0}
   .bildunterschrift{margin:2vw;}
@@ -947,7 +968,7 @@ start:hover {
   #left {position:fixed;width:80vw;}
   .menuon {font-size:max(2vmax, 15pt);line-height:max(3vmax, 20pt);padding-bottom:0;margin-top:0vh;
     margin-left:20vw;position:absolute;top:25vh;left:2vw;align-content:center; overflow:hidden;}
-  .navlist {padding-right:65vw;}
+  .navlist {width:80%}
   #logo {padding-right:0;}
   #dingle {top:0vh;}
   #aufführung {top:2.5vmax;}
@@ -969,4 +990,17 @@ start:hover {
   #links {width:5vw;}
   .linksraus {right:-100vw;}
   .rechtsraus {left:200vw;}
+
+  #bern{width:82%}
+  #aussenbern{width:150%}
+  #wo{width:120%}
+  #institutionen{width:120%}
+  #schiebedetails{position:relative;height:10vh;top:-5%}
+  #detailschiebung{width:80%}
+
+  .keyword{width:fit-content}
+  #navlist1{width:fit-content}
+  .bottom{height:10vh}
+  #schauenbox{top:10vh}
+  [id^="textschauen"]{transform:translateY(-20vh)}
 }
