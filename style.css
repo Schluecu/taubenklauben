@@ -1,0 +1,1006 @@
+@font-face {
+  font-family: "Circuit";
+  src: url(../resources/BT-Circuit-Medium.woff);
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Circuit";
+  src: url(../resources/BT-Circuit-Medium-Italic-10.woff);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Giusto";
+  src: url(../resources/BT-Giusto-SemiBold.woff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width:100vw;
+  height:100%;
+  background: #F2F1ED;
+  text-overflow:ellipsis;
+  display:flex;
+  user-select:none;
+  transition:opacity 2s;
+}
+
+nav {
+  width:20vw;
+  height:100vh;
+  display:inline-flex;
+  position:fixed;
+  z-index:2;
+}
+
+.blurnav {
+  position:absolute;
+  display:block;
+  width:20vw;
+  height:100%;
+  backdrop-filter: blur(3px);
+  background:#F2F1EDAA;
+}
+
+.blurnav.l{mask: linear-gradient(to left, transparent, black 35%);}
+.blurnav.r{mask: linear-gradient(to right, transparent, black 35%);}
+.blurnav.b{width:90%;height:20%;bottom:7%;left:5%;mask: linear-gradient(to bottom, transparent, black 90%);pointer-events: none;}
+
+main {
+  display:flex;
+  flex-direction:column;
+  margin-top:12vmax;
+  margin-left:20vw;
+  padding-bottom:10vh;
+  width:60vw;
+}
+
+i {
+  font-style:italic;
+}
+
+a {
+  color:inherit;
+}
+
+a:hover {
+  color:#c73a2d;
+}
+
+u:hover {
+  color:#c73a2d;
+}
+
+#wowo:hover{color:white}
+
+quote {
+  hyphens:auto;
+  font-family:Circuit, serif;
+  font-size:max(1.7vmax, 12pt);
+  line-height:max(2vmax, 14pt);
+  color: #285f78;
+}
+
+p {
+  font-family:Giusto, sans-serif;
+  font-size:max(1.5vmax, 10pt);
+  color: #285f78;
+}
+
+p.inhalt {
+  line-height:max(1.8vmax, 12pt);
+}
+
+container {
+  padding-top:2vw;
+  padding-left:2vw;
+  padding-right:2vw;
+}
+
+.bild{
+  -webkit-user-drag: none;
+  margin-right:1vw;
+  display:flexbox;
+  position:relative;
+  height:min-content;
+  flex-wrap: wrap;
+  float:inline-start;
+  overflow:hidden;
+}
+
+.liste{
+  width:30vh;
+}
+
+.liste.on{
+  display:inline-flexbox;
+  flex-direction:row;
+}
+
+.liste.off{
+  display:none;
+  flex-direction:column;
+}
+
+.imagelink{
+  z-index:1;
+  height:max-content;
+}
+
+.bild.liste:hover {
+  cursor:pointer;
+}
+
+.bildunterschrift{
+  hyphens:auto;
+  display:flex;
+  position:absolute;
+  bottom:0;
+  margin: .7vw;
+  padding-top:100%;
+  font-size:max(0.9vmax, 6pt);
+  color:transparent;
+  pointer-events:pointermove;
+  transition:opacity .15s;
+  color:transparent;
+  text-shadow:none;
+  opacity:0;
+}
+
+.bildunterschrift:hover{
+  cursor:pointer;
+  opacity:100;
+  color:#F2F1ED;
+  text-shadow:0 0 .3vmax #2f312b;
+  animation: descfade .1s;
+}
+
+.bildunten{
+  margin:.5vmax;
+  font-size:max(0.9vmax, 6pt);
+  line-height:max(1vmax, 7pt);
+  color: #285f78;
+  user-select: all;
+}
+
+#killswitch{
+  position:fixed;
+  right:1vw;
+  bottom:2vh;
+  height:1vmax;
+  width:1vmax;
+}
+
+#enhance {
+  position:absolute;
+  top:0;
+}
+
+.halb{
+  object-fit: cover;
+  width:27vw;
+  height:38vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.drittel{
+  object-fit:cover;
+  width:17.6vw;
+  height:25vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.viertel{
+  object-fit: cover;
+  height:18vw;
+  width:13vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.fünftel{
+  object-fit: cover;
+  height:14vw;
+  width:10.2vw;
+  display:inline-flex;
+  flex-direction:row;
+}
+
+.zeile {
+  display:block;
+  overflow:auto;
+  margin-top:1vw;
+}
+
+.detail {
+  transition:opacity .2s;
+}
+
+.detail:hover {
+  cursor:pointer;
+}
+
+.detail.on {
+  opacity:100;
+}
+
+.detail.off {
+  opacity:0;
+}
+
+.menuoff {
+  display:none;
+}
+
+.menuon {
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  text-wrap:initial;
+  width:50vw;
+  margin-top:2vmax;
+  margin-left:100%;
+  text-align:center;
+  overflow:scroll;
+  font-family:Circuit, serif;
+  font-size:max(2.5vmax, 18pt);
+  line-height:max(3.5vmax, 25pt);
+  color: #285f78;
+}
+
+.menulink {
+  flex-direction:column;
+}
+
+.small {
+  height:8.5vmax;
+}
+
+.big {
+  display:flex;
+  height:11.5vmax;
+  margin-left:35vw;
+  margin-right:35vw;
+  margin-top:7vh;
+  transition:all .3s, width .2s;
+}
+
+.navlist {
+  line-height:max(2.2vmax, 15pt);
+  position:fixed;
+  bottom:3vw;
+}
+
+.navlist.off {
+  display:none;
+}
+
+#logo {
+  position:relative;
+  -webkit-user-drag: none;
+  transition:height .3s, margin-left .3s;
+}
+
+#logo:not(.big):hover {
+  cursor:pointer;
+  transform-origin:top left;
+  transform:scale(104%);
+  transition:all .2s;
+}
+
+#dingle {
+  -webkit-user-drag:none;
+  transform:translate(-50%,-50%);
+  top:3vh;
+  width:13vmax;
+  align-self:center;
+  margin-left:13vmax;
+  margin-top:15vh;
+}
+
+#aufführung {
+  position:relative;
+  top:1.5vmax;
+  width:80vw;
+}
+
+#verzeichnis {
+  position:absolute;
+}
+
+.grösser {
+  margin-left:25vw;
+  margin-top:20vh;
+  width:45vw;
+  height:auto;
+}
+
+.button {
+  position:absolute;
+  top:46%;
+  z-index:1;
+}
+
+.button:hover {
+  cursor:pointer;
+  color:#c73a2d;
+}
+
+#links {
+  left:0;
+}
+
+#rechts{
+  right:0;
+}
+
+#umsetzung{
+  position:relative;
+  width:56vw;
+  height:60vh;
+  overflow:hidden;
+  transition:all .2s;
+}
+
+.keyimage {
+  position:absolute;
+  object-fit: cover;
+  height:62vh;
+  transform:translate(-50%, -50%);
+  left:50%;
+  top:50%;
+  transition:all .8s;
+  -webkit-user-drag: none;
+}
+
+.keyimage.off {
+  transition:none;
+  display:none;
+}
+
+.linksraus{
+  left:-50vw;
+}
+
+.rechtsraus{
+  left:100vw;
+}
+
+.keyword:hover {
+  cursor:pointer;
+  color:#c73a2d;
+}
+
+.seitentaube {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:20%;
+  left:9vw;
+  z-index:2;
+}
+
+.seitentaube:hover {
+  height:22%;
+}
+
+#überbaum {
+  pointer-events: none;
+}
+
+#überspann {
+  pointer-events: none;
+}
+
+#unterbaum:hover {
+  filter: invert(.3);
+  opacity:.7;
+}
+
+#unterspann:hover {
+  filter: invert(.3);
+  opacity:.7;
+}
+
+.seitenbaum {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:40vh;
+  left:9vw;
+  z-index:2;
+}
+
+.seitenbaum:hover {
+  height:41vh;
+}
+
+.seitenuhr {
+  position:fixed;
+  transition:all .4s ease-out;
+  width:13vw;
+  height:auto;
+  left:9vw;
+  z-index:2;
+}
+
+.seitenuhr:hover {
+  width:13.5vw;
+}
+
+.geschaut {
+  position:absolute;
+  object-fit: cover;
+  justify-self:center;
+  -webkit-user-drag: none;
+  transition:all .2s;
+  transform:translate(0% 0%);
+  display:block;
+  transform-origin:center center;
+}
+
+@keyframes roundnround {
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(360deg)}
+}
+
+.uhrtile {width:40%; transition: all 3s;z-index: 10}
+.uhrtile.eins {animation: roundnround 15s infinite linear}
+.uhrtile.zwei {animation: roundnround 9s infinite linear}
+.uhrtile.drei {animation: roundnround 7s infinite linear}
+.uhrtile.vier {animation: roundnround 12s infinite linear}
+.uhrtile.fünf {animation: roundnround 5s infinite linear}
+.uhrtile.sechs {animation: roundnround 10s infinite linear}
+
+.uhrtile:hover {
+  animation: roundnround 3s infinite linear reverse;
+  cursor:pointer;
+}
+
+.seitenschauen {
+  position:fixed;
+  transition:all .4s ease-out;
+  height:15vh;
+  left:10vw;
+  z-index:2;
+  position:absolute;
+  object-fit: cover;
+  left:50%;
+  top:57%;
+  transition:all .8s;
+  -webkit-user-drag: none;
+}
+
+[id^="textschauen"]{width:67%;hyphens:auto;transition:all .3s ease-in;bottom:-55vh;margin-left:17%;z-index:2;pointer-events:none;position:relative}
+
+.seitenschauen:hover {
+  height:16vh;
+}
+
+#schauen {
+  height:20vh;
+}
+
+#pieds {
+  transition:.5s ease-out;
+  position:absolute;
+  -webkit-user-drag:none;
+  width:20vw;
+  left:13vw;
+  top:4vh;
+  transform:rotate(2deg);
+}
+
+#pieds:hover {
+  left:16vw;
+  transform:rotate(-3.5deg);
+  cursor:grab;
+}
+
+sup {
+  vertical-align: super;
+  line-height:0;
+  font-size:max(1vmax, 7pt);
+}
+
+s{
+  vertical-align: super;
+  line-height:0;
+  font-size:max(1vmax, 7pt);
+}
+
+#stern2:hover {
+  transform-origin: 50% 50%;
+  transform:scale(1.03);
+}
+
+#unreflektiert {
+  animation: slowintro forwards 1s;
+}
+
+.popup {
+  min-height:fit-content;
+  background:#F2F1ED;
+  padding:1vmax;
+  border-radius: .5vmax;
+  box-shadow: 0 0 1vmax #2f312b;
+  z-index:1;
+}
+
+.popdown {
+  min-height:fit-content;
+  background:#F2F1ED;
+  padding:1vmax;
+  border-radius: .5vmax;
+  box-shadow: 0 0 1vmax #2f312b;
+  z-index:3;
+  position:absolute;
+  display:none;
+  top:0;
+  right:0;
+}
+
+.popdown.klein {
+  font-size:max(1vmax, 8pt);
+}
+
+.dot:hover + .popdown {cursor:pointer;display:block}
+
+.grabber:hover {
+  cursor:grab;
+}
+
+.cross {
+  color:#c73a2d;
+}
+
+.cross:hover {
+  cursor:pointer;
+}
+
+/* rot: #c73a2d    weiss: #F2F1ED    blau: #285f78    schwarz: #2f312b */
+
+start {
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  z-index:10;
+}
+
+start:hover {
+  cursor:pointer;
+}
+
+@keyframes karten2turn {
+  from{right:-2vw}
+  to{right:.4vw}
+}
+
+@keyframes karten1turn {
+  from{right:-3vw}
+  to{right:.4vw}
+}
+
+#karte1 {
+  top:-2vh;
+  position:absolute;
+  width:25vw;
+  right:-3vw;
+  transform:rotate(-5deg);
+  transition:all .3s;
+}
+
+#karte2 {
+  top:-.5vh;
+  position:absolute;
+  width:25vw;
+  right:.4vw;
+  transform:rotate(-6deg);
+  transition:all .4s;
+}
+
+#eingang {
+  position:fixed;
+  bottom:-10vh;
+  width:100vw;
+  justify-self:center;
+  transition:ease-in transform .5s;
+  transform-origin:top center;
+}
+
+@keyframes turn {
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+
+#uhr {
+  position:fixed;
+  width:30vmax;
+  top:-10vmax;
+  left:-7vmax;
+  animation: turn 500s linear infinite;
+  transition:ease-in all .3s;
+}
+
+@keyframes wobble {
+  0% {top:54.8vh}
+  50% {top:55.2vh}
+  100% {top:54.8vh}
+}
+
+#taube {
+  position:fixed;
+  transform:translate(-50%,-50%);
+  width:19vmax;
+  left:20vw;
+  top:54.8vh;
+  animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+  transition:ease-in all .3s;
+}
+
+.pointer:hover {
+  cursor:pointer;
+}
+
+#inhaltsgefäss {
+  opacity:0;
+  transition:all .3s;
+  position:absolute;
+  width:60vw;
+  height:max-content;
+  display:block;
+  padding-bottom:10vh;
+}
+
+#inhaltsgefäss.on {
+  opacity:100;
+}
+
+.inhalt {
+  display:inline-block;
+  position:relative;
+}
+
+@keyframes tiktok {
+  0% {opacity:1}
+  100% {opacity:.05}
+}
+
+@keyframes slowintro {
+  0% {opacity:0}
+  80% {opacity:0}
+  100% {opacity:1}
+}
+
+.tik {
+  display:flex;
+  position:fixed;
+  z-index:1;
+}
+
+.tik:hover {
+  cursor:pointer;
+  color:#c73a2d;
+}
+
+.disappeared {
+  display:none;
+  opacity:0;
+}
+
+.navright {
+  padding-left:2vw;
+  align-items: center;
+  justify-items: center;
+}
+
+#mapwrap {
+  position:relative;
+  z-index:2;
+}
+
+.dot {
+  position:absolute;
+  color: #285f78;
+  transform:scale(.2);
+  transition:all .4s;
+  z-index: 2;
+}
+
+.dot:hover {
+  transform-origin: 50% 50%;
+  transform:scale(.5);
+  cursor:pointer;
+}
+
+.bern:hover{
+  transform-origin: 50% 50%;
+  transform:scale(.45);
+}
+
+.map {
+  position:relative;
+  width:13vw;
+  -webkit-user-drag: none;
+}
+
+.mapper:hover > .dot{
+  color:#c73a2d;
+  transform-origin: 50% 50%;
+  transform:scale(.35);
+}
+
+.mapp {
+  position:absolute;
+  width:13vw;
+  -webkit-user-drag: none;
+}
+
+.mapp.navi {
+  transition:all .8s;
+  width:28%;
+}
+
+.plaintext {
+  text-decoration:none;
+}
+
+.plaintext:hover{
+  color:inherit;
+}
+
+#stern {
+  position:absolute;
+  transform-origin: 48% 55%;
+  animation: roundnround infinite linear 10s;
+}
+
+#stern:hover {
+  animation: roundnround infinite linear 2s;
+}
+
+#turnherr {
+  opacity:0;
+  padding-top:30vh;
+  text-shadow:0 0 .5vmax #285f78;color:#F2F1ED;
+  position:absolute;
+  left:2vw;
+  bottom:4vh;
+  width:22.5vw;
+}
+
+#turnherr:hover {
+  opacity:1;
+  transition:all .3s;
+}
+
+#hoheuhr{width:20vw;}
+#ersteuhr{width:50vw;}
+#nebenuhr{width:30vw;float:right;}
+#ralfgobelins2{position:fixed;top:40vh;left:35vw;}
+#sternzeichnung{position:absolute; width:15vw;left:-2vw;}
+#spaced{min-height:35vmin;}
+#olfaktorisch{float:right; position:absolute; text-align:center; width:30%; right:28%; top:8vh;z-index:3}
+#uhrreflekt{width:55vw;}
+#stern2{position:absolute;width:11%;right:26.7%;top:45.1%; z-index: 1;}
+#fahrlässig{position:absolute;color:#F2F1ED; text-shadow:0 0 .5vmax #285f78; top:68%; left:53%; width:15vw;}
+#lowest{height:5vh;}
+#trophäe{position:absolute;left:45%;top:8%;width:26vw;}
+#büstenbild{width:25vw;}
+#fusssessel{-webkit-user-drag:none;width:20vw;position:absolute;right:-27vw;}
+#turnherrzitat{position:fixed;top:30vh;left:30vw;}
+#turnherrtext{user-select: text;display:inline-block;width:25vw;text-align:left;}
+.geschaut{height:40vh}
+#geschaut1{top:-10vh;left:-22vw;}
+#geschaut2{top:-6vh;left:-18vw;}
+#geschaut3{top:-7vh;left:-20vw;}
+#mweiss{height:65%;top:48%;transform:translate(-75%, -50%)}
+#mschöni{height:80%;top:55%;transform:translate(-75%, -50%);}
+#mwerdt{height:98%;top:53%;transform:translate(-48%, -50%)}
+#weiterleitung{z-index:5;position:fixed;left:38%; top:40%;width:22%}
+@keyframes wabern {0%{text-shadow:0 0 .5vmax #285f78}100%{text-shadow:0 0 .8vmax #285f78}}
+.frage{text-shadow:0 0 .5vmax #285f78;color:white;mix-blend-mode: multiply;z-index:3;animation: wabern infinite alternate 3s;}
+.centerpiece{-webkit-user-drag:none;position:absolute;top:48%;left:47%;color:#c73a2d;transition:all .4s;z-index:3;text-shadow:0 0 .8vmax #F2F1ED;}
+.schlagwort{-webkit-user-drag: none;top:85%;left:5%;position:absolute;text-shadow:0 0 1vmax #F2F1ED;transition:all .7s}
+.schlagwort:hover{color:#c73a2d;cursor:pointer; animation-play-state: paused;}
+#fullsvg {left:0;top:0;width:100%;height:100%;position:absolute;pointer-events:none;object-fit:cover;}
+.line{stroke:#285f78;stroke-width:.12%;z-index:3;}
+.gross.dot{position:absolute;
+  color: #285f78;
+  transform:scale(.4);
+  transition:all .4s;}
+.gross.dot:hover{
+  color: #c73a2d;
+  cursor:pointer;
+  transform-origin: 50% 50%;
+  transform:scale(.6);
+}
+.gross.dot.red{color:#c73a2d}
+.anjasketch{width:20%;display:flex;}
+.anjasketch:hover{width:40%}
+#oben{transform:rotate(90deg);top:10%;left:50%;z-index: 3;}
+#unten{transform:rotate(90deg);top:90%;left:50%;z-index:3;}
+#navnav{z-index:2;transition:.3s;}
+#navnav:hover{transform:scale(1.1)}
+.forschungsbild{width:100%;display:flex;-webkit-user-drag: none;transition:all .2s;object-fit: cover;}
+.forschungsbild:hover{transform:scale(2);cursor:zoom-in;}
+.taub{display:none;}
+.quelle{font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);hyphens:none;position:relative;user-select: text;}
+.fussnote{font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);hyphens:none;position:absolute;}
+.bildtextbild{display:none;position:absolute;margin-top:7.5%;margin-left:-3.5%;font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);color: #285f78;user-select: all;width:100%}
+.seitenbild:hover{ .bildtextbild{display:block}}
+.nohover:hover{transform:scale(1);cursor:inherit;}
+
+#matterport{line-height:max(1.5vmax, 15pt); font-size: max(1vmax, 7pt); height:100%;margin-top:5%;margin-left:2%;overflow:scroll;hyphens:auto;width:90%}
+#matterportbox{position:fixed;left:20%;top:79%;width:10%;height:10%;z-index:3;}
+
+.tooltipinhalt{display:inline-block;width:32vw;text-align:center;}
+
+@keyframes ersteuhr {
+  0% {height:20vmin;}
+  100% {height:15vmin;}
+}
+
+@keyframes fadeout {100%{opacity:0}}
+#raum{position:relative;animation:fadeout 20s forwards}
+.insetshadow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 .7vmax .7vmax #F2F1ED;
+  width:90%;
+}
+.insetshadow{display:inline-flex;width:90%;}
+.rechtsactivated{transition:all 1s;transform-origin:top right; transform: scale(1.85);box-shadow: inset 0 0 1vmax 1vmax #F2F1ED;animation:none}
+.linksactivated{transition:all 1.3s;transform-origin: bottom center;transform: scale(6.85);box-shadow: inset 0 0 1vmax 1vmax #F2F1ED;animation:none}
+.nodrag{-webkit-user-drag: none;}
+.detailtaube{width:15%;position:absolute;transition:all .5s}
+.bern{font-size:max(3vmax, 20pt);transform: scale(.3);}
+.bern.schlagwort{position:relative;}
+.bern.schlagwort:hover{transform:scale(.3);}
+.dotmother{position:absolute}
+.dotdaughter{position:relative;width:fit-content}
+#punkte:hover{color:#c73a2d}
+.schiebdetail{height:100%;position:relative;}
+
+.grschauen{width:70%;position:absolute;top:10vh;left:10%;transition:all .3s}
+.grschauen:hover{transform-origin:center,center;transform: scale(1.01);}
+#schauenbox:hover{cursor:pointer}
+
+@keyframes zitat {0%{top:15vh}100%{top:0}}
+#besserus{animation:zitat 7s ease-out}
+#besserus:hover {color:#c73a2d;}
+#glassrect {transition:fill .5s;fill:rgba(0,0,0,0);}
+#glassrect:hover {fill:#f2f1ed88}
+
+#multisensory{width:78%;align-self:center;width:87%;margin-left:5%;}
+#wandbild{position:absolute;width:100%}
+#bern{position:relative;left:5%;width:80%;}
+#wo{position:relative;width:100%;text-align:center;z-index:5;mix-blend-mode:multiply;}
+#schiebedetails{display:flex;height:25vh;margin-left:-10%;justify-content:center;}
+#institutionen{position:relative;width:100%;text-align:center;}
+#bottom{height:5vmin;}
+#glass{position:fixed;top:40%;left:32%;width:18%;height:32%;transition:transform .3s;background-image: url(../Bilder/glass.jpg);background-size:cover}
+#glasstext{position:fixed;top:40%;right:27%;width:18%;min-height:32%}
+#anjabox{position:fixed;bottom:20%;left:27%;width:20%;height:25%;}
+#pläfebox{position:fixed;bottom:20%;left:27%;width:25%;height:25%;background-image: url(../Bilder/austausch.png);background-size:cover}
+
+
+.red {color:#c73a2d;}
+.white {color:#F2F1ED}
+
+@media only screen and (orientation:portrait){
+  body {margin-left:4vw;margin-top:2vh;margin-bottom:2vh;height:100vh;}
+  main {margin-top:12vh;margin-left:3vw;width:90vw;}
+  nav {display:inline;position:fixed;height:10%;width:20%}
+  nav#right {bottom:10%;}
+  #mapwrap {top:-500%;width:100%;right:30%}
+  .map{width:100%}
+
+  .keyimage{width:30%;height:20%;top:38%;object-fit:contain;}
+  .keyimage#überbaum{width:200%;position:absolute;object-fit:cover;height:43vh;transform:translate(-50%, -50%);left:50%;top:40%;transition:all .8s;-webkit-user-drag: none;}
+  .seitenschauen{left:570%;width:150%;height:120%}
+  .seitenuhr{left:85%; width:20%}
+  .seitentaube{left:85%;width:20%}
+  .seitenbaum{left:80%;width:27%}
+
+  .portraitrechts{height:7%;object-fit:cover}
+  .portraitlinks{height:7%;object-fit:cover}
+  #glass{width:40%;height:25%;left:10%;top:32%}
+  #glasstext{width:40%;min-height:20%;top:60%}
+  #anjabox{width:45%;left:10%;height:10%}
+  #pläfebox{width:50%;left:10%;height:18%}
+  #spaced{min-height:0%;}
+  #hoheuhr{width:40%;}
+  #ersteuhr{width:113%;}
+  #nebenuhr{width:60%;float:right;}
+  #sternzeichnung{position:absolute; width:100%;left:-10%;}
+  #multi{width:170%}
+  #olfaktorisch{position:absolute; text-align:center; width:60%; right:-8%; top:20%;}
+  #uhrreflekt{width:115%;}
+  #stern2{position:absolute;width:15%;right:7.7%;top:44.1%; z-index: 1;}
+  #fahrlässig{position:absolute; top:102%; left:3%; width:115%;color:#285f78;text-shadow:none;}
+  #lowest{height:17vh;}
+  #trophäe{position:absolute;left:3%;top:102%;width:110%;padding-bottom:10vh;}
+  #büstenbild{width:115%;}
+  #fusssessel{-webkit-user-drag:none;width:70%;position:relative;right:60%;top:11vh}
+  #pieds {transition:.5s ease-out;position:absolute;-webkit-user-drag:none;width:130%;left:-41%;top:60%;transform:rotate(2deg);}
+  #pieds:hover {left:-30%;transform:rotate(-3.5deg);cursor:grab;}
+  #turnherrzitat{position:fixed;top:30vh;left:30vw;width:38%}
+  #turnherrtext{user-select: text;display:inline-block;width:100%;left:3%;text-align:left;}
+  #leitungstext{display:inline-block;width:90%;left:3%;text-align:left;}
+  .geschaut{height:110%;}
+  #geschaut1{top:10%;left:-70%;}
+  #geschaut2{top:14%;left:-60%;}
+  #geschaut3{top:13%;left:-65%;}
+  #uhren{width:60%;top:30%;transform:translate(-44%, -50%)}
+  #navlist1.menu{left:36%;top:80%;text-align:center;}
+  #navlist2{left:29%;top:80%;text-align:center}
+  #mschöni{height:42%;top:53%;width:30%;}
+  #multisensory{width:78%}
+  #wandbild{width:160%;height:41%}
+  .zeile{width:800%}
+  #weiterleitung{left:20%; top:40%;width:60%}
+  #matterportbox{position:fixed;left:50%;top:79%;width:25%;height:10%;z-index:3;}
+  .blurnav.b{width:90%;height:20%;bottom:4%;left:5%;mask: linear-gradient(to bottom, transparent, black 90%);pointer-events: none;}
+  .taub{display:flex;}
+
+  #ralfgobelins1{width:40%}
+  #ralfgobelins2{width:33%;left:30%}
+  .tooltipinhalt{display:inline-block;width:100%;text-align:center;}
+
+  #unterbaum{width:220%;height:auto;}
+  #tauben{width:80%;height:80%;transform:translate(-48%, -50%)scale(2)}
+
+  .blurnav.l {width:34%;mask: radial-gradient(black,transparent 90%);}
+  .blurnav.r {display:none;}
+  quote {display:block; width:85vw;}
+  container {padding:0}
+  .bildunterschrift{margin:2vw;}
+  .drittel {width:27.5vw;height:38vw;}
+  .fünftel {width:16vw;height:22vw;}
+  .big {margin-left:30vw;}
+  #left {position:fixed;width:80vw;}
+  .menuon {font-size:max(2vmax, 15pt);line-height:max(3vmax, 20pt);padding-bottom:0;margin-top:0vh;
+    margin-left:20vw;position:absolute;top:25vh;left:2vw;align-content:center; overflow:hidden;}
+  .navlist {width:80%}
+  #logo {padding-right:0;}
+  #dingle {top:0vh;}
+  #aufführung {top:2.5vmax;}
+  #verzeichnis {margin-top:5vmax;position:absolute;width:100vw;overflow:scroll;}
+  #weg {display:none;}
+  #uhr {animation: turn 100s linear infinite;}
+  @keyframes wobble {
+    0% {top:71.6vh}
+    50% {top:71vh}
+    100% {top:71.6vh}
+  }
+  #taube {width:22vmax;left:48vw;animation: wobble 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;}
+  #eingang {width:180vw;bottom:-5vh;left:-53vw}
+  .weg {display:none}
+  .grösser {width:70vw;margin-left:13vw;margin-top:26vh;}
+  #uhr {width:70vw;top:-16vh;left:-25vw;}
+  #umsetzung {width:90vw;}
+  #rechts {width:5vw;}
+  #links {width:5vw;}
+  .linksraus {right:-100vw;}
+  .rechtsraus {left:200vw;}
+
+  #bern{width:82%}
+  #aussenbern{width:150%}
+  #wo{width:120%}
+  #institutionen{width:120%}
+  #schiebedetails{position:relative;height:10vh;top:-5%}
+  #detailschiebung{width:80%}
+
+  .keyword{width:fit-content}
+  #navlist1{width:fit-content}
+  .bottom{height:10vh}
+  #schauenbox{top:10vh}
+  [id^="textschauen"]{transform:translateY(-20vh)}
+}
