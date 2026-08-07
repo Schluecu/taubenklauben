@@ -487,12 +487,14 @@ var schau = 1;
 var zind = 0;
 let schauenen = ('schauen'+schau).toString();
 let schauenenen = ('text'+schauenen).toString();
+let working = false;
 function schauen() {
+  if (working==true) {return} else {
+  working = true;
   disappearschautext(schauenenen);
-  document.getElementById(schauenen).style.pointerEvents="none";
   document.getElementById(schauenen).style.top="0vh";
   document.getElementById(schauenen).style.transform="rotate(3deg)";
-  setTimeout(schauenzwei,300);
+  setTimeout(schauenzwei,300);}
 }
 
 function schauenzwei() {
@@ -508,13 +510,18 @@ function schauenzweihalb() {
 }
 
 function schauendrei() {
-  if (schau==12){schau=1}else{schau++;}
+  if (schau==12 ){schau=1}else{schau++;}
   schauenen = ('schauen'+schau).toString();
   schauenenen = ('text'+schauenen).toString();
   schauenenen = (schauenenen).toString();
   document.getElementById(schauenen).style.zIndex="3";
-  document.getElementById(schauenen).style.pointerEvents="all";
   appearschautext(schauenenen);
+  working=false;
+}
+
+function schauenschluss() {
+  disappear('schauenbox');
+  appear('auswahl');
 }
 
 const skizzen = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];

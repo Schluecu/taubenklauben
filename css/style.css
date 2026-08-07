@@ -835,6 +835,9 @@ start:hover {
 .bildtextbild{display:none;position:absolute;margin-top:7.5%;margin-left:-3.5%;font-size:max(0.9vmax, 6pt);line-height:max(1vmax, 7pt);color: #285f78;user-select: all;width:100%}
 .seitenbild:hover{ .bildtextbild{display:block}}
 .nohover:hover{transform:scale(1);cursor:inherit;}
+.vorzeige{width:auto;height:100%;position:relative}
+.vorzeigehülle{width:46%;margin-right:2%;display:inline-flex;height:30vh;justify-content:center;}
+.sammeltitel{margin-top:1%;width:46%;margin-right:2%;display:inline-flex;justify-content:center}
 
 #matterport{line-height:max(1.5vmax, 15pt); font-size: max(1vmax, 7pt); height:100%;margin-top:5%;margin-left:2%;overflow:scroll;hyphens:auto;width:90%}
 #matterportbox{position:fixed;left:20%;top:79%;width:10%;height:10%;z-index:3;}
@@ -873,10 +876,11 @@ start:hover {
 .grschauen{width:70%;position:absolute;top:10vh;left:10%;transition:all .3s}
 .grschauen:hover{transform-origin:center,center;transform: scale(1.01);}
 #schauenbox:hover{cursor:pointer}
+#schlussbox:hover{cursor:auto}
 
 @keyframes zitat {0%{top:15vh}100%{top:0}}
 #besserus{animation:zitat 7s ease-out}
-#besserus:hover {color:#c73a2d;}
+#besseruspfeil:hover {color:#c73a2d;}
 #glassrect {transition:fill .5s;fill:rgba(0,0,0,0);}
 #glassrect:hover {fill:#f2f1ed88}
 
@@ -890,7 +894,16 @@ start:hover {
 #glass{position:fixed;top:40%;left:32%;width:18%;height:32%;transition:transform .3s;background-image: url(../Bilder/glass.jpg);background-size:cover}
 #glasstext{position:fixed;top:40%;right:27%;width:18%;min-height:32%}
 #anjabox{position:fixed;bottom:20%;left:27%;width:20%;height:25%;}
-#pläfebox{position:fixed;bottom:20%;left:27%;width:25%;height:25%;background-image: url(../Bilder/austausch.png);background-size:cover}
+#pläfebox{position:fixed;bottom:20%;left:27%;width:25%;height:30%;background-image: url(../Bilder/terasse.png);background-size:cover}
+#sammelbox{position:relative;width:100%;transition:all .2s}
+#sammelbox:hover{transform:scale(1.1);z-index:3}
+#selfie{position:relative;transition:all .2s}
+#selfie:hover{transform:scale(1.1);z-index:3}
+#skizzenbox{position:relative;transition:all .2s}
+#skizzenbox:hover{transform:scale(1.1)}
+#notizen{position:relative;transition:all .2s}
+#notizen:hover{transform:scale(1.1)}
+#dich:hover{color:#c73a2d}
 
 
 .red {color:#c73a2d;}
