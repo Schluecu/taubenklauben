@@ -42,7 +42,7 @@
                 <img src="../Bilder/Baumdraussen_frei.png" id="überbaum" class="nodrag" style="width:100%;position:absolute;top:0;left:0"></img>
                 <svg id="glasssquare" onclick="appear('glass')" class="pointer" style="position:absolute;top:65%;left:5%;width:9%;height:5vw;" xmlns="http://www.w3.org/2000/svg"><rect id="glassrect" width="100%" height="100%" style="stroke-width:.5vmax;stroke:#c73a2d"></rect></svg>
             </div>
-            <quote class="inhalt pointer" id="besserus" onclick="appear('baumbaum'), unclick('besserus')" style="position:relative;text-align: center;width:100%"><br>«Üse gsed chli besser us.»<br>«Ui ja, de heds halt au chli schwirig hie.»</quote>
+            <quote class="inhalt" id="besserus" style="justify-items:center;position:relative;text-align: center;width:100%"><br>«Üse gsed chli besser us.»<br>«Ui ja, de heds halt au chli schwirig hie.» <p class="pointer" id="besseruspfeil" style="width:min-content;" onclick="appear('baumbaum'), unclick('besseruspfeil')">↓</p></quote>
             <div class="disappeared popup grabber" onmouseenter="appear('glasstext')" srcset id="glass">
             <p class="cross" onclick="disappear('glass')" style="position:absolute;bottom:3%;right:3%;text-shadow: 0 0 .5vmax #F2F1ED">×</p></div>
 
@@ -85,8 +85,9 @@
                 <img class="map" src="../resources/og.svg"></img>
                 <p onclick="map('Baumkrone')" id="baumkrone" style="top:-6%;right:17%;" class="dot disappeared">⬤</p>
                     <p class="popdown klein" style="top:0%;right:0%;">Baumkrone</p>
-                <p onclick="map('Innenhof')" id="innenhof" style="top:45%;right:63%;" class="dot">⬤</p>
-                    <p class="popdown klein" style="top:53%;right:20%;">Baum im Innenhof</p></div>
+                <p onclick="map('Innenhof')" id="innenhof" style="top:47%;right:55%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:54%;right:20%;">Baum im Innenhof</p>
+                </div>
                 
                 <div class="mapper" style="position:relative">
                 <img class="map" src="../resources/eg.svg"></img>

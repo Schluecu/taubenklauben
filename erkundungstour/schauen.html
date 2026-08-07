@@ -37,12 +37,46 @@
         <div id="navnav" style="position:absolute;width:15%;height:30%;top:33%;left:2%">
         <a href="./menu.html"><img class="keyimage" id="seitenschauen" src="../Bilder/Skizzen/hae.png"></img></a></div>
         <container id="inhaltsgefäss">
+            <div id="auswahl" class="disappeared" style="width:90%">
+                <div class="vorzeigehülle" id="skizzenbox">
+                    <img src="../Bilder/Skizzen/1.png" class="vorzeige nodrag pointer" id="schauerei" onclick="appear('schauenbox'), disappear('auswahl'), schauen()">
+                    <p style="position:absolute;color:#285f78;bottom:5%;font-size:100%;">Anja Roosens</p></img>
+                </div>
+
+                <div class="vorzeigehülle" id="selfie">
+                    <img src="../Bilder/selfie.png" class="vorzeige nodrag pointer" style="position:relative;transform-origin:bottom center;">
+                    <p style="position:absolute;color:#F2F1ED;bottom:3%;font-size:100%">Benjamin Jaeger</p></img>
+                </div>
+
+                <p class="sammeltitel">Dokumentieren</p>
+                <p class="sammeltitel">Reinszenieren</p>
+
+                <div class="vorzeigehülle" id="sammeln">
+                    <div id="sammelbox" style="justify-content:center;">
+                    <img src="../Bilder/sammeln/granat.png" style="position:absolute;transform:rotate(3deg);width:40%;height:auto;right:26%;bottom:0%" class="vorzeige nodrag pointer" id="detail"></img>
+                    <img src="../Bilder/sammeln/gruppenfoto.png" style="position:absolute;left:25%;width:30%;height:auto;bottom:0%" class="vorzeige nodrag pointer" id="detail"></img>
+                    <img src="../Bilder/sammeln/leopard.png" style="position:absolute;transform:rotate(-3deg);width:38%;height:auto;bottom:0%" class="vorzeige nodrag pointer" id="detail"></img>
+                    <img src="../Bilder/glass.jpg" style="position:absolute;transform:rotate(6deg);width:35%;height:auto;right:5%;bottom:0%" class="vorzeige nodrag pointer" id="detail"></img>
+                    <p style="position:absolute;transform-origin:bottom left;color:#F2F1ED;bottom:3%;left:35%;font-size:100%">Pearlie Frisch</p>
+                    </div>
+                </div>
+
+                <div class="vorzeigehülle" id="notizen">
+                    <img src="../Bilder/sammeln/notizen.png" class="vorzeige nodrag pointer">
+                    <p style="position:absolute;color:#285f78;bottom:7%;left:35%;font-size:100%">Ethan Pageot</p></img>
+                </div>
+
+                <div>
+                    <p class="sammeltitel">Sammeln</p>
+                    <p class="sammeltitel">Notieren</p>
+                </div>
+            </div>
             <div id="schauenbox" style="position:relative">
-                <div style="width:90%">
-                    <img src="../Bilder/Skizzen/12.png" class="grschauen nodrag" id="schauen12" onclick="schauen()"></img>
+                <div id="schlussbox" style="width:90%">
+                    <img src="../Bilder/Skizzen/12.png" class="grschauen nodrag" id="schauen12"></img>
                     <p id="textschauen12" class="disappeared">
                         Was man im Haus wahrnimmt, wo das eigene Interesse hinfällt und was daraus wird, ist für alle verschieden. Für Anja waren es diese Skizzen,
-                        für mich diese Webseite.
+                        für mich diese Webseite.<br><br><u onclick="schauenschluss()" style="margin-left:30%;pointer-events:all" class="pointer" id="dich">Was ist es für dich?</u>
                     </p>
                 </div>
                 <div style="width:90%">
@@ -126,8 +160,12 @@
                 <img class="map" src="../resources/og.svg"></img>
                 <p onclick="map('Tierteller')" id="tierteller" style="top:21%;right:35%;" class="dot">⬤</p>
                     <p class="popdown klein" style="top:27.5%;right:10;">Teller mit Tier</p>
-                <p onclick="map('Innenhof')" id="innenhof" style="top:45%;right:63%;" class="dot">⬤</p>
-                    <p class="popdown klein" style="top:53%;right:20%;">Baum im Innenhof</p>
+                <p onclick="map('Innenhof')" id="innenhof" style="top:47%;right:55%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:54%;right:20%;">Baum im Innenhof</p>
+                <p onclick="map('Spiegelselfie')" id="spiegelselfie" style="top:6%;right:-1.5%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:14%;right:0%;">Spiegelselfie-Spot</p>
+                <p onclick="map('Glassaeule')" id="glassaeule" style="top:45%;right:38%;" class="dot">⬤</p>
+                    <p class="popdown klein" style="top:52%;right:20%;">Glassäule</p>
                 </div>
 
                 <div class="mapper" style="position:relative">
